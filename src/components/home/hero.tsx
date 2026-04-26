@@ -16,11 +16,11 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-10 md:pt-0 text-foreground">
       {/* Background glow using semantic classes */}
-      <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 blur-[150px] pointer-events-none" />
-      <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 blur-[120px] pointer-events-none" />
+      {/* <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 blur-[150px] pointer-events-none" /> */}
+      {/* <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 blur-[120px] pointer-events-none" /> */}
 
       {/* Soft noise / vignette feel */}
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/20 to-background opacity-80 pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/20 to-background opacity-80 pointer-events-none" /> */}
 
       {/* Curved lines */}
       <svg
@@ -41,8 +41,6 @@ export function Hero() {
           strokeOpacity="0.22"
           strokeWidth="1.2"
         />
-        <circle cx="1475" cy="225" r="4.5" fill="currentColor" fillOpacity="0.95" />
-        <circle cx="940" cy="635" r="4.5" fill="currentColor" fillOpacity="0.95" />
       </svg>
 
       {/* Dot pattern */}
@@ -57,8 +55,8 @@ export function Hero() {
       </div>
 
       {/* Primary glow behind image */}
-      <div className="absolute right-[10%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/25 blur-[120px]" />
-      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/15 blur-[90px]" />
+      <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/20 blur-[120px]" />
+      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/10 blur-[90px]" />
 
       <div className="relative z-10 mx-auto grid md:min-h-screen max-w-7xl items-center gap-16 px-6 py-10 md:pt-26 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         {/* Left */}

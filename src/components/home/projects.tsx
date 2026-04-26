@@ -11,9 +11,12 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-background overflow-hidden"
+      className="relative py-24 bg-background overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      {/* Background Decorative Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
           badge="Selected Work"
           title="Featured"

@@ -44,6 +44,10 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-24 bg-background overflow-hidden">
+      {/* Background Decorative Glows */}
+      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-100 h-100 bg-primary/20 rounded-full blur-[100px] pointer-events-none translate-y-1/4 -translate-x-1/4" />
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
           badge="Get in Touch"
