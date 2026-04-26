@@ -33,8 +33,8 @@ const SKILL_CATEGORIES = [
 export function Skills() {
   return (
     <section id="skills" className="relative py-24 bg-background overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-125 h-125 bg-primary/5 blur-[120px] pointer-events-none" />
+      {/* Background Decorative Elements - Centered behind the grid */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10 px-6 lg:px-10">
         <SectionHeader 

@@ -25,8 +25,11 @@ const LANGUAGES = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="about" className="relative py-24 bg-background overflow-hidden">
+      {/* Background Decorative Glow - Positioned to highlight the Bio content */}
+      <div className="absolute top-[10%] left-[5%] w-100 h-100 bg-primary/15 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
           badge="Get to Know Me"
           title="About"

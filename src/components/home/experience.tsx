@@ -18,8 +18,11 @@ const EXPERIENCES = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="experience" className="relative py-24 bg-background overflow-hidden">
+      {/* Background Decorative Glow - Positioned to follow the timeline flow */}
+      <div className="absolute top-[20%] left-[10%] w-120 h-120 bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
           badge="Career Path"
           title="Professional"
