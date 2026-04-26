@@ -14,7 +14,7 @@ const ROLES = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background pt-16 md:pt-10 text-foreground">
+    <section className="relative min-h-screen overflow-hidden bg-background pt-10 md:pt-0 text-foreground">
       {/* Background glow using semantic classes */}
       <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -60,7 +60,7 @@ export function Hero() {
       <div className="absolute right-[10%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 rounded-full bg-primary/25 blur-[120px]" />
       <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 rounded-full bg-primary/15 blur-[90px]" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 py-10 md:py-20 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-0">
+      <div className="relative z-10 mx-auto grid md:min-h-screen max-w-7xl items-center gap-16 px-6 py-10 md:pt-26 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         {/* Left */}
         <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge with Typewriter */}
