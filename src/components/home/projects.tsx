@@ -46,7 +46,7 @@ export function Projects() {
             >
               {/* Project Image Container */}
               <div
-                className={`relative aspect-video rounded-3xl overflow-hidden border border-border bg-muted/20 ${
+                className={`relative aspect-video overflow-hidden border border-border bg-muted/20 ${
                   index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               >
@@ -70,7 +70,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1 rounded-full border border-primary/10"
+                      className="text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1  border border-primary/10"
                     >
                       {tag}
                     </span>
@@ -87,12 +87,12 @@ export function Projects() {
 
                 <div className="flex items-center gap-4">
                   <Link href={project.liveUrl} target="_blank">
-                    <Button variant="hero" size="sm" className="rounded-full">
+                    <Button variant="hero" size="sm" className="">
                       Live Demo <ExternalLink />
                     </Button>
                   </Link>
                   <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" size="sm" className="rounded-full">
+                    <Button variant="nav" size="sm" className="">
                       Source Code <GithubIcon />
                     </Button>
                   </Link>

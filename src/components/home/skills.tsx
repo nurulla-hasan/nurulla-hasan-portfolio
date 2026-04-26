@@ -31,7 +31,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-24 bg-background overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-125 h-125 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-125 h-125 bg-primary/5 blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto  relative z-10 px-6 lg:px-10">
         <div className="max-w-3xl mb-16">
@@ -73,7 +73,7 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <span 
                       key={skill}
-                      className="px-4 py-1.5 rounded-full bg-muted/50 border border-border text-sm font-medium text-foreground/80 transition-all hover:border-primary/50 hover:text-primary hover:bg-primary/5"
+                      className="px-4 py-1.5 bg-muted/50 border border-border text-sm font-medium text-foreground/80 transition-all hover:border-primary/50 hover:text-primary hover:bg-primary/5"
                     >
                       {skill}
                     </span>
