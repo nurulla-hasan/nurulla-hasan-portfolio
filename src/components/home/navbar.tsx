@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Send, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,21 +35,35 @@ const socialLinks = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-2 md:px-6 md:py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between rounded-full bg-background/60 backdrop-blur-xl border border-border/50 px-5 py-2 md:px-8 md:py-3 shadow-2xl shadow-primary/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-2 md:px-6 md:py-4 transition-all duration-500">
+      <div className={`max-w-7xl mx-auto flex items-center justify-between rounded-full px-5 py-2 md:px-8 md:py-3 transition-all duration-500 ${
+        scrolled 
+          ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5" 
+          : "bg-transparent border border-transparent shadow-none"
+      }`}>
         {/* Logo */}
-        <Link href="/" className="group relative flex items-center justify-center transition-all duration-300 hover:scale-110 shrink-0">
-          <Image 
-            src="/logo.png" 
-            alt="Nurulla Hasan Logo" 
-            width={44} 
-            height={44} 
-            priority
-            className="object-contain w-8 h-8 md:w-11 md:h-11"
-            style={{ height: 'auto' }}
-          />
+        <Link href="/" className="group relative flex items-center gap-1.5 transition-all duration-300 shrink-0">
+          <span className="text-primary text-xl md:text-2xl font-black tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">
+            &lt;
+          </span>
+          <div className="flex items-center text-2xl md:text-3xl font-bold transition-all group-hover:scale-105" style={{ fontFamily: 'var(--font-cagliostro)' }}>
+            <span className="text-foreground transition-colors">N</span>
+            <span className="text-primary -ml-1 transition-colors">H</span>
+          </div>
+          <span className="text-primary text-xl md:text-2xl font-black tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">
+            /&gt;
+          </span>
         </Link>
 
         {/* Navigation Links (Desktop) */}
@@ -81,7 +94,7 @@ export function Navbar() {
             className="hidden md:flex transition-all rounded-full"
           >
             <Send className="w-4 h-4 mr-2 fill-current" />
-            Hire Me
+            Resume
           </Button>
 
           {/* Mobile Menu Toggle */}

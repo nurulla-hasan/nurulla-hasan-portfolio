@@ -137,7 +137,7 @@ export function Contact() {
                   {errors.message?.message}
                 </FieldError>
               </Field>
-              <Button type="submit" variant="hero" size="lg" className="w-full rounded-xl py-8 text-lg font-bold">
+              <Button type="submit" variant="hero" size="lg" className="w-full rounded-xl h-12 text-lg font-bold">
                 <Send className="mr-2 w-5 h-5" />
                 Send Message
               </Button>
