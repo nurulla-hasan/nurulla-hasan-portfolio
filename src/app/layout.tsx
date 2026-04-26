@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
-const raleway = Raleway({
+const josefinSans = Josefin_Sans({
   subsets: ["latin"],
-  variable: "--font-raleway",
+  variable: "--font-josefin",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", raleway.variable)}
+      className={cn("h-full", "antialiased", josefinSans.variable)}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
