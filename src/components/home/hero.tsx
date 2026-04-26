@@ -77,7 +77,7 @@ export function Hero() {
           </div>
 
           {/* Heading */}
-          <div className="mt-6 md:mt-8 space-y-1">
+          <div className="mt-6 space-y-1">
             <h1 className="text-[25px] font-bold leading-tight md:leading-22 text-foreground sm:text-[30px] md:text-[40px] xl:text-[50px]">
               Hi, I&apos;m
             </h1>
@@ -88,7 +88,7 @@ export function Hero() {
           </div>
 
           {/* Experience & Location Badges */}
-          <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-start lg:justify-start gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-start lg:justify-start gap-3">
             <div className="px-4 py-1.5 bg-primary/10 border border-primary/20 text-xs font-bold text-primary tracking-wider uppercase neon-border">
               1+ Year Experience
             </div>
@@ -98,10 +98,10 @@ export function Hero() {
           </div>
 
           {/* Accent line */}
-          <div className="mt-6 md:mt-8 h-1.5 w-16 bg-primary shadow-[0_0_25px_var(--color-primary)] lg:mx-0" />
+          <div className="mt-6 h-1.5 w-16 bg-primary shadow-[0_0_25px_var(--color-primary)] lg:mx-0" />
 
           {/* Description */}
-          <p className="mt-6 md:mt-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
             I specialize in building API-driven web applications and 
             <span className="text-foreground font-semibold"> dashboard systems </span> 
             using React, Next.js, and TypeScript. Expert in 

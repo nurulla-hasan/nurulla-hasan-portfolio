@@ -1,10 +1,11 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
+import { SectionHeader } from "@/components/ui/section-header";
 
 import { PROJECTS } from "@/lib/data";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 export function Projects() {
   return (
@@ -13,28 +14,13 @@ export function Projects() {
       className="py-24 bg-background overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
-              <span className="w-8 h-px bg-primary" />
-              Selected Work
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-4">
-              Featured <span className="text-primary">Projects</span>
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Explore a collection of my recent work, focusing on large-scale
-              dashboard systems, reusable component libraries, and full-stack
-              applications built with modern tools.
-            </p>
-          </div>
-          <Link href="/projects">
-            <Button variant="nav" className="group">
-              View All Projects
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-        </div>
+        <SectionHeader 
+          badge="Selected Work"
+          title="Featured"
+          titleAccent="Projects"
+          description="Explore a collection of my recent work, focusing on large-scale dashboard systems, reusable component libraries, and full-stack applications built with modern tools."
+          link={{ href: "/projects", label: "View All Projects" }}
+        />
 
         <div className="grid grid-cols-1 gap-12">
           {PROJECTS.slice(0, 3).map((project, index) => (

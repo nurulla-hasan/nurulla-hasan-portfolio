@@ -14,6 +14,7 @@ import {
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -64,14 +65,12 @@ export function Contact() {
   return (
     <section id="contact" className="relative py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase">
-            Let&apos;s <span className="text-primary">Connect</span>
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-            Have a project in mind or just want to say hi? I&apos;m always open to discussing new opportunities and creative ideas.
-          </p>
-        </div>
+        <SectionHeader 
+          badge="Get in Touch"
+          title="Let's"
+          titleAccent="Connect"
+          description="Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative ideas."
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left: Contact Info */}

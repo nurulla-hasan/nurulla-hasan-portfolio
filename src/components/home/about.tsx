@@ -1,4 +1,5 @@
 import { GraduationCap, Award, Languages, Code } from "lucide-react";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const EDUCATION = [
   {
@@ -26,17 +27,14 @@ export function About() {
   return (
     <section id="about" className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <SectionHeader 
+          badge="Get to Know Me"
+          title="About"
+          titleAccent="Me"
+        />
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           {/* Left: Bio & Personal Info */}
           <div>
-            <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
-              <span className="w-8 h-px bg-primary" />
-              Get to Know Me
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-8">
-              About <span className="text-primary">Me</span>
-            </h3>
-            
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-xl">
               <p>
                 I am a passionate <span className="text-foreground font-semibold">Frontend-focused MERN Stack Developer</span> with 
@@ -65,7 +63,7 @@ export function About() {
                 {LANGUAGES.map((lang) => (
                   <div 
                     key={lang.name}
-                    className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-border bg-muted/20 backdrop-blur-sm"
+                    className="flex items-center gap-3 px-6 py-3 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30"
                   >
                     {lang.icon}
                     <div>
@@ -83,7 +81,7 @@ export function About() {
             {/* Education */}
             <div>
               <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/10 flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 Education
@@ -92,13 +90,13 @@ export function About() {
                 {EDUCATION.map((edu) => (
                   <div 
                     key={edu.institution}
-                    className="group relative p-8 rounded-3xl border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {edu.degree}
                       </h5>
-                      <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/10">
+                      <span className="text-sm font-medium text-primary border border-primary/20 px-3 py-1">
                         {edu.duration}
                       </span>
                     </div>
@@ -111,7 +109,7 @@ export function About() {
             {/* Training */}
             <div>
               <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/10 flex items-center justify-center">
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 Additional Training
@@ -120,13 +118,13 @@ export function About() {
                 {TRAINING.map((train) => (
                   <div 
                     key={train.platform}
-                    className="group relative p-8 rounded-3xl border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                       {train.platform}
                     </h5>
                     <p className="text-muted-foreground font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      <span className="w-2 h-2 bg-primary animate-pulse" />
                       {train.status}
                     </p>
                   </div>
