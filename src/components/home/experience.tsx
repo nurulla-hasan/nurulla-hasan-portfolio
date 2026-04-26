@@ -17,8 +17,8 @@ const EXPERIENCES = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 max-w-7xl mx-auto bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-10">
+    <section id="experience" className="py-24 bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-2xl mb-16">
           <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
             <span className="w-8 h-px bg-primary" />

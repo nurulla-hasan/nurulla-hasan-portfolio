@@ -57,11 +57,11 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="pt-24 max-w-7xl mx-auto bg-background relative overflow-hidden">
+    <section id="contact" className="pt-24 bg-background relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute right-0 bottom-0 w-150 h-150 bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
       
-      <div className="container mx-auto px-6 lg:px-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left: Contact Info */}
           <div>

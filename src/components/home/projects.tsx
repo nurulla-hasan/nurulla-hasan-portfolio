@@ -10,9 +10,9 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 max-w-7xl mx-auto bg-background overflow-hidden"
+      className="py-24 bg-background overflow-hidden"
     >
-      <div className="container mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">

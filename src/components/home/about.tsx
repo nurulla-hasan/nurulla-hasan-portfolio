@@ -24,8 +24,8 @@ const LANGUAGES = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 max-w-7xl mx-auto bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-10">
+    <section id="about" className="py-24 bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           {/* Left: Bio & Personal Info */}
           <div>
