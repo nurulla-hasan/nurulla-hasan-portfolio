@@ -102,12 +102,12 @@ export function Hero() {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Button variant="hero" size="xl">
+            <Button variant="hero">
               <Rocket className="mr-2 h-4 w-4" />
               View Projects
             </Button>
 
-            <Button variant="heroOutline" size="xl">
+            <Button variant="nav">
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>
@@ -125,6 +125,7 @@ export function Hero() {
                 src="/without-bg.png"
                 alt="Nurulla Hasan"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
                 className="object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
               />
