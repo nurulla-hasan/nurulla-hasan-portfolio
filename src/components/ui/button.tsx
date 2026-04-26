@@ -5,7 +5,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-md border border-transparent bg-clip-padding text-xs/relaxed font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding text-xs/relaxed font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -20,9 +20,9 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
 
-        hero: "border border-primary/20 bg-[linear-gradient(to_right,transparent_50%,var(--color-primary)_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top text-primary-foreground hover:text-primary rounded-full font-bold transition-all duration-500",
+        hero: "border border-primary/20 bg-[linear-gradient(to_right,transparent_50%,var(--color-primary)_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top text-background hover:text-primary font-bold transition-all duration-500",
 
-        nav: "border border-primary/20 bg-transparent text-primary hover:text-background rounded-full font-bold bg-[linear-gradient(to_right,var(--color-primary)_50%,transparent_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top transition-all duration-500",
+        nav: "border border-primary/20 bg-transparent text-primary hover:text-background font-bold bg-[linear-gradient(to_right,var(--color-primary)_50%,transparent_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top transition-all duration-500",
       },
      size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

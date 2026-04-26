@@ -47,7 +47,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-2 md:px-6 md:py-4 transition-all duration-500">
-      <div className={`max-w-7xl mx-auto flex items-center justify-between rounded-full px-5 py-2 md:px-8 md:py-3 transition-all duration-500 ${
+      <div className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-8 md:py-3 transition-all duration-500 ${
         scrolled 
           ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5" 
           : "bg-transparent border border-transparent shadow-none"
@@ -91,7 +91,7 @@ export function Navbar() {
           <ModeToggle />
           <Button 
             variant="hero" 
-            className="hidden md:flex transition-all rounded-full"
+            className="hidden md:flex transition-all"
           >
             <Send className="w-4 h-4 mr-2 fill-current" />
             Resume
@@ -100,14 +100,14 @@ export function Navbar() {
           {/* Mobile Menu Toggle */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden rounded-full hover:bg-primary/10">
+              <Button variant="ghost" size="icon" className="lg:hidden hover:bg-primary/10">
                 <Menu className="w-6 h-6 text-foreground" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" showCloseButton={false} className="bg-background/95 backdrop-blur-2xl border-l border-border/50 w-72 sm:w-80 p-0 overflow-hidden flex flex-col">
               {/* Background architectural detail */}
               <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-2xl" />
               
               <SheetHeader className="p-6 pb-4 text-left border-b border-border/50 relative z-10">
                 <SheetTitle className="text-lg font-bold uppercase tracking-widest flex items-center gap-2">
@@ -153,7 +153,7 @@ export function Navbar() {
                         
                         {/* Right side indicator */}
                         {isActive && (
-                          <div className="w-1 h-1 rounded-full bg-primary shadow-[0_0_8px_var(--color-primary)]" />
+                          <div className="w-1 h-1 bg-primary shadow-[0_0_8px_var(--color-primary)]" />
                         )}
                       </Link>
                     );
