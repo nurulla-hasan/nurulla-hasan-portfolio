@@ -78,7 +78,7 @@ export function Hero() {
 
           {/* Heading */}
           <div className="mt-6 md:mt-8 space-y-1">
-            <h1 className="text-[40px] font-bold leading-tight md:leading-22 text-foreground sm:text-[56px] md:text-[74px] xl:text-[86px]">
+            <h1 className="text-[25px] font-bold leading-tight md:leading-22 text-foreground sm:text-[30px] md:text-[40px] xl:text-[50px]">
               Hi, I&apos;m
             </h1>
             <h2 className="text-[40px] font-bold leading-tight md:leading-22 sm:text-[56px] md:text-[74px] xl:text-[86px]">
