@@ -24,26 +24,6 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const CONTACT_INFO = [
-  {
-    label: "Email",
-    value: "nurullahasan.dev@gmail.com",
-    href: "mailto:nurullahasan.dev@gmail.com",
-    icon: <Mail className="w-5 h-5 text-primary" />
-  },
-  {
-    label: "Phone",
-    value: "+8801750974716",
-    href: "tel:+8801750974716",
-    icon: <Phone className="w-5 h-5 text-primary" />
-  },
-  {
-    label: "Location",
-    value: "Dhaka, Bangladesh",
-    icon: <MapPin className="w-5 h-5 text-primary" />
-  }
-];
-
 export function Contact() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -72,89 +52,98 @@ export function Contact() {
           description="Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative ideas."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Contact Info */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
-              {CONTACT_INFO.map((info) => (
-                <div key={info.label} className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 flex items-center justify-center bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-all">
-                    {info.icon}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          {/* Main Form Box (Left) */}
+          <div className="lg:col-span-7">
+            <Card className="h-full border-border bg-muted/5">
+              <CardHeader className="p-6">
+                <CardTitle className="text-xl font-black uppercase tracking-tighter">Send a Message</CardTitle>
+              </CardHeader>
+              <CardContent className="p-6 pt-0">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Field data-invalid={!!errors.name}>
+                      <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Full Name</FieldLabel>
+                      <Input 
+                        placeholder="John Doe"
+                        {...form.register("name")}
+                        className="bg-background border-border rounded-none h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                      />
+                      <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
+                        {errors.name?.message}
+                      </FieldError>
+                    </Field>
+                    <Field data-invalid={!!errors.email}>
+                      <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Email Address</FieldLabel>
+                      <Input 
+                        type="email" 
+                        placeholder="john@example.com"
+                        {...form.register("email")}
+                        className="bg-background border-border rounded-none h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                      />
+                      <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
+                        {errors.email?.message}
+                      </FieldError>
+                    </Field>
                   </div>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">{info.label}</p>
-                    {info.href ? (
-                      <a href={info.href} className="text-xl font-bold text-foreground hover:text-primary transition-colors block">
-                        {info.value}
-                      </a>
-                    ) : (
-                      <p className="text-xl font-bold text-foreground">{info.value}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+                  <Field data-invalid={!!errors.message}>
+                    <FieldLabel className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1.5 block">Message Body</FieldLabel>
+                    <Textarea 
+                      placeholder="How can I help you?"
+                      {...form.register("message")}
+                      className="h-32 bg-background border-border rounded-none px-4 py-3 focus:ring-1 focus:ring-primary/30 resize-none text-base font-bold"
+                    />
+                    <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
+                      {errors.message?.message}
+                    </FieldError>
+                  </Field>
+                  <Button type="submit" variant="hero" className="w-full h-12 text-xs font-bold uppercase tracking-[0.2em]">
+                    <Send className="mr-2 w-4 h-4" />
+                    Send Transmission
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Right: Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-bold uppercase tracking-widest">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Field data-invalid={!!errors.name}>
-                    <FieldLabel>Full Name</FieldLabel>
-                    <Input 
-                      placeholder="John Doe"
-                      {...form.register("name")}
-                    />
-                    <FieldError>
-                      {errors.name?.message}
-                    </FieldError>
-                  </Field>
-                  <Field data-invalid={!!errors.email}>
-                    <FieldLabel>Email Address</FieldLabel>
-                    <Input 
-                      type="email" 
-                      placeholder="john@example.com"
-                      {...form.register("email")}
-                    />
-                    <FieldError>
-                      {errors.email?.message}
-                    </FieldError>
-                  </Field>
-                </div>
-                <Field data-invalid={!!errors.message}>
-                  <FieldLabel>Message</FieldLabel>
-                  <Textarea 
-                    placeholder="How can I help you?"
-                    {...form.register("message")}
-                    className="h-36"
-                  />
-                  <FieldError>
-                    {errors.message?.message}
-                  </FieldError>
-                </Field>
-                <Button type="submit" variant="hero" className="w-full">
-                  <Send className="mr-2 w-4 h-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
+          {/* Contact Details (Right Strip) */}
+          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+            {/* Email Card */}
+            <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+              <Mail className="w-6 h-6 text-primary mb-6" />
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Email</p>
+                <a href="mailto:nurullahasan.dev@gmail.com" className="text-lg font-black text-foreground hover:text-primary transition-colors block break-all leading-tight">
+                  nurullahasan.dev@gmail.com
+                </a>
+              </div>
+            </div>
 
-        {/* Footer Bottom */}
-        <div className="mt-24 py-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-muted-foreground font-medium text-sm">
-            © {new Date().getFullYear()} Nurulla Hasan. Built with Next.js & Tailwind CSS.
-          </p>
-          <div className="flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-muted-foreground">
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+            {/* Phone & Location Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                <Phone className="w-6 h-6 text-primary mb-6" />
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Phone</p>
+                  <a href="tel:+8801750974716" className="text-lg font-black text-foreground hover:text-primary transition-colors block leading-tight">
+                    +8801750974716
+                  </a>
+                </div>
+              </div>
+              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                <MapPin className="w-6 h-6 text-primary mb-6" />
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Location</p>
+                  <p className="text-lg font-black text-foreground leading-tight">Dhaka, BD</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Availability Badge Card */}
+            <div className="p-5 border border-primary/20 bg-primary/5 flex items-center gap-4">
+              <div className="h-2 w-2 bg-primary shadow-[0_0_8px_var(--color-primary)] animate-pulse" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Status: Open for opportunities</p>
+            </div>
           </div>
         </div>
       </div>
