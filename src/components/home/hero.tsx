@@ -14,7 +14,7 @@ const ROLES = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background pt-10 text-foreground">
+    <section className="relative min-h-screen overflow-hidden bg-background pt-16 md:pt-10 text-foreground">
       {/* Background glow using semantic classes */}
       <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -60,9 +60,9 @@ export function Hero() {
       <div className="absolute right-[10%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 rounded-full bg-primary/25 blur-[120px]" />
       <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 rounded-full bg-primary/15 blur-[90px]" />
 
-      <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-16 px-6 py-20 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-0">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 py-10 md:py-20 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-0">
         {/* Left */}
-        <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left pt-10 lg:pt-0">
+        <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge with Typewriter */}
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-4 py-2 backdrop-blur-md">
             <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
@@ -77,19 +77,19 @@ export function Hero() {
           </div>
 
           {/* Heading */}
-          <div className="mt-8 space-y-1">
-            <h1 className="text-[40px] font-bold leading-22 text-foreground sm:text-[56px] md:text-[74px] xl:text-[86px]">
+          <div className="mt-6 md:mt-8 space-y-1">
+            <h1 className="text-[40px] font-bold leading-tight md:leading-22 text-foreground sm:text-[56px] md:text-[74px] xl:text-[86px]">
               Hi, I&apos;m
             </h1>
-            <h2 className="text-[40px] font-bold leading-22 sm:text-[56px] md:text-[74px] xl:text-[86px]">
+            <h2 className="text-[40px] font-bold leading-tight md:leading-22 sm:text-[56px] md:text-[74px] xl:text-[86px]">
               <span className="text-foreground">Nurulla </span>
               <span className="text-primary">Hasan</span>
             </h2>
           </div>
 
           {/* Experience & Location Badges */}
-          <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3">
-            <div className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary tracking-wider uppercase">
+          <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-start lg:justify-start gap-3">
+            <div className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary tracking-wider uppercase neon-border">
               1+ Year Experience
             </div>
             <div className="px-4 py-1.5 rounded-full bg-muted/50 border border-border text-xs font-medium text-muted-foreground">
@@ -98,10 +98,10 @@ export function Hero() {
           </div>
 
           {/* Accent line */}
-          <div className="mt-8 h-1.5 w-16 rounded-full bg-primary shadow-[0_0_20px_var(--color-primary)] mx-auto lg:mx-0" />
+          <div className="mt-6 md:mt-8 h-1.5 w-16 rounded-full bg-primary shadow-[0_0_25px_var(--color-primary)] lg:mx-0" />
 
           {/* Description */}
-          <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
+          <p className="mt-6 md:mt-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
             I specialize in building API-driven web applications and 
             <span className="text-foreground font-semibold"> dashboard systems </span> 
             using React, Next.js, and TypeScript. Expert in 
@@ -110,7 +110,7 @@ export function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="mt-10 flex items-center justify-center gap-4 w-full sm:w-auto">
+          <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-start gap-4 w-full sm:w-auto">
             <Button variant="hero" >
               <Rocket className="mr-2 h-4 w-4" />
               View Projects

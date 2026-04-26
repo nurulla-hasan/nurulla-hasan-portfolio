@@ -117,25 +117,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer utilities {
-  .neon-glow {
-    text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
-  }
-  
-  .bg-grid-pattern {
-    background-image: radial-gradient(var(--border) 1px, transparent 1px);
-    background-size: 30px 30px;
-  }
-
-  .neon-border {
-    box-shadow: 0 0 15px color-mix(in srgb, var(--color-primary) 15%, transparent);
-  }
-
-  .mask-radial {
-    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
-  }
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
