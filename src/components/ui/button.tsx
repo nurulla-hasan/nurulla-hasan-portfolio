@@ -20,9 +20,9 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
 
-        hero: "border border-primary/20 bg-[linear-gradient(to_right,transparent_50%,var(--color-primary)_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top text-primary-foreground hover:text-primary rounded-full shadow-lg shadow-primary/30 hover:shadow-none font-bold transition-all duration-500",
+        hero: "border border-primary/20 bg-[linear-gradient(to_right,transparent_50%,var(--color-primary)_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top text-primary-foreground hover:text-primary rounded-full font-bold transition-all duration-500",
 
-        nav: "border border-primary/20 bg-transparent text-primary hover:text-foreground rounded-full font-bold bg-[linear-gradient(to_right,var(--color-primary)_50%,transparent_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top transition-all duration-500 hover:shadow-lg hover:shadow-primary/20",
+        nav: "border border-primary/20 bg-transparent text-primary hover:text-background rounded-full font-bold bg-[linear-gradient(to_right,var(--color-primary)_50%,transparent_50%)] bg-[length:200%_100%] bg-right-top hover:bg-left-top transition-all duration-500",
       },
      size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

@@ -14,7 +14,7 @@ const ROLES = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background pt-20 text-foreground">
+    <section className="relative min-h-screen overflow-hidden bg-background pt-10 text-foreground">
       {/* Background glow using semantic classes */}
       <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
