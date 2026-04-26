@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: "Frontend-Focused MERN Stack Developer",
 };
 
+import { Navbar } from "@/components/home/navbar";
 import { SocialSidebar } from "@/components/ui/social-sidebar";
 import SmoothScrollProvider from "@/components/ui/smooth-scroll";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScrollProvider>
+            <Navbar />
             {children}
             <SocialSidebar />
           </SmoothScrollProvider>

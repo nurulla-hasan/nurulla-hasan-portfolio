@@ -4,38 +4,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/ui/icons";
 
-const PROJECTS = [
-  {
-    title: "Wedding Marketplace & Vendor Platform",
-    description:
-      "A comprehensive platform featuring App Router route groups, shared UI abstractions, and vendor/user dashboard workflows. Includes smart filtering and infinite loading.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    title: "Admin & Management Dashboard",
-    description:
-      "Built reusable data-heavy dashboard patterns with sortable/searchable tables, shared modals, and management modules across multiple entities.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop",
-    tags: ["React", "TypeScript", "Redux Toolkit", "RTK Query"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    title: "Cookbook Recipe & Meal Planner",
-    description:
-      "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
-    image:
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop",
-    tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-];
+import { PROJECTS } from "@/lib/data";
 
 export function Projects() {
   return (
@@ -59,14 +28,16 @@ export function Projects() {
               applications built with modern tools.
             </p>
           </div>
-          <Button variant="nav" className="group">
-            View All Projects
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href="/projects">
+            <Button variant="nav" className="group">
+              View All Projects
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-12">
-          {PROJECTS.map((project, index) => (
+          {PROJECTS.slice(0, 3).map((project, index) => (
             <div
               key={project.title}
               className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
