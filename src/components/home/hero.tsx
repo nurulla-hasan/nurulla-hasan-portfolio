@@ -78,10 +78,10 @@ export function Hero() {
 
           {/* Heading */}
           <div className="mt-8 space-y-1">
-            <h1 className="text-[40px] font-bold leading-tight tracking-tighter text-foreground sm:text-[56px] md:text-[74px] xl:text-[86px]">
+            <h1 className="text-[40px] font-bold leading-22 text-foreground sm:text-[56px] md:text-[74px] xl:text-[86px]">
               Hi, I&apos;m
             </h1>
-            <h2 className="text-[40px] font-bold leading-tight tracking-tighter sm:text-[56px] md:text-[74px] xl:text-[86px]">
+            <h2 className="text-[40px] font-bold leading-22 sm:text-[56px] md:text-[74px] xl:text-[86px]">
               <span className="text-foreground">Nurulla </span>
               <span className="text-primary">Hasan</span>
             </h2>

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
-const josefinSans = Josefin_Sans({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-josefin",
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", josefinSans.variable)}
+      className={cn("h-full", "antialiased", lato.variable)}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
