@@ -3,10 +3,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Field, FieldLabel, FieldError } from "@/components/ui/field";
@@ -39,11 +37,6 @@ const CONTACT_INFO = [
   }
 ];
 
-const SOCIAL_LINKS = [
-  { name: "GitHub", href: "https://github.com/nurulla-hasan", icon: <GithubIcon className="w-5 h-5" /> },
-  { name: "LinkedIn", href: "https://linkedin.com/in/nurulla-hasan", icon: <LinkedinIcon className="w-5 h-5" /> }
-];
-
 export function Contact() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -64,19 +57,14 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 max-w-7xl mx-auto bg-background relative overflow-hidden">
+    <section id="contact" className="pt-24 max-w-7xl mx-auto bg-background relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute right-0 bottom-0 w-150 h-150 bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
       
       <div className="container mx-auto px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left: Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-primary" />
               Contact
@@ -108,26 +96,10 @@ export function Contact() {
                 </div>
               ))}
             </div>
-
-            <div className="flex items-center gap-4">
-              {SOCIAL_LINKS.map((social) => (
-                <Button key={social.name} variant="outline" size="icon" asChild className="rounded-xl group hover:border-primary hover:text-primary">
-                  <a href={social.href} target="_blank" rel="noopener noreferrer">
-                    {social.icon}
-                  </a>
-                </Button>
-              ))}
-            </div>
-          </motion.div>
+          </div>
 
           {/* Right: Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="p-8 md:p-10 rounded-3xl border border-border bg-muted/20 backdrop-blur-sm"
-          >
+          <div className="p-8 md:p-10 rounded-3xl border border-border bg-muted/20 backdrop-blur-sm">
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Field data-invalid={!!errors.name}>
@@ -135,7 +107,7 @@ export function Contact() {
                   <Input 
                     placeholder="John Doe"
                     {...form.register("name")}
-                    className="bg-background border border-border rounded-xl px-5 py-6 focus:ring-2 focus:ring-primary/50 transition-all h-auto"
+                    className="bg-background border border-border rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/50 transition-all h-12"
                   />
                   <FieldError className="text-xs text-destructive font-semibold ml-1">
                     {errors.name?.message}
@@ -147,7 +119,7 @@ export function Contact() {
                     type="email" 
                     placeholder="john@example.com"
                     {...form.register("email")}
-                    className="bg-background border border-border rounded-xl px-5 py-6 focus:ring-2 focus:ring-primary/50 transition-all h-auto"
+                    className="bg-background border border-border rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/50 transition-all h-12"
                   />
                   <FieldError className="text-xs text-destructive font-semibold ml-1">
                     {errors.email?.message}
@@ -157,10 +129,9 @@ export function Contact() {
               <Field data-invalid={!!errors.message}>
                 <FieldLabel className="text-sm font-bold uppercase tracking-widest text-foreground/70 ml-1">Message</FieldLabel>
                 <Textarea 
-                  rows={5}
                   placeholder="How can I help you?"
                   {...form.register("message")}
-                  className="bg-background border border-border rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                  className="bg-background border border-border rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary/50 transition-all resize-none h-36"
                 />
                 <FieldError className="text-xs text-destructive font-semibold ml-1">
                   {errors.message?.message}
@@ -171,11 +142,11 @@ export function Contact() {
                 Send Message
               </Button>
             </form>
-          </motion.div>
+          </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-24 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="mt-24 py-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-muted-foreground font-medium text-sm">
             © {new Date().getFullYear()} Nurulla Hasan. Built with Next.js & Tailwind CSS.
           </p>

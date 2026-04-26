@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/ui/icons";
@@ -70,12 +67,8 @@ export function Projects() {
 
         <div className="grid grid-cols-1 gap-12">
           {PROJECTS.map((project, index) => (
-            <motion.div
+            <div
               key={project.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
@@ -122,27 +115,19 @@ export function Projects() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href={project.liveUrl} target="_blank">
                     <Button variant="hero" size="sm" className="rounded-full">
                       Live Demo <ExternalLink />
                     </Button>
                   </Link>
-                  <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href={project.githubUrl} target="_blank">
                     <Button variant="nav" size="sm" className="rounded-full">
                       Source Code <GithubIcon />
                     </Button>
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

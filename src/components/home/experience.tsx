@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
 
 const EXPERIENCES = [
@@ -33,13 +30,9 @@ export function Experience() {
         </div>
 
         <div className="max-w-4xl">
-          {EXPERIENCES.map((exp, index) => (
-            <motion.div
+          {EXPERIENCES.map((exp) => (
+            <div
               key={exp.company}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="relative pl-8 md:pl-12 border-l border-border pb-12 last:pb-0"
             >
               {/* Timeline Dot */}
@@ -85,7 +78,7 @@ export function Experience() {
                 {/* Subtle Glow */}
                 <div className="absolute inset-0 rounded-3xl bg-primary/0 transition-colors group-hover:bg-primary/2 pointer-events-none" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

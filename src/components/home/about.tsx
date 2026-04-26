@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { GraduationCap, Award, Languages, Code } from "lucide-react";
 
 const EDUCATION = [
@@ -31,12 +28,7 @@ export function About() {
       <div className="container mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           {/* Left: Bio & Personal Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-primary" />
               Get to Know Me
@@ -84,17 +76,12 @@ export function About() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: Education & Training */}
           <div className="space-y-12">
             {/* Education */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <div>
               <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-primary" />
@@ -119,15 +106,10 @@ export function About() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Training */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <div>
               <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Award className="w-6 h-6 text-primary" />
@@ -150,7 +132,7 @@ export function About() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

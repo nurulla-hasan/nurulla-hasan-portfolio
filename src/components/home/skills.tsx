@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Cpu, Database, Layout, Zap } from "lucide-react";
 
 const SKILL_CATEGORIES = [
@@ -38,12 +35,7 @@ export function Skills() {
       
       <div className="container relative z-10 mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-primary" />
               Technical Prowess
@@ -55,17 +47,13 @@ export function Skills() {
               I specialize in the MERN stack and modern frontend technologies, 
               focusing on creating seamless digital products that solve real-world problems.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {SKILL_CATEGORIES.map((category, index) => (
-            <motion.div
+          {SKILL_CATEGORIES.map((category) => (
+            <div
               key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative p-8 rounded-3xl border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
             >
               {/* Glow effect on hover */}
@@ -97,7 +85,7 @@ export function Skills() {
               <div className="absolute top-0 right-0 p-4 opacity-0 transition-opacity group-hover:opacity-100">
                 <Zap className="w-5 h-5 text-primary animate-pulse" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
