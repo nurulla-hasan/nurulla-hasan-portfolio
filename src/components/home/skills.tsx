@@ -48,7 +48,7 @@ export function Skills() {
               <span className="w-8 h-px bg-primary" />
               Technical Prowess
             </h2>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground mb-6">
+            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-6">
               My Expert <span className="text-primary">Skillset</span>
             </h3>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">

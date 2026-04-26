@@ -27,7 +27,7 @@ export function Experience() {
             <span className="w-8 h-px bg-primary" />
             Career Path
           </h2>
-          <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground">
+          <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground">
             Professional <span className="text-primary">Experience</span>
           </h3>
         </div>

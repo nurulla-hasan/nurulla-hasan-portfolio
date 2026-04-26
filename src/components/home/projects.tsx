@@ -53,7 +53,7 @@ export function Projects() {
               <span className="w-8 h-px bg-primary" />
               Selected Work
             </h2>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-4">
               Featured <span className="text-primary">Projects</span>
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">

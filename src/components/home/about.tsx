@@ -41,7 +41,7 @@ export function About() {
               <span className="w-8 h-px bg-primary" />
               Get to Know Me
             </h2>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground mb-8">
+            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-8">
               About <span className="text-primary">Me</span>
             </h3>
             

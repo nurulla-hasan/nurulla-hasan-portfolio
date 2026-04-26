@@ -81,7 +81,7 @@ export function Contact() {
               <span className="w-8 h-px bg-primary" />
               Contact
             </h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <h3 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-8">
               Let&apos;s Build Something <span className="text-primary">Great</span> Together
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-12 max-w-lg">
