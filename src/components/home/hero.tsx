@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Rocket, Download } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Typewriter } from "@/components/ui/typewriter";
 
 const ROLES = [
   "Frontend-Focused MERN Developer",
@@ -14,15 +13,6 @@ const ROLES = [
 ];
 
 export function Hero() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % ROLES.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-20 text-foreground">
       {/* Background glow using semantic classes */}
@@ -73,25 +63,16 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         {/* Left */}
         <div className="flex max-w-170 flex-col items-start justify-center pt-8 lg:pt-0">
-          {/* Badge with Text Rotator */}
+          {/* Badge with Typewriter */}
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-4 py-2 backdrop-blur-md">
             <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_14px_var(--color-primary)]" />
             <div className="flex items-center text-sm font-medium tracking-wide text-foreground/85">
               <span>Frontend-Focused </span>
-              <div className="ml-1.5 h-5 overflow-hidden font-semibold text-primary">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={ROLES[index]}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="block"
-                  >
-                    {ROLES[index]}
-                  </motion.span>
-                </AnimatePresence>
-              </div>
+              <Typewriter 
+                texts={ROLES} 
+                className="ml-1.5 font-semibold text-primary"
+                delay={80}
+              />
             </div>
           </div>
 
