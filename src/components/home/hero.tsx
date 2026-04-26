@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Typewriter } from "@/components/ui/typewriter";
 
 const ROLES = [
-  "Frontend-Focused MERN Developer",
-  "Next.js & React Developer",
+  "MERN Stack Developer",
+  "Frontend Architecture Specialist",
+  "Dashboard Systems Expert",
   "Scalable UI Architect",
-  "Clean & Modern UI Builder",
 ];
 
 export function Hero() {
@@ -65,12 +65,12 @@ export function Hero() {
         <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left pt-10 lg:pt-0">
           {/* Badge with Typewriter */}
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/30 px-4 py-2 backdrop-blur-md">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_14px_var(--color-primary)]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
             <div className="flex items-center text-xs sm:text-sm font-medium tracking-wide text-foreground/85">
               <span>Frontend-Focused </span>
               <Typewriter 
                 texts={ROLES} 
-                className="ml-1.5 font-semibold text-primary"
+                className="ml-1.5 font-bold text-primary"
                 delay={80}
               />
             </div>
@@ -87,17 +87,26 @@ export function Hero() {
             </h2>
           </div>
 
+          {/* Experience & Location Badges */}
+          <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <div className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary tracking-wider uppercase">
+              1+ Year Experience
+            </div>
+            <div className="px-4 py-1.5 rounded-full bg-muted/50 border border-border text-xs font-medium text-muted-foreground">
+              Dhaka, Bangladesh
+            </div>
+          </div>
+
           {/* Accent line */}
-          <div className="mt-7 h-1 w-14 rounded-full bg-primary shadow-[0_0_18px_var(--color-primary)] mx-auto lg:mx-0" />
+          <div className="mt-8 h-1.5 w-16 rounded-full bg-primary shadow-[0_0_20px_var(--color-primary)] mx-auto lg:mx-0" />
 
           {/* Description */}
           <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
-            I build clean, scalable and impactful web applications
-            <br className="hidden md:block" /> using{" "}
-            <span className="font-medium text-primary">
-              React, Next.js, TypeScript
-            </span>{" "}
-            and modern technologies.
+            I specialize in building API-driven web applications and 
+            <span className="text-foreground font-semibold"> dashboard systems </span> 
+            using React, Next.js, and TypeScript. Expert in 
+            <span className="text-primary font-medium"> reusable architecture </span> 
+            and modern data patterns.
           </p>
 
           {/* Buttons */}
