@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nurulla-hasan.vercel.app/sitemap.xml

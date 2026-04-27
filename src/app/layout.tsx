@@ -11,8 +11,49 @@ const cagliostro = Cagliostro({
 });
 
 export const metadata: Metadata = {
-  title: "Nurulla Hasan | Portfolio",
-  description: "Frontend-Focused MERN Stack Developer",
+  title: {
+    default: "Nurulla Hasan | Portfolio",
+    template: "%s | Nurulla Hasan",
+  },
+  description: "Frontend-Focused MERN Stack Developer specializing in building modern web applications with React, Next.js, and Node.js.",
+  keywords: [
+    "Nurulla Hasan",
+    "Frontend Developer",
+    "MERN Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Portfolio",
+    "Web Developer",
+  ],
+  authors: [{ name: "Nurulla Hasan" }],
+  creator: "Nurulla Hasan",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://nurulla-hasan-portfolio-pink.vercel.app",
+    siteName: "Nurulla Hasan Portfolio",
+    title: "Nurulla Hasan | Frontend Developer",
+    description: "Frontend-Focused MERN Stack Developer building modern web applications.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nurulla Hasan Portfolio",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 import { Navbar } from "@/components/home/navbar";
