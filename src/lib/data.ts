@@ -27,7 +27,7 @@ export const PROJECTS = [
     description:
       "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
     image:
-      "/public/assets/jaykou.png",
+      "/assets/jaykou.png",
     tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
     liveUrl: "https://koumanisdietapp.com",
     githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
