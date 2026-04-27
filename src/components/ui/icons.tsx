@@ -1,4 +1,5 @@
 import { LucideProps } from "lucide-react";
+import React from "react";
 
 export const GithubIcon = (props: LucideProps) => (
   <svg
@@ -73,3 +74,45 @@ export const InstagramIcon = (props: LucideProps) => (
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
+
+type NHLogoProps = React.SVGProps<SVGSVGElement>;
+
+export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
+  const topClipId = React.useId();
+  const bottomClipId = React.useId();
+
+  return (
+    <svg
+      viewBox="0 0 120 100"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      className={className}
+      {...props}
+    >
+      <defs>
+        {/* 20-degree sharp diagonal split */}
+        <clipPath id={topClipId}>
+          <path d="M0 0H120V28L0 72V0Z" />
+        </clipPath>
+        <clipPath id={bottomClipId}>
+          <path d="M0 72L120 28V100H0V72Z" />
+        </clipPath>
+      </defs>
+
+      <g clipPath={`url(#${topClipId})`} fill="currentColor">
+        {/* N - increased height */}
+        <path d="M14 20H26L42 58V20H54V80H42L26 42V80H14V20Z" />
+        {/* H - increased height */}
+        <path d="M66 20H78V44H90V20H102V80H90V56H78V80H66V20Z" />
+      </g>
+
+      {/* Bottom part - Shifted for "broken" effect */}
+      <g clipPath={`url(#${bottomClipId})`} fill="var(--primary)" transform="translate(4, 0)">
+        {/* N - increased height */}
+        <path d="M14 20H26L42 58V20H54V80H42L26 42V80H14V20Z" />
+        {/* H - increased height */}
+        <path d="M66 20H78V44H90V20H102V80H90V56H78V80H66V20Z" />
+      </g>
+    </svg>
+  );
+};

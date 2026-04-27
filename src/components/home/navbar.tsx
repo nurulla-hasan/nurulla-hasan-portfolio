@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Send, Menu } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import {
@@ -15,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "@/components/ui/icons";
+import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon, NHLogo } from "@/components/ui/icons";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -55,13 +54,8 @@ export function Navbar() {
       }`}>
         {/* Logo */}
         <Link href="/" className="group transition-all duration-300 shrink-0">
-          <Image 
-            src="/logo.png" 
-            alt="NH Logo" 
-            width={120} 
-            height={40} 
-            className="h-7 md:h-9 w-auto object-contain transition-all group-hover:scale-105 dark:invert-0 invert"
-            priority
+          <NHLogo 
+            className="text-foreground h-8 md:h-10 w-auto transition-all group-hover:scale-110"
           />
         </Link>
 
