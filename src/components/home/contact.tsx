@@ -59,7 +59,7 @@ export function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Main Form Box (Left) */}
           <div className="lg:col-span-7">
-            <Card className="h-full border-border bg-muted/5">
+            <Card className="h-full border-border bg-muted/5 premium-shadow">
               <CardHeader className="p-6">
                 <CardTitle className="text-xl font-black uppercase tracking-tighter">Send a Message</CardTitle>
               </CardHeader>
@@ -113,7 +113,7 @@ export function Contact() {
           {/* Contact Details (Right Strip) */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-4">
             {/* Email Card */}
-            <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+            <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
               <Mail className="w-6 h-6 text-primary mb-6" />
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Email</p>
@@ -125,7 +125,7 @@ export function Contact() {
 
             {/* Phone & Location Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
                 <Phone className="w-6 h-6 text-primary mb-6" />
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Phone</p>
@@ -134,7 +134,7 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group">
+              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
                 <MapPin className="w-6 h-6 text-primary mb-6" />
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Location</p>

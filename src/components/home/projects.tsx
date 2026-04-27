@@ -14,7 +14,7 @@ export function Projects() {
       className="relative py-24 bg-background overflow-hidden"
     >
       {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
@@ -35,7 +35,7 @@ export function Projects() {
             >
               {/* Project Image Container */}
               <div
-                className={`relative aspect-video overflow-hidden border border-border bg-muted/20 ${
+                className={`relative aspect-video overflow-hidden border border-border bg-muted/20 premium-hover ${
                   index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               >
@@ -43,7 +43,7 @@ export function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -59,7 +59,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1  border border-primary/10"
+                      className="premium-hover text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1  border border-primary/10"
                     >
                       {tag}
                     </span>

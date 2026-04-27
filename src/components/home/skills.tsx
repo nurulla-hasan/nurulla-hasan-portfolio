@@ -79,7 +79,7 @@ export function Skills() {
           {SKILL_CATEGORIES.map((category) => (
             <div
               key={category.title}
-              className="group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+              className="premium-hover group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/2" />
@@ -98,7 +98,7 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}
-                      className="px-3 py-1 bg-primary/5 border border-primary/10 text-muted-foreground text-sm transition-colors hover:border-primary/30 hover:text-primary flex items-center gap-1.5"
+                      className="premium-hover px-3 py-1 bg-primary/5 border border-primary/10 text-muted-foreground text-sm transition-colors hover:border-primary/30 hover:text-primary flex items-center gap-1.5"
                     >
                       {skill.icon}
                       {skill.name}

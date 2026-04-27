@@ -150,3 +150,14 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-primary/40;
 }
+
+@layer utilities {
+  .premium-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary hover:-translate-y-1;
+  }
+}
+@layer utilities {
+  .premium-shadow {
+    @apply transition-all duration-300 shadow-lg shadow-primary;
+  }
+}

@@ -66,7 +66,7 @@ export function About() {
                 {LANGUAGES.map((lang) => (
                   <div 
                     key={lang.name}
-                    className="flex items-center gap-3 px-6 py-3 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30"
+                    className="premium-hover flex items-center gap-3 px-6 py-3 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30"
                   >
                     {lang.icon}
                     <div>
@@ -93,7 +93,7 @@ export function About() {
                 {EDUCATION.map((edu) => (
                   <div 
                     key={edu.institution}
-                    className="group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
@@ -121,7 +121,7 @@ export function About() {
                 {TRAINING.map((train) => (
                   <div 
                     key={train.platform}
-                    className="group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                       {train.platform}
