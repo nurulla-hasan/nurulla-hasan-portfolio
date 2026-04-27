@@ -46,8 +46,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-2 md:px-6 md:py-4 transition-all duration-500">
-      <div className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-8 md:py-3 transition-all duration-500 ${
+    <nav className="fixed top-0 left-0 right-0 z-50 px-0 py-2 md:px-6 md:py-4 transition-all duration-500">
+      <div className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-10 md:py-3 transition-all duration-500 ${
         scrolled 
           ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5" 
           : "bg-transparent border border-transparent shadow-none"
@@ -81,7 +81,9 @@ export function Navbar() {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-2 md:gap-5">
-          <ModeToggle />
+          <div className="hidden lg:block">
+            <ModeToggle variant="nav"/>
+          </div>
           <Button 
             variant="hero" 
             className="hidden md:flex transition-all"
@@ -93,7 +95,7 @@ export function Navbar() {
           {/* Mobile Menu Toggle */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden hover:bg-primary/10">
+              <Button variant="nav" size="icon-sm" className="lg:hidden">
                 <Menu className="w-6 h-6 text-foreground" />
               </Button>
             </SheetTrigger>
@@ -102,13 +104,11 @@ export function Navbar() {
               <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-2xl" />
               
-              <SheetHeader className="p-6 pb-4 text-left border-b border-border/50 relative z-10">
+              <SheetHeader className="p-6 pb-4 text-left border-b border-border/50 relative z-10 flex flex-row items-center justify-between">
                 <SheetTitle className="text-lg font-bold uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-[10px] font-black">NH</span>
-                  </div>
-                  Nurulla <span className="text-primary">Hasan</span>
+                  <NHLogo className="w-7 h-7" />
                 </SheetTitle>
+                <ModeToggle variant="nav" size="icon-sm" />
                 <SheetDescription className="sr-only">
                   Navigation Menu
                 </SheetDescription>
