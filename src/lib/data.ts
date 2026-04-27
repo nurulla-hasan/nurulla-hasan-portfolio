@@ -5,10 +5,10 @@ export const PROJECTS = [
     description:
       "A comprehensive platform featuring App Router route groups, shared UI abstractions, and vendor/user dashboard workflows. Includes smart filtering and infinite loading.",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
+      "/assets/elevetor.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
+    liveUrl: "https://elevator-website-six.vercel.app/",
+    githubUrl: "https://github.com/nurulla-hasan/elevator_website",
   },
   {
     id: "admin-dashboard",
@@ -16,10 +16,10 @@ export const PROJECTS = [
     description:
       "Built reusable data-heavy dashboard patterns with sortable/searchable tables, shared modals, and management modules across multiple entities.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop",
+      "/assets/vitakinetic.png",
     tags: ["React", "TypeScript", "Redux Toolkit", "RTK Query"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
+    liveUrl: "https://mikefiremerritt-dashboard.vercel.app/auth/login",
+    githubUrl: "https://github.com/nurulla-hasan/mikefiremerritt_dashboard",
   },
   {
     id: "cookbook-recipe",
@@ -27,10 +27,10 @@ export const PROJECTS = [
     description:
       "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
     image:
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop",
+      "/public/assets/jaykou.png",
     tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
+    liveUrl: "https://koumanisdietapp.com",
+    githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
   },
   {
     id: "saas-landing",
