@@ -1,32 +1,63 @@
 "use client";
 
-import { Cpu, Database, Layout, Zap } from "lucide-react";
+import { Cpu, Layout, Zap, CheckCircle2 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
+import { 
+  FrontendIcon, StateIcon, ArchitectureIcon, FocusIcon,
+  ReactIcon, NextjsIcon, TSIcon, JSIcon, TailwindIcon, CodeIcon 
+} from "@/components/ui/icons";
 
 const SKILL_CATEGORIES = [
   {
     title: "Frontend Mastery",
     description: "Expertise in building high-performance, accessible, and scalable user interfaces.",
-    icon: <Layout className="w-6 h-6 text-primary" />,
-    skills: ["React.js", "Next.js (App Router)", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "Shadcn UI"]
+    icon: <FrontendIcon className="w-8 h-8 text-primary" />,
+    skills: [
+      { name: "React.js", icon: <ReactIcon className="w-8 h-8" /> },
+      { name: "Next.js (App Router)", icon: <NextjsIcon className="w-8 h-8" /> },
+      { name: "TypeScript", icon: <TSIcon className="w-8 h-8" /> },
+      { name: "JavaScript (ES6+)", icon: <JSIcon className="w-8 h-8" /> },
+      { name: "Tailwind CSS", icon: <TailwindIcon className="w-8 h-8" /> },
+      { name: "Shadcn UI", icon: <CodeIcon className="w-8 h-8" /> }
+    ]
   },
   {
     title: "State & Data Management",
     description: "Robust data-fetching patterns and complex state synchronization.",
-    icon: <Database className="w-6 h-6 text-primary" />,
-    skills: ["Redux Toolkit", "RTK Query", "TanStack Query", "React Hook Form", "Zod"]
+    icon: <StateIcon className="w-8 h-8 text-primary" />,
+    skills: [
+      { name: "Redux Toolkit", icon: <StateIcon className="w-8 h-8" /> },
+      { name: "RTK Query", icon: <Zap className="w-8 h-8" /> },
+      { name: "TanStack Query", icon: <Cpu className="w-8 h-8" /> },
+      { name: "React Hook Form", icon: <Layout className="w-8 h-8" /> },
+      { name: "Zod", icon: <CheckCircle2 className="w-8 h-8" /> }
+    ]
   },
   {
     title: "Modern Tools & Architecture",
     description: "Delivering high-quality code through reusable patterns and modern deployment.",
-    icon: <Cpu className="w-6 h-6 text-primary" />,
-    skills: ["Git & GitHub", "Vercel", "Custom Hooks", "Component Architecture", "API Integration", "Rapid Prototyping"]
+    icon: <ArchitectureIcon className="w-8 h-8 text-primary" />,
+    skills: [
+      { name: "Git & GitHub", icon: <CodeIcon className="w-8 h-8" /> },
+      { name: "Vercel", icon: <NextjsIcon className="w-8 h-8" /> },
+      { name: "Custom Hooks", icon: <ReactIcon className="w-8 h-8" /> },
+      { name: "Component Architecture", icon: <ArchitectureIcon className="w-8 h-8" /> },
+      { name: "API Integration", icon: <Cpu className="w-8 h-8" /> },
+      { name: "Rapid Prototyping", icon: <Zap className="w-8 h-8" /> }
+    ]
   },
   {
     title: "Professional Focus",
     description: "Dedicated to rapid prototyping and clean, maintainable frontend systems.",
-    icon: <Zap className="w-6 h-6 text-primary" />,
-    skills: ["MERN Stack", "Dashboard Systems", "Scalable UI", "Clean Code", "Infinite Loading", "URL State"]
+    icon: <FocusIcon className="w-8 h-8 text-primary" />,
+    skills: [
+      { name: "MERN Stack", icon: <CodeIcon className="w-8 h-8" /> },
+      { name: "Dashboard Systems", icon: <Layout className="w-8 h-8" /> },
+      { name: "Scalable UI", icon: <ArchitectureIcon className="w-8 h-8" /> },
+      { name: "Clean Code", icon: <CheckCircle2 className="w-8 h-8" /> },
+      { name: "Infinite Loading", icon: <Zap className="w-8 h-8" /> },
+      { name: "URL State", icon: <StateIcon className="w-8 h-8" /> }
+    ]
   }
 ];
 
@@ -52,7 +83,7 @@ export function Skills() {
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/2" />
-              
+               
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
                   {category.icon}
@@ -65,11 +96,12 @@ export function Skills() {
                 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <span 
-                      key={skill}
-                      className="px-4 py-1.5 bg-muted/50 border border-border text-sm font-medium text-foreground/80 transition-all hover:border-primary/50 hover:text-primary hover:bg-primary/5"
+                    <span
+                      key={skill.name}
+                      className="px-3 py-1 bg-primary/5 border border-primary/10 text-muted-foreground text-sm transition-colors hover:border-primary/30 hover:text-primary flex items-center gap-1.5"
                     >
-                      {skill}
+                      {skill.icon}
+                      {skill.name}
                     </span>
                   ))}
                 </div>
