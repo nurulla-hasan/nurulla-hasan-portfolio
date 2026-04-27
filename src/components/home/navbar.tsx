@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Send, Menu } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import {
@@ -53,17 +54,15 @@ export function Navbar() {
           : "bg-transparent border border-transparent shadow-none"
       }`}>
         {/* Logo */}
-        <Link href="/" className="group relative flex items-center gap-1.5 transition-all duration-300 shrink-0">
-          <span className="text-primary text-xl md:text-2xl font-black tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">
-            &lt;
-          </span>
-          <div className="flex items-center text-2xl md:text-3xl font-bold transition-all group-hover:scale-105" style={{ fontFamily: 'var(--font-cagliostro)' }}>
-            <span className="text-foreground transition-colors">N</span>
-            <span className="text-primary -ml-1 transition-colors">H</span>
-          </div>
-          <span className="text-primary text-xl md:text-2xl font-black tracking-tighter opacity-80 group-hover:opacity-100 transition-opacity">
-            /&gt;
-          </span>
+        <Link href="/" className="group transition-all duration-300 shrink-0">
+          <Image 
+            src="/logo.png" 
+            alt="NH Logo" 
+            width={120} 
+            height={40} 
+            className="h-7 md:h-9 w-auto object-contain transition-all group-hover:scale-105"
+            priority
+          />
         </Link>
 
         {/* Navigation Links (Desktop) */}

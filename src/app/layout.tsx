@@ -11,11 +11,13 @@ const cagliostro = Cagliostro({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nurulla-hasan-portfolio-pink.vercel.app"),
   title: {
     default: "Nurulla Hasan | Portfolio",
     template: "%s | Nurulla Hasan",
   },
-  description: "Frontend-Focused MERN Stack Developer specializing in building modern web applications with React, Next.js, and Node.js.",
+  description:
+    "Frontend-Focused MERN Stack Developer specializing in building modern web applications with React, Next.js, and Node.js.",
   keywords: [
     "Nurulla Hasan",
     "Frontend Developer",
@@ -24,16 +26,27 @@ export const metadata: Metadata = {
     "Next.js Developer",
     "Portfolio",
     "Web Developer",
+    "Software Engineer",
   ],
   authors: [{ name: "Nurulla Hasan" }],
   creator: "Nurulla Hasan",
+  publisher: "Nurulla Hasan",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://nurulla-hasan-portfolio-pink.vercel.app",
     siteName: "Nurulla Hasan Portfolio",
-    title: "Nurulla Hasan | Frontend Developer",
-    description: "Frontend-Focused MERN Stack Developer building modern web applications.",
+    title: "Nurulla Hasan | Portfolio",
+    description:
+      "Frontend-Focused MERN Stack Developer specializing in building modern web applications.",
     images: [
       {
         url: "/og-image.png",
@@ -42,6 +55,13 @@ export const metadata: Metadata = {
         alt: "Nurulla Hasan Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nurulla Hasan | Portfolio",
+    description:
+      "Frontend-Focused MERN Stack Developer specializing in building modern web applications.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -53,6 +73,11 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png", // Ensure this file exists or standard Next.js icons are used
   },
 };
 
