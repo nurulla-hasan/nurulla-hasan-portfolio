@@ -60,7 +60,7 @@ export function Navbar() {
             alt="NH Logo" 
             width={120} 
             height={40} 
-            className="h-7 md:h-9 w-auto object-contain transition-all group-hover:scale-105"
+            className="h-7 md:h-9 w-auto object-contain transition-all group-hover:scale-105 dark:invert-0 invert"
             priority
           />
         </Link>
