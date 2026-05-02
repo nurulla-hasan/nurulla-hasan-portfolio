@@ -1,11 +1,36 @@
 export const PROJECTS = [
   {
+    id: "mentorip",
+    title: "MentorIP — Global IP Law Firm",
+    description:
+      "A premium, high-performance digital platform for an international Intellectual Property law firm. Features advanced interactive layouts, smooth scroll-triggered animations, and optimized accessibility for global legal services.",
+    image: "/assets/mentorip.png",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "Framer Motion",
+      "Tailwind CSS v4",
+      "TypeScript",
+    ],
+    liveUrl: "https://mentorip.com",
+    githubUrl: "https://github.com/nurulla-hasan/mentorip_website",
+  },
+  {
+    id: "cookbook-recipe",
+    title: "Cookbook Recipe & Meal Planner",
+    description:
+      "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
+    image: "/assets/jaykou.png",
+    tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
+    liveUrl: "https://koumanisdietapp.com",
+    githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
+  },
+  {
     id: "wedding-marketplace",
     title: "Wedding Marketplace & Vendor Platform",
     description:
       "A comprehensive platform featuring App Router route groups, shared UI abstractions, and vendor/user dashboard workflows. Includes smart filtering and infinite loading.",
-    image:
-      "/assets/elevetor.png",
+    image: "/assets/elevetor.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     liveUrl: "https://elevator-website-six.vercel.app/",
     githubUrl: "https://github.com/nurulla-hasan/elevator_website",
@@ -15,33 +40,10 @@ export const PROJECTS = [
     title: "Admin & Management Dashboard",
     description:
       "Built reusable data-heavy dashboard patterns with sortable/searchable tables, shared modals, and management modules across multiple entities.",
-    image:
-      "/assets/vitakinetic.png",
+    image: "/assets/vitakinetic.png",
     tags: ["React", "TypeScript", "Redux Toolkit", "RTK Query"],
     liveUrl: "https://mikefiremerritt-dashboard.vercel.app/auth/login",
     githubUrl: "https://github.com/nurulla-hasan/mikefiremerritt_dashboard",
-  },
-  {
-    id: "cookbook-recipe",
-    title: "Cookbook Recipe & Meal Planner",
-    description:
-      "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
-    image:
-      "/assets/jaykou.png",
-    tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
-    liveUrl: "https://koumanisdietapp.com",
-    githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
-  },
-  {
-    id: "saas-landing",
-    title: "SaaS Marketing Website",
-    description:
-      "High-performance landing page with complex layouts, scroll-triggered animations, and optimized asset delivery for maximum conversion.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026&auto=format&fit=crop",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
   },
   {
     id: "ecommerce-store",

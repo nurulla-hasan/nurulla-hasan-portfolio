@@ -35,7 +35,7 @@ export function Projects() {
             >
               {/* Project Image Container */}
               <div
-                className={`relative aspect-video overflow-hidden border border-border bg-muted/20 premium-hover ${
+                className={`relative aspect-video overflow-hidden premium-hover ${
                   index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               >
@@ -43,7 +43,7 @@ export function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

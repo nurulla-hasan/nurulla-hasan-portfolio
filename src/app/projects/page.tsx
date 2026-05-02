@@ -46,7 +46,7 @@ export default function ProjectsPage() {
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
-              className="group flex flex-col rounded-3xl border border-border bg-muted/20 overflow-hidden hover:border-primary/30 transition-all duration-300"
+              className="group flex flex-col rounded-3xl border bg-muted/20 overflow-hidden hover:border-primary/30 transition-all duration-300 premium-hover"
             >
               {/* Image */}
               <div className="relative aspect-video overflow-hidden">
@@ -54,7 +54,7 @@ export default function ProjectsPage() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
