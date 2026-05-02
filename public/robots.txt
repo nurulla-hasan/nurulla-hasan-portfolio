@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nurulla-hasan.vercel.app/sitemap.xml
+Sitemap: https://nurulla-hasan-portfolio-pink.vercel.app/sitemap.xml
