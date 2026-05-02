@@ -84,19 +84,18 @@ export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
 
   return (
     <svg
-      viewBox="0 0 120 100"
+      viewBox="14 20 88 60"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       className={className}
       {...props}
     >
       <defs>
-        {/* 20-degree sharp diagonal split */}
         <clipPath id={topClipId}>
-          <path d="M0 0H120V28L0 72V0Z" />
+          <path d="M14 20H102V40L14 65V20Z" />
         </clipPath>
         <clipPath id={bottomClipId}>
-          <path d="M0 72L120 28V100H0V72Z" />
+          <path d="M14 65L102 40V80H14V65Z" />
         </clipPath>
       </defs>
 

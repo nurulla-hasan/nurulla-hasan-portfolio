@@ -113,11 +113,13 @@ export function Contact() {
           {/* Contact Details (Right Strip) */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-4">
             {/* Email Card */}
-            <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
-              <Mail className="w-6 h-6 text-primary mb-6" />
-              <div>
+            <div className="p-5 border border-border bg-muted/10 flex items-center gap-5 hover:border-primary/50 transition-all group premium-hover">
+              <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <div className="min-w-0">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Email</p>
-                <a href="mailto:nurullahasan.dev@gmail.com" className="text-lg font-black text-foreground hover:text-primary transition-colors block break-all leading-tight">
+                <a href="mailto:nurullahasan.dev@gmail.com" className="text-sm font-black text-foreground hover:text-primary transition-colors block truncate leading-tight">
                   nurullahasan.dev@gmail.com
                 </a>
               </div>
@@ -125,28 +127,32 @@ export function Contact() {
 
             {/* Phone & Location Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
-                <Phone className="w-6 h-6 text-primary mb-6" />
+              <div className="p-5 border border-border bg-muted/10 flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
+                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Phone</p>
-                  <a href="tel:+8801750974716" className="text-lg font-black text-foreground hover:text-primary transition-colors block leading-tight">
+                  <a href="tel:+8801750974716" className="text-sm font-black text-foreground hover:text-primary transition-colors block leading-tight">
                     +8801750974716
                   </a>
                 </div>
               </div>
-              <div className="p-5 border border-border bg-muted/10 flex flex-col justify-between hover:border-primary/50 transition-all group premium-hover">
-                <MapPin className="w-6 h-6 text-primary mb-6" />
+              <div className="p-5 border border-border bg-muted/10 flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
+                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Location</p>
-                  <p className="text-lg font-black text-foreground leading-tight">Dhaka, BD</p>
+                  <p className="text-sm font-black text-foreground leading-tight">Dhaka, Bangladesh</p>
                 </div>
               </div>
             </div>
 
             {/* Availability Badge Card */}
             <div className="p-5 border border-primary/20 bg-primary/5 flex items-center gap-4">
-              <div className="h-2 w-2 bg-primary shadow-[0_0_8px_var(--color-primary)] animate-pulse" />
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Status: Open for opportunities</p>
+              <div className="h-2.5 w-2.5 bg-primary shadow-[0_0_8px_var(--color-primary)] animate-pulse shrink-0" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Status: Open for Opportunities</p>
             </div>
           </div>
         </div>

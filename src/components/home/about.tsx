@@ -1,6 +1,12 @@
 import { GraduationCap, Award, Languages, Code } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 
+const STATS = [
+  { value: "1+", label: "Year Experience" },
+  { value: "40+", label: "Projects Built" },
+  { value: "12+", label: "Happy Clients" },
+];
+
 const EDUCATION = [
   {
     institution: "Dinajpur Polytechnic Institute",
@@ -26,7 +32,7 @@ const LANGUAGES = [
 export function About() {
   return (
     <section id="about" className="relative py-24 bg-background overflow-hidden">
-      {/* Background Decorative Glow - Positioned to highlight the Bio content */}
+      {/* Background Decorative Glow */}
       <div className="absolute top-[10%] left-[5%] w-100 h-100 bg-primary/15 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
@@ -36,29 +42,40 @@ export function About() {
           titleAccent="Me"
         />
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
-          {/* Left: Bio & Personal Info */}
+          {/* Left: Bio & Stats */}
           <div>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-xl">
+            <div className="space-y-4 text-muted-foreground text-base leading-relaxed max-w-xl">
               <p>
                 I am a passionate <span className="text-foreground font-semibold">Frontend-focused MERN Stack Developer</span> with 
                 a deep love for building clean, scalable, and impactful web applications.
               </p>
               <p>
-                With over a year of experience in the industry, I have honed my skills in 
+                With over a year of experience, I have honed my skills in 
                 <span className="text-primary font-medium"> React, Next.js, and TypeScript</span>. 
-                I take pride in my ability to bridge the gap between complex backend logic and 
-                intuitive, aesthetic user interfaces.
+                I bridge the gap between complex backend logic and intuitive, aesthetic user interfaces.
               </p>
               <p>
-                My approach to development is centered around <span className="text-foreground font-semibold">reusable architecture</span> and 
-                clean code, ensuring that every product I build is not only powerful but also 
-                maintainable and developer-friendly.
+                My approach is centered around <span className="text-foreground font-semibold">reusable architecture</span> and 
+                clean code — ensuring every product I build is powerful, maintainable, and developer-friendly.
               </p>
             </div>
 
+            {/* Stats Row */}
+            <div className="mt-8 grid grid-cols-3 gap-4">
+              {STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="group p-4 border border-border bg-muted/20 hover:border-primary/40 hover:bg-muted/30 transition-all text-center"
+                >
+                  <p className="text-3xl font-black text-primary leading-none mb-1">{stat.value}</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+
             {/* Languages */}
-            <div className="mt-12">
-              <h4 className="text-foreground font-bold text-xl mb-6 flex items-center gap-2">
+            <div className="mt-8">
+              <h4 className="text-foreground font-bold text-xl mb-5 flex items-center gap-2">
                 <Code className="w-5 h-5 text-primary" />
                 Languages I Speak
               </h4>
@@ -80,26 +97,26 @@ export function About() {
           </div>
 
           {/* Right: Education & Training */}
-          <div className="space-y-12">
+          <div className="space-y-10">
             {/* Education */}
             <div>
-              <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
+              <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
                 <div className="w-10 h-10 bg-primary/10 flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 Education
               </h4>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {EDUCATION.map((edu) => (
                   <div 
                     key={edu.institution}
-                    className="premium-shadow group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-6 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <div className="flex justify-between items-start mb-2">
-                      <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                         {edu.degree}
                       </h5>
-                      <span className="text-sm font-medium text-primary border border-primary/20 px-3 py-1">
+                      <span className="text-sm font-medium text-primary border border-primary/20 px-3 py-1 shrink-0 ml-3">
                         {edu.duration}
                       </span>
                     </div>
@@ -111,23 +128,23 @@ export function About() {
 
             {/* Training */}
             <div>
-              <h4 className="text-foreground font-bold text-2xl mb-8 flex items-center gap-3">
+              <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
                 <div className="w-10 h-10 bg-primary/10 flex items-center justify-center">
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 Additional Training
               </h4>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {TRAINING.map((train) => (
                   <div 
                     key={train.platform}
-                    className="premium-shadow group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-6 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
-                    <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                    <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                       {train.platform}
                     </h5>
                     <p className="text-muted-foreground font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary animate-pulse" />
+                      <span className="w-2 h-2 bg-primary animate-pulse shrink-0" />
                       {train.status}
                     </p>
                   </div>

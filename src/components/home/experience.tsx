@@ -12,13 +12,14 @@ const EXPERIENCES = [
       "Built reusable frontend abstractions including custom hooks, data tables, modal systems, and shared layout components to standardize UI patterns.",
       "Developed scalable filtering and data-loading solutions with URL-synced search state, debounced updates, and infinite-loading patterns.",
       "Implemented advanced features such as authenticated flows, protected routing, rich-text editing, and backend-integrated validated forms."
-    ]
+    ],
+    stack: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit", "RTK Query", "React Hook Form", "Zod"]
   }
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-24 bg-background overflow-hidden">
+    <section id="experience" className="relative py-20 bg-background overflow-hidden">
       {/* Background Decorative Glow - Positioned to follow the timeline flow */}
       <div className="absolute top-[20%] left-[10%] w-120 h-120 bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
       
@@ -34,7 +35,7 @@ export function Experience() {
           {EXPERIENCES.map((exp) => (
             <div
               key={exp.company}
-              className="relative pl-8 md:pl-12 border-l border-border pb-12 last:pb-0"
+              className="relative pl-8 md:pl-12 border-l border-border pb-8 last:pb-0"
             >
               {/* Timeline Dot */}
               <div className="absolute -left-2.25 top-0 w-4.5 h-4.5 bg-background border-4 border-primary shadow-[0_0_10px_rgba(var(--color-primary),0.5)]" />
@@ -73,6 +74,18 @@ export function Experience() {
                       <p className="text-foreground/80 text-sm leading-relaxed">{achievement}</p>
                     </div>
                   ))}
+                </div>
+
+                {/* Tech Stack Tags */}
+                <div className="mt-6 pt-6 border-t border-border/50">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mb-3">Tech Stack</p>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.stack.map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-primary/5 border border-primary/15 text-xs font-bold text-primary/80 uppercase tracking-widest">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

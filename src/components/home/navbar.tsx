@@ -52,17 +52,17 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-0 py-2 md:px-6 md:py-4 transition-all duration-500">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-0 md:px-6 transition-all duration-500">
       <div
         className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-10 md:py-3 transition-all duration-500 ${
           scrolled
-            ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5"
+            ? "bg-background/60 backdrop-blur-xl border-x border-b md:border border-border/50 shadow-2xl shadow-primary/5 md:rounded-b-2xl lg:rounded-b-3xl"
             : "bg-transparent border border-transparent shadow-none"
         }`}
       >
         {/* Logo */}
         <Link href="/" className="group transition-all duration-300 shrink-0">
-          <NHLogo className="text-foreground h-8 md:h-10 w-auto transition-all group-hover:scale-110" />
+          <NHLogo className="text-foreground h-6 md:h-8 w-auto transition-all group-hover:scale-110" />
         </Link>
 
         {/* Navigation Links (Desktop) */}

@@ -47,16 +47,16 @@ const SKILL_CATEGORIES = [
     ]
   },
   {
-    title: "Professional Focus",
-    description: "Dedicated to rapid prototyping and clean, maintainable frontend systems.",
+    title: "Backend & Database",
+    description: "Server-side development with Node.js and database management for full-stack applications.",
     icon: <FocusIcon className="w-8 h-8 text-primary" />,
     skills: [
-      { name: "MERN Stack", icon: <CodeIcon className="w-8 h-8" /> },
-      { name: "Dashboard Systems", icon: <Layout className="w-8 h-8" /> },
-      { name: "Scalable UI", icon: <ArchitectureIcon className="w-8 h-8" /> },
-      { name: "Clean Code", icon: <CheckCircle2 className="w-8 h-8" /> },
-      { name: "Infinite Loading", icon: <Zap className="w-8 h-8" /> },
-      { name: "URL State", icon: <StateIcon className="w-8 h-8" /> }
+      { name: "Node.js", icon: <CodeIcon className="w-8 h-8" /> },
+      { name: "Express.js", icon: <Zap className="w-8 h-8" /> },
+      { name: "MongoDB", icon: <Cpu className="w-8 h-8" /> },
+      { name: "REST APIs", icon: <Layout className="w-8 h-8" /> },
+      { name: "JWT Auth", icon: <CheckCircle2 className="w-8 h-8" /> },
+      { name: "Mongoose", icon: <ArchitectureIcon className="w-8 h-8" /> }
     ]
   }
 ];

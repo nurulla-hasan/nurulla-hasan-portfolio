@@ -25,69 +25,72 @@ export default function ProjectsPage() {
             
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <h1 className="text-5xl md:text-7xl font-bold uppercase text-foreground">
-                  Works <span className="text-primary">.</span>
-                </h1>
+                <div className="relative">
+                  <h1 className="text-5xl md:text-7xl font-bold uppercase text-foreground">
+                    Works
+                  </h1>
+                  <div className="absolute -bottom-2 left-0 h-1 w-16 bg-primary" />
+                </div>
                 <div className="h-px flex-1 bg-linear-to-r from-border to-transparent hidden md:block" />
-                <span className="text-sm text-muted-foreground border border-border px-3 py-1 rounded-full uppercase bg-muted/10">
-                  {PROJECTS.length} &nbsp; Showcases
+                <span className="text-sm text-muted-foreground border px-4 py-1.5 uppercase tracking-widest font-bold bg-muted/10">
+                  {PROJECTS.length}&nbsp; Showcases
                 </span>
               </div>
-              <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
+              <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed font-medium pt-4">
                 A selection of digital experiences and technical engineering 
-                focused on <span className="text-foreground">scalability</span> and <span className="text-foreground">performance</span>.
+                focused on <span className="text-foreground font-semibold">scalability</span> and <span className="text-foreground font-semibold">performance</span>.
               </p>
             </div>
           </div>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
-              className="group flex flex-col rounded-3xl border bg-muted/20 overflow-hidden hover:border-primary/30 transition-all duration-300 premium-hover"
+              className="group flex flex-col border bg-muted/20 overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
             >
               {/* Image */}
-              <div className="relative aspect-video overflow-hidden">
+              <div className="relative aspect-video overflow-hidden bg-muted/30">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-contain transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
               {/* Content */}
-              <div className="p-8 flex flex-col flex-1">
-                <div className="flex flex-wrap gap-2 mb-6">
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1 rounded-full border border-primary/10"
+                      className="text-[10px] font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-2.5 py-1 border border-primary/10"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
-                <div className="flex items-center gap-4 mt-auto pt-6 border-t border-border/40">
+                <div className="flex items-center gap-3 mt-auto pt-5 border-t">
                   <Link href={project.liveUrl} target="_blank" className="flex-1">
-                    <Button variant="hero" size="sm" className="w-full rounded-xl h-10">
-                      Live Preview <ExternalLink className="w-3 h-3 ml-2" />
+                    <Button variant="hero" size="sm" className="w-full h-9 text-xs">
+                      Live Preview <ExternalLink className="w-3 h-3 ml-1.5" />
                     </Button>
                   </Link>
                   <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" size="sm" className="rounded-xl h-10 w-10 flex items-center justify-center p-0">
+                    <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
                       <GithubIcon className="w-4 h-4" />
                     </Button>
                   </Link>

@@ -25,11 +25,13 @@ export function Projects() {
           link={{ href: "/projects", label: "View All Projects" }}
         />
 
-        <div className="grid grid-cols-1 gap-12">
+        <div className="flex flex-col gap-0">
           {PROJECTS.slice(0, 3).map((project, index) => (
             <div
               key={project.title}
-              className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
+              className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12 ${
+                index !== 0 ? "border-t" : ""
+              } ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >

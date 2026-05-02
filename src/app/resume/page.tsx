@@ -195,8 +195,8 @@ export default function ResumePage() {
             <div className="lg:col-span-4 space-y-12">
               {/* Skills */}
               <section>
-                <h2 className="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <Wrench className="w-5 h-5 text-primary" />
+                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
+                  <Wrench className="w-4 h-4 text-primary" />
                   Technical Skills
                 </h2>
                 <div className="space-y-6">
@@ -237,8 +237,8 @@ export default function ResumePage() {
 
               {/* Education */}
               <section>
-                <h2 className="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <GraduationCap className="w-5 h-5 text-primary" />
+                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4 text-primary" />
                   Education
                 </h2>
                 <div className="space-y-4">
@@ -252,8 +252,8 @@ export default function ResumePage() {
 
               {/* Training */}
               <section>
-                <h2 className="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-primary" />
+                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-primary" />
                   Additional Training
                 </h2>
                 <div className="space-y-4">
@@ -265,8 +265,8 @@ export default function ResumePage() {
 
               {/* Languages */}
               <section>
-                <h2 className="text-xl font-black uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <Globe className="w-5 h-5 text-primary" />
+                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
+                  <Globe className="w-4 h-4 text-primary" />
                   Languages
                 </h2>
                 <div className="space-y-2 text-sm font-bold">
