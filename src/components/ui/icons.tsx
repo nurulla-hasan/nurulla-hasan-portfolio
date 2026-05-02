@@ -79,51 +79,71 @@ export const InstagramIcon = (props: LucideProps) => (
 type NHLogoProps = React.SVGProps<SVGSVGElement>;
 
 export const NHLogo = ({ className = "", ...props }: NHLogoProps) => {
-  const topClipId = React.useId();
-  const bottomClipId = React.useId();
 
   return (
     <svg
-      viewBox="14 20 88 60"
+      viewBox="10 5 80 90"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       className={className}
       {...props}
     >
-      <defs>
-        <clipPath id={topClipId}>
-          <path d="M14 20H102V40L14 65V20Z" />
-        </clipPath>
-        <clipPath id={bottomClipId}>
-          <path d="M14 65L102 40V80H14V65Z" />
-        </clipPath>
-      </defs>
-
-      {/* Walking line animation path - Slower and more visible */}
-      <motion.path
-        d="M14 20H54V80H14V20 M66 20H102V80H66V20 M0 72L120 28"
-        stroke="var(--primary)"
-        strokeWidth="1.5"
-        strokeDasharray="30 160"
-        animate={{ strokeDashoffset: [0, -190] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        style={{ opacity: 1, filter: "drop-shadow(0 0 2px var(--primary))" }}
+      {/* Subtle Background Hexagon (Static) */}
+      <path
+        d="M50 5 L90 27.5 V72.5 L50 95 L10 72.5 V27.5 Z"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.2"
       />
 
-      <g clipPath={`url(#${topClipId})`} fill="currentColor">
-        {/* N - increased height */}
-        <path d="M14 20H26L42 58V20H54V80H42L26 42V80H14V20Z" />
-        {/* H - increased height */}
-        <path d="M66 20H78V44H90V20H102V80H90V56H78V80H66V20Z" />
+      {/* Walking Line Comet Tail Effect (6 layers for ultra-smooth fade) */}
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <motion.path
+          key={i}
+          d="M50 5 L90 27.5 V72.5 L50 95 L10 72.5 V27.5 Z"
+          stroke="var(--primary)"
+          strokeWidth={1.5 - i * 0.1}
+          strokeDasharray={`${5 + i * 5} 273.5`}
+          animate={{ strokeDashoffset: [i * 3, -273.5 + i * 3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          style={{ 
+            opacity: 1 - i * 0.18, 
+            strokeLinecap: "round",
+            filter: i === 0 ? "drop-shadow(0 0 2px var(--primary))" : "none"
+          }}
+        />
+      ))}
+
+      {/* Slanted (Italic) Monogram Group */}
+      <g>
+        {/* Primary Color Accent Paths (N left leg + H middle + H right leg) */}
+        <path
+          d="M25 70V30 M50 50H75 M75 30V70"
+          stroke="var(--primary)"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="miter"
+          fill="none"
+          style={{ fill: "none", opacity: 1 }}
+        />
+
+        {/* Main NH Monogram Path (N Diagonal + N Right leg) */}
+        <path
+          d="M25 30L50 70V30"
+          stroke="currentColor"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="miter"
+          fill="none"
+          style={{ fill: "none", opacity: 1 }}
+        />
+
+        {/* Tech Node/Dot at the end */}
+        <circle cx="75" cy="50" r="4" fill="var(--primary)">
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinity" />
+        </circle>
       </g>
 
-      {/* Bottom part - Shifted for "broken" effect */}
-      <g clipPath={`url(#${bottomClipId})`} fill="var(--primary)" transform="translate(4, 0)">
-        {/* N - increased height */}
-        <path d="M14 20H26L42 58V20H54V80H42L26 42V80H14V20Z" />
-        {/* H - increased height */}
-        <path d="M66 20H78V44H90V20H102V80H90V56H78V80H66V20Z" />
-      </g>
     </svg>
   );
 };

@@ -62,7 +62,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="group transition-all duration-300 shrink-0">
-          <NHLogo className="text-foreground h-6 md:h-8 w-auto transition-all group-hover:scale-110" />
+          <NHLogo className="text-foreground h-8 md:h-12 w-auto transition-all group-hover:scale-110" />
         </Link>
 
         {/* Navigation Links (Desktop) */}
