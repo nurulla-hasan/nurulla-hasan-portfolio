@@ -153,11 +153,11 @@
 
 @layer utilities {
   .premium-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-[0px_5px_10px_-1px_#00c964] hover:shadow-primary hover:-translate-y-1;
   }
 }
 @layer utilities {
   .premium-shadow {
-    @apply transition-all duration-300 shadow-lg shadow-primary;
+    @apply transition-all duration-300 shadow-[0px_5px_10px_-1px_#00c964] shadow-primary;
   }
 }
