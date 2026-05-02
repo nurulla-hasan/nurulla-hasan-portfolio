@@ -14,7 +14,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon, NHLogo } from "@/components/ui/icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  XIcon,
+  InstagramIcon,
+  NHLogo,
+} from "@/components/ui/icons";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -47,23 +53,26 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-0 py-2 md:px-6 md:py-4 transition-all duration-500">
-      <div className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-10 md:py-3 transition-all duration-500 ${
-        scrolled 
-          ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5" 
-          : "bg-transparent border border-transparent shadow-none"
-      }`}>
+      <div
+        className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-10 md:py-3 transition-all duration-500 ${
+          scrolled
+            ? "bg-background/60 backdrop-blur-xl border border-border/50 shadow-2xl shadow-primary/5"
+            : "bg-transparent border border-transparent shadow-none"
+        }`}
+      >
         {/* Logo */}
         <Link href="/" className="group transition-all duration-300 shrink-0">
-          <NHLogo 
-            className="text-foreground h-8 md:h-10 w-auto transition-all group-hover:scale-110"
-          />
+          <NHLogo className="text-foreground h-8 md:h-10 w-auto transition-all group-hover:scale-110" />
         </Link>
 
         {/* Navigation Links (Desktop) */}
         <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href.split("#")[0] + "/"));
-            
+            const isActive =
+              pathname === link.href ||
+              (link.href !== "/" &&
+                pathname.startsWith(link.href.split("#")[0] + "/"));
+
             return (
               <Link
                 key={link.name}
@@ -73,7 +82,9 @@ export function Navbar() {
                 }`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover/link:w-full"}`} />
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover/link:w-full"}`}
+                />
               </Link>
             );
           })}
@@ -82,15 +93,14 @@ export function Navbar() {
         {/* Action Buttons */}
         <div className="flex items-center gap-2 md:gap-5">
           <div className="hidden lg:block">
-            <ModeToggle variant="nav"/>
+            <ModeToggle variant="nav" />
           </div>
-          <Button 
-            variant="hero" 
-            className="hidden md:flex transition-all"
-          >
-            <Send className="w-4 h-4 mr-2 fill-current" />
-            Resume
-          </Button>
+          <Link href="/resume">
+            <Button variant="hero" className="hidden md:flex transition-all">
+              <Send className="w-4 h-4 mr-2 fill-current" />
+              Resume
+            </Button>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -99,11 +109,15 @@ export function Navbar() {
                 <Menu className="w-6 h-6 text-foreground" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" showCloseButton={false} className="bg-background/95 backdrop-blur-2xl border-l border-border/50 w-72 sm:w-80 p-0 overflow-hidden flex flex-col">
+            <SheetContent
+              side="right"
+              showCloseButton={false}
+              className="bg-background/95 backdrop-blur-2xl border-l border-border/50 w-72 sm:w-80 p-0 overflow-hidden flex flex-col"
+            >
               {/* Background architectural detail */}
               <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 blur-2xl" />
-              
+
               <SheetHeader className="p-6 pb-4 text-left border-b border-border/50 relative z-10 flex flex-row items-center justify-between">
                 <SheetTitle className="text-lg font-bold uppercase tracking-widest flex items-center gap-2">
                   <NHLogo className="w-7 h-7" />
@@ -126,24 +140,34 @@ export function Navbar() {
                         className="group relative flex items-center py-4 transition-all"
                       >
                         <div className="flex items-baseline gap-4 w-full">
-                          <span className={`text-xs transition-colors duration-300 ${
-                            isActive ? "text-primary" : "text-muted-foreground/30 group-hover:text-primary/50"
-                          }`}>
+                          <span
+                            className={`text-xs transition-colors duration-300 ${
+                              isActive
+                                ? "text-primary"
+                                : "text-muted-foreground/30 group-hover:text-primary/50"
+                            }`}
+                          >
                             /{idx + 1}
                           </span>
                           <div className="relative flex-1">
-                            <span className={`text-lg font-bold uppercase tracking-widest transition-all duration-500 block ${
-                              isActive ? "text-primary translate-x-2" : "text-foreground group-hover:text-primary group-hover:translate-x-2"
-                            }`}>
+                            <span
+                              className={`text-lg font-bold uppercase tracking-widest transition-all duration-500 block ${
+                                isActive
+                                  ? "text-primary translate-x-2"
+                                  : "text-foreground group-hover:text-primary group-hover:translate-x-2"
+                              }`}
+                            >
                               {link.name}
                             </span>
                             {/* Simple accent bar */}
-                            <span className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-500 ${
-                              isActive ? "w-8" : "w-0 group-hover:w-4"
-                            }`} />
+                            <span
+                              className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-500 ${
+                                isActive ? "w-8" : "w-0 group-hover:w-4"
+                              }`}
+                            />
                           </div>
                         </div>
-                        
+
                         {/* Right side indicator */}
                         {isActive && (
                           <div className="w-1 h-1 bg-primary shadow-[0_0_8px_var(--color-primary)]" />
@@ -159,8 +183,8 @@ export function Navbar() {
                   </p>
                   <div className="flex gap-3">
                     {socialLinks.map((social, idx) => (
-                      <Link 
-                        key={idx} 
+                      <Link
+                        key={idx}
                         href={social.href}
                         target="_blank"
                         className="w-10 h-10 rounded-lg border border-border bg-primary/5 flex items-center justify-center text-foreground hover:border-primary hover:text-primary transition-all cursor-pointer"
@@ -173,10 +197,12 @@ export function Navbar() {
               </div>
 
               <div className="p-6 border-t border-border/50 bg-muted/10 relative z-10">
-                <Button variant="hero" className="w-full">
-                  <Send className="w-4 h-4 mr-2 fill-current" />
-                  Resume
-                </Button>
+                <Link href="/resume" onClick={() => setIsOpen(false)}>
+                  <Button variant="hero" className="w-full">
+                    <Send className="w-4 h-4 mr-2 fill-current" />
+                    Resume
+                  </Button>
+                </Link>
                 <p className="text-center text-[9px] font-medium text-muted-foreground mt-3 uppercase tracking-widest opacity-60">
                   Dhaka, Bangladesh
                 </p>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Rocket, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Typewriter } from "@/components/ui/typewriter";
+import Link from "next/link";
 
 const ROLES = [
   "MERN Stack Developer",
@@ -114,10 +115,16 @@ export function Hero() {
               View Projects
             </Button>
 
-            <Button variant="nav">
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
-            </Button>
+            <Link 
+              href="/assets/RESUME%20ONSITE.pdf" 
+              target="_blank"
+              download="Nurulla_Hasan_Resume.pdf"
+            >
+              <Button variant="nav">
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </Button>
+            </Link>
           </div>
         </div>
 
