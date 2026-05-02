@@ -3,6 +3,7 @@ import { Cagliostro } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner"
 
 const cagliostro = Cagliostro({
   subsets: ["latin"],
@@ -108,6 +109,7 @@ export default function RootLayout({
             {children}
             <SocialSidebar />
           </SmoothScrollProvider>
+          <Toaster richColors/>
         </ThemeProvider>
       </body>
     </html>

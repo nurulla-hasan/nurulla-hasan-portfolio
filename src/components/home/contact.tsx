@@ -1,9 +1,13 @@
 "use client";
 
+import * as React from "react";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { toast } from "sonner";
+import { sendEmail } from "@/app/actions/email";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -36,10 +40,30 @@ export function Contact() {
 
   const { errors } = form.formState;
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    alert("Message sent successfully!");
-    form.reset();
+  const [isSending, setIsSending] = React.useState(false);
+
+  const onSubmit = async (data: FormValues) => {
+    setIsSending(true);
+    try {
+      const result = await sendEmail(data);
+      
+      if (result.success) {
+        toast.success("Transmission successful!", {
+          description: "I've received your message and will get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        toast.error("Transmission failed", {
+          description: result.error || "A system error occurred. Please try again.",
+        });
+      }
+    } catch {
+      toast.error("System Error", {
+        description: "Could not establish connection. Please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -101,9 +125,23 @@ export function Contact() {
                       {errors.message?.message}
                     </FieldError>
                   </Field>
-                  <Button type="submit" variant="hero" className="w-full h-12 text-xs font-bold uppercase tracking-[0.2em]">
-                    <Send className="mr-2 w-4 h-4" />
-                    Send Transmission
+                  <Button 
+                    type="submit" 
+                    variant="hero" 
+                    className="w-full h-12 text-xs font-bold uppercase tracking-[0.2em]"
+                    disabled={isSending}
+                  >
+                    {isSending ? (
+                      <>
+                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 w-4 h-4" />
+                        Send Transmission
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
