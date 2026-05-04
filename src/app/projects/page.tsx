@@ -4,6 +4,18 @@ import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/ui/icons";
 import { PROJECTS } from "@/lib/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Explore the projects built by Nurulla Hasan — modern web applications using React, Next.js, TypeScript, Node.js and more.",
+  openGraph: {
+    title: "Projects | Nurulla Hasan",
+    description:
+      "A curated collection of web development projects by Nurulla Hasan.",
+  },
+};
 
 export default function ProjectsPage() {
   return (

@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
- 
+
+const baseUrl = 'https://nurulla-hasan-portfolio-pink.vercel.app'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nurulla-hasan-portfolio-pink.vercel.app'
-  
   return [
     {
       url: baseUrl,
@@ -10,12 +10,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
-    // Add other routes if you have them, for example:
-    // {
-    //   url: `${baseUrl}/projects`,
-    //   lastModified: new Date(),
-    //   changeFrequency: 'weekly',
-    //   priority: 0.8,
-    // },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resume`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
