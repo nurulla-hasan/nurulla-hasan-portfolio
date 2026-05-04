@@ -98,8 +98,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   verification: {
-    // After adding your site to Google Search Console, paste the verification code here
-    // google: "your-google-verification-code",
+    google: "IhcboU1VL3736BrgXDuvYguYXsjToJ1pnTXA8aMSOOM",
   },
 };
 
