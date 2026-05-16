@@ -1,5 +1,22 @@
 export const PROJECTS = [
   {
+    id: "mess-manager-os",
+    title: "MessManager OS",
+    description:
+      "A full-featured mess management platform for managers and members with meal tracking, meal-off requests, market schedules, payments, expenses, billing, notices, complaints, reports, and subscription-based feature access.",
+    image: "/assets/mess.png",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "TypeScript",
+    ],
+    liveUrl: "https://mess-os-client.vercel.app",
+    githubUrl: "https://github.com/nurulla-hasan/mess_os_client",
+  },
+  {
     id: "mentorip",
     title: "MentorIP — Global IP Law Firm",
     description:
@@ -21,7 +38,7 @@ export const PROJECTS = [
     description:
       "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
     image: "/assets/jaykou.png",
-    tags: ["React", "Redux", "JavaScript", "Shadcn UI"],
+    tags: ["React", "Redux", "JavaScript","Tailwind CSS", "Shadcn UI"],
     liveUrl: "https://koumanisdietapp.com",
     githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
   },
@@ -34,70 +51,5 @@ export const PROJECTS = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     liveUrl: "https://elevator-website-six.vercel.app/",
     githubUrl: "https://github.com/nurulla-hasan/elevator_website",
-  },
-  {
-    id: "admin-dashboard",
-    title: "Admin & Management Dashboard",
-    description:
-      "Built reusable data-heavy dashboard patterns with sortable/searchable tables, shared modals, and management modules across multiple entities.",
-    image: "/assets/vitakinetic.png",
-    tags: ["React", "TypeScript", "Redux Toolkit", "RTK Query"],
-    liveUrl: "https://mikefiremerritt-dashboard.vercel.app/auth/login",
-    githubUrl: "https://github.com/nurulla-hasan/mikefiremerritt_dashboard",
-  },
-  {
-    id: "ecommerce-store",
-    title: "Digital Product Marketplace",
-    description:
-      "Fully functional e-commerce store with product filtering, cart persistence, and secure checkout integration. Built with a focus on UX.",
-    image:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
-    tags: ["React", "Zustand", "Tailwind CSS", "Stripe"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    id: "crypto-tracker",
-    title: "Real-time Crypto Dashboard",
-    description:
-      "Dashboard for tracking real-time cryptocurrency prices with interactive charts and automated portfolio balance calculations.",
-    image:
-      "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2069&auto=format&fit=crop",
-    tags: ["React", "Chart.js", "TanStack Query", "WebSocket"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    id: "social-connect",
-    title: "Developer Community Platform",
-    description:
-      "A social platform for developers to share projects and collaborate. Features include real-time notifications and nested commenting systems.",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Next.js", "PostgreSQL", "Prisma", "Clerk"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    id: "ai-content-gen",
-    title: "AI Writing Assistant",
-    description:
-      "Platform for generating SEO-optimized content using AI. Features streaming responses and dynamic prompt templates.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-    tags: ["OpenAI API", "Next.js", "Server Actions", "Radix UI"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
-  },
-  {
-    id: "booking-system",
-    title: "Rental Booking Engine",
-    description:
-      "Complex multi-step booking system with availability checks, dynamic pricing, and calendar management for property owners.",
-    image:
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2080&auto=format&fit=crop",
-    tags: ["React", "date-fns", "Formik", "Yup"],
-    liveUrl: "https://portfolio-mu-five-k7foxti51e.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan",
   },
 ];
