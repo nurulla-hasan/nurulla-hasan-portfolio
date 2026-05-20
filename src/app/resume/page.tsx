@@ -107,7 +107,7 @@ export default function ResumePage() {
                   Professional Summary
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                  Frontend-focused MERN Stack Developer with over 1 year of experience building API-driven web applications and dashboard systems using React, Next.js, and TypeScript. Strong in reusable component architecture, custom hooks, and modern data-fetching patterns. Recognized for delivering high-quality UI, rapid prototyping, and clean, scalable frontend architecture.
+                  Frontend-focused MERN Stack Developer with 1+ year of experience building API-driven dashboards and production-style web applications using React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Strong in reusable UI architecture, custom hooks, protected routes, REST API integration, and dashboard workflows, with hands-on experience in Node.js, Express, and MongoDB.
                 </p>
               </section>
 
@@ -131,9 +131,9 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <ul className="space-y-3 text-muted-foreground list-disc list-outside ml-4">
-                      <li>Built reusable frontend abstractions including custom hooks, data tables, modal systems, pagination, and shared layout components to standardize complex UI patterns across multiple modules.</li>
-                      <li>Developed scalable filtering and data-loading solutions with URL-synced search state, debounced updates, server-aware pagination, and infinite-loading patterns for smoother user workflows.</li>
-                      <li>Implemented advanced frontend features such as authenticated flows, protected routing, rich-text editing, location autocomplete, validated forms, and backend-integrated interfaces for product-style web applications.</li>
+                      <li>Built reusable frontend systems including data tables, modal wrappers, pagination, shared layouts, search/filter components, infinite lists, and location inputs.</li>
+                      <li>Developed an optimized URL-state filtering hook for Next.js App Router with debounced navigation, pagination reset, and responsive dashboard filtering.</li>
+                      <li>Implemented authenticated dashboard workflows with protected routing, role-based UI, validated forms, rich-text editing, location autocomplete, and API-integrated CRUD flows.</li>
                     </ul>
                   </div>
                 </div>
@@ -148,43 +148,44 @@ export default function ResumePage() {
                 <div className="space-y-8">
                   <div className="group">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">MentorIp Law Firm</h3>
+                      <h3 className="text-lg font-bold">Mess Management System</h3>
+                      <div className="flex gap-4">
+                        <Link href="https://mess-os-client.vercel.app" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                        <Link href="https://github.com/nurulla-hasan/mess_os_client" target="_blank" className="text-xs font-bold text-primary hover:underline">Client GitHub</Link>
+                        <Link href="https://github.com/nurulla-hasan/mess_os_server" target="_blank" className="text-xs font-bold text-primary hover:underline">Server GitHub</Link>
+                      </div>
+                    </div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui, Express.js, MongoDB</p>
+                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
+                      <li>Built a full-stack role-based mess management platform with admin/manager/member dashboards, protected routes, member approval, billing cycles, notices, complaints, JWT auth, RBAC, and API-integrated workflows.</li>
+                    </ul>
+                  </div>
+
+                  <div className="group">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-lg font-bold">MentorIP Law Firm</h3>
                       <div className="flex gap-4">
                         <Link href="https://mentorip.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
                         <Link href="https://github.com/nurulla-hasan/mentorip_website" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
                       </div>
                     </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, ShadcnUI</p>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>A premium, high-performance digital platform for an international Intellectual Property law firm. Features advanced interactive layouts, smooth scroll-triggered animations, and optimized accessibility for global legal services.</li>
+                      <li>Built a responsive IP law firm website with service/article pages, contact forms, SEO metadata, polished layouts, and motion-driven interactions.</li>
                     </ul>
                   </div>
 
                   <div className="group">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">Wedding Marketplace & Vendor Platform</h3>
+                      <h3 className="text-lg font-bold">Wedding Marketplace</h3>
                       <div className="flex gap-4">
                         <Link href="https://elevator-website-six.vercel.app/" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
                         <Link href="https://github.com/nurulla-hasan/elevator_website" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
                       </div>
                     </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, ShadcnUI</p>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Designed a reusable frontend system with App Router route groups, shared UI abstractions, smart filtering, infinite-loading utilities, location autocomplete, and vendor/user dashboard workflows.</li>
-                    </ul>
-                  </div>
-
-                  <div className="group">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">Cookbook Recipe & Meal Planner</h3>
-                      <div className="flex gap-4">
-                        <Link href="https://koumanisdietapp.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
-                        <Link href="https://github.com/nurulla-hasan/cookbook-recipe-website" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
-                      </div>
-                    </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">React, Redux, JavaScript, Shadcn UI</p>
-                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Developed modular frontend flows with protected/public routing, shared utilities, debounce-driven interactions, meal-planning workflows, and reusable profile/account features.</li>
+                      <li>Built a vendor marketplace UI with vendor/venue browsing, smart filters, compare flows, user/vendor dashboards, quote workflows, infinite lists, and location autocomplete.</li>
                     </ul>
                   </div>
                 </div>
@@ -203,7 +204,7 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Frontend</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Shadcn UI"].map(s => (
+                      {["React.js", "Next.js App Router", "TypeScript", "JavaScript ES6+", "Tailwind CSS", "shadcn/ui"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -211,7 +212,7 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Backend</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Node.js", "Express.js", "MongoDB"].map(s => (
+                      {["Node.js", "Express.js", "MongoDB", "Mongoose", "REST APIs", "JWT"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -219,7 +220,7 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">State & Data</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Redux Toolkit", "RTK Query", "TanStack Query", "React Hook Form", "Zod"].map(s => (
+                      {["Redux Toolkit", "RTK Query", "TanStack Query", "TanStack Table", "React Hook Form", "Zod"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -227,7 +228,7 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Tools</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Git", "GitHub", "Vercel"].map(s => (
+                      {["Git", "GitHub", "Vercel", "pnpm", "npm"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
