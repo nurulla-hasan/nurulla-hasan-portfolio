@@ -16,44 +16,20 @@ const ROLES = [
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-10 md:pt-0 text-foreground">
-      {/* Background glow using semantic classes */}
-      {/* <div className="absolute right-[20%] top-[20%] w-200 h-200 bg-primary/10 blur-[150px] pointer-events-none" /> */}
-      {/* <div className="absolute right-[30%] top-[40%] w-150 h-150 bg-primary/5 blur-[120px] pointer-events-none" /> */}
 
-      {/* Soft noise / vignette feel */}
-      {/* <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/20 to-background opacity-80 pointer-events-none" /> */}
-
-      {/* Curved lines */}
-      <svg
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-60 text-primary"
-        viewBox="0 0 1600 900"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M980 120C1120 100 1270 135 1390 260C1480 355 1520 470 1500 620"
-          stroke="currentColor"
-          strokeOpacity="0.28"
-          strokeWidth="1.5"
-        />
-        <path
-          d="M845 655C930 555 1035 500 1180 495C1320 490 1440 540 1545 650"
-          stroke="currentColor"
-          strokeOpacity="0.22"
-          strokeWidth="1.2"
-        />
-      </svg>
-
-      {/* Dot pattern */}
-      <div className="absolute right-[9%] top-[18%] z-0 h-24 w-20 opacity-50">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage: "radial-gradient(color-mix(in srgb, var(--color-primary) 70%, transparent) 1.2px, transparent 1.2px)",
-            backgroundSize: "14px 14px",
-          }}
-        />
-      </div>
+      {/* Background Grid Pattern */}
+      <div 
+        className="absolute inset-0 z-0 opacity-25 dark:opacity-[0.25] pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+          maskImage: "radial-gradient(circle 60% at 50% 50%, #000 30%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(circle 60% at 50% 50%, #000 30%, transparent 100%)"
+        }}
+      />
 
       {/* Primary glow behind image */}
       <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/5 dark:bg-primary/20 blur-[120px]" />
@@ -151,7 +127,7 @@ export function Hero() {
           <div className="rounded-full absolute right-[-2%] top-[12%] h-135 w-135" />
 
           <div className="relative z-10 flex h-full w-full items-end justify-center lg:justify-end">
-            <div className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_90%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center">
+            <div className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center">
               {/* Light Mode Avatar */}
               <Image
                 src="/light-avatar.png"
@@ -159,7 +135,7 @@ export function Hero() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
-                className="relative z-10 object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)] block dark:hidden scale-[0.93] origin-bottom"
+                className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)] block dark:hidden"
               />
 
               {/* Dark Mode Avatar */}
@@ -169,7 +145,7 @@ export function Hero() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
-                className="relative z-10 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] hidden dark:block"
+                className="object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] hidden dark:block"
               />
             </div>
           </div>
