@@ -63,7 +63,7 @@ export function Hero() {
         {/* Left */}
         <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge with Typewriter */}
-          <div className="inline-flex items-center gap-2 border border-border bg-muted/30 px-4 py-2 rounded-lg backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 border bg-muted/30 px-4 py-2 rounded-lg backdrop-blur-md">
             <span className="h-2.5 w-2.5 bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
             <div className="flex items-center text-xs sm:text-sm font-medium tracking-wide text-foreground/85">
               <span>Frontend-Focused </span>
@@ -148,17 +148,28 @@ export function Hero() {
         {/* Right */}
         <div className="relative flex h-87.5 items-end justify-center sm:h-112.5 lg:h-180 lg:justify-end">
           {/* Big faded circle */}
-          <div className="rounded-full absolute right-[-2%] top-[12%] h-135 w-135 border border-border/40 dark:border-border" />
+          <div className="rounded-full absolute right-[-2%] top-[12%] h-135 w-135" />
 
           <div className="relative z-10 flex h-full w-full items-end justify-center lg:justify-end">
-            <div className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] md:rounded-full">
+            <div className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_90%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center">
+              {/* Light Mode Avatar */}
+              <Image
+                src="/light-avatar.png"
+                alt="Nurulla Hasan"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
+                priority
+                className="relative z-10 object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)] block dark:hidden scale-[0.93] origin-bottom"
+              />
+
+              {/* Dark Mode Avatar */}
               <Image
                 src="/without-bg.png"
                 alt="Nurulla Hasan"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
-                className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)] dark:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                className="relative z-10 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] hidden dark:block"
               />
             </div>
           </div>
