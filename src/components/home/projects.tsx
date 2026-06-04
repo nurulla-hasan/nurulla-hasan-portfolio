@@ -14,7 +14,7 @@ export function Projects() {
       className="relative py-24 bg-background overflow-hidden"
     >
       {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/5 dark:bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
@@ -37,7 +37,7 @@ export function Projects() {
             >
               {/* Project Image Container */}
               <div
-                className={`relative aspect-video overflow-hidden premium-hover ${
+                className={`relative aspect-video overflow-hidden rounded-xl premium-hover ${
                   index % 2 !== 0 ? "lg:order-2" : "lg:order-1"
                 }`}
               >
@@ -61,7 +61,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="premium-hover text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1  border border-primary/10"
+                      className="premium-hover text-xs font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-3 py-1 rounded-md border border-primary/10"
                     >
                       {tag}
                     </span>

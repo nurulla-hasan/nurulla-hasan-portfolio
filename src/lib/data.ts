@@ -52,4 +52,14 @@ export const PROJECTS = [
     liveUrl: "https://elevator-website-six.vercel.app/",
     githubUrl: "https://github.com/nurulla-hasan/elevator_website",
   },
+  {
+    id: "mouza-map-calculator",
+    title: "Mouza Map & Land Area Calculator",
+    description:
+      "Engineered a high-performance 2D geospatial plotting tool using Konva.js, executing complex Shoelace algorithms to convert raw pixel distances into exact physical land areas (SqFt, Shotok). Implemented a custom physics-based repulsion algorithm to prevent label overlapping and integrated client-side PDF processing (pdfjs), delivering instant, scale-accurate A4 reports without server overhead.",
+    image: "/assets/mouza-map.png",
+    tags: ["React", "Konva.js", "Zustand", "jsPDF"],
+    liveUrl: "https://mouza-map-calculation.vercel.app/",
+    githubUrl: "https://github.com/nurulla-hasan/mouza-map-calculation",
+  },
 ];

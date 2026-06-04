@@ -65,7 +65,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-24 bg-background overflow-hidden">
       {/* Background Decorative Elements - Centered behind the grid */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/3 dark:bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10 px-6 lg:px-10">
         <SectionHeader 
@@ -79,13 +79,13 @@ export function Skills() {
           {SKILL_CATEGORIES.map((category) => (
             <div
               key={category.title}
-              className="premium-hover group relative p-8 border border-border bg-muted/20 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+              className="premium-hover group relative p-8 border border-border bg-muted/20 rounded-xl backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/2" />
+              <div className="absolute inset-0 bg-primary/0 rounded-xl transition-colors group-hover:bg-primary/2" />
                
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
                   {category.icon}
                 </div>
                 
@@ -98,7 +98,7 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}
-                      className="premium-hover px-3 py-1 bg-primary/5 border border-primary/10 text-muted-foreground text-sm transition-colors hover:border-primary/30 hover:text-primary flex items-center gap-1.5"
+                      className="premium-hover px-3 py-1 bg-primary/5 border border-primary/10 rounded-md text-muted-foreground text-sm transition-colors hover:border-primary/30 hover:text-primary flex items-center gap-1.5"
                     >
                       {skill.icon}
                       {skill.name}

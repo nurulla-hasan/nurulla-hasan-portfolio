@@ -56,14 +56,14 @@ export function Hero() {
       </div>
 
       {/* Primary glow behind image */}
-      <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/20 blur-[120px]" />
-      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/10 blur-[90px]" />
+      <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/5 dark:bg-primary/20 blur-[120px]" />
+      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/2 dark:bg-primary/10 blur-[90px]" />
 
       <div className="relative z-10 mx-auto grid md:min-h-screen max-w-7xl items-center gap-16 px-6 py-10 md:pt-26 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         {/* Left */}
         <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge with Typewriter */}
-          <div className="inline-flex items-center gap-2 border border-border bg-muted/30 px-4 py-2 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 border border-border bg-muted/30 px-4 py-2 rounded-lg backdrop-blur-md">
             <span className="h-2.5 w-2.5 bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
             <div className="flex items-center text-xs sm:text-sm font-medium tracking-wide text-foreground/85">
               <span>Frontend-Focused </span>
@@ -88,10 +88,10 @@ export function Hero() {
 
           {/* Experience & Location Badges */}
           <div className="mt-6 flex flex-wrap items-center justify-start lg:justify-start gap-3">
-            <div className="px-4 py-1.5 bg-primary/10 border border-primary/20 text-xs font-bold text-primary tracking-wider uppercase neon-border">
+            <div className="px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-lg text-xs font-bold text-primary tracking-wider uppercase neon-border">
               1+ Year Experience
             </div>
-            <div className="px-4 py-1.5 bg-muted/50 border border-border text-xs font-medium text-muted-foreground">
+            <div className="px-4 py-1.5 bg-muted/50 border border-border rounded-lg text-xs font-medium text-muted-foreground">
               Dhaka, Bangladesh
             </div>
           </div>
@@ -110,13 +110,30 @@ export function Hero() {
 
           {/* Buttons */}
           <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-start gap-4 w-full sm:w-auto">
-            <Button variant="hero" >
+            <Button
+              variant="hero"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector("#projects");
+                if (element) {
+                  const lenisInstance = (window as unknown as LenisWindow).lenis;
+                  if (lenisInstance) {
+                    lenisInstance.scrollTo("#projects", {
+                      offset: -80,
+                      duration: 1.2,
+                    });
+                  } else {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              }}
+            >
               <Rocket className="mr-2 h-4 w-4" />
               View Projects
             </Button>
 
             <Link 
-              href="/assets/RESUME%20ONSITE.pdf" 
+              href="/assets/RESUME.pdf" 
               target="_blank"
               download="Nurulla_Hasan_Resume.pdf"
             >
@@ -131,7 +148,7 @@ export function Hero() {
         {/* Right */}
         <div className="relative flex h-87.5 items-end justify-center sm:h-112.5 lg:h-180 lg:justify-end">
           {/* Big faded circle */}
-          <div className="rounded-full absolute right-[-2%] top-[12%] h-135 w-135 border" />
+          <div className="rounded-full absolute right-[-2%] top-[12%] h-135 w-135 border border-border/40 dark:border-border" />
 
           <div className="relative z-10 flex h-full w-full items-end justify-center lg:justify-end">
             <div className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] md:rounded-full">
@@ -141,7 +158,7 @@ export function Hero() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
-                className="object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)] dark:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
               />
             </div>
           </div>

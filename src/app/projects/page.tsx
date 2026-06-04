@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                   <div className="absolute -bottom-2 left-0 h-1 w-16 bg-primary" />
                 </div>
                 <div className="h-px flex-1 bg-linear-to-r from-border to-transparent hidden md:block" />
-                <span className="text-sm text-muted-foreground border px-4 py-1.5 uppercase tracking-widest font-bold bg-muted/10">
+                <span className="text-sm text-muted-foreground border px-4 py-1.5 rounded-md uppercase tracking-widest font-bold bg-muted/10">
                   {PROJECTS.length}&nbsp; Showcases
                 </span>
               </div>
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
-              className="group flex flex-col border bg-muted/20 overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
+              className="group flex flex-col border bg-muted/20 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
             >
               {/* Image */}
               <div className="relative aspect-video overflow-hidden bg-muted/30">
@@ -80,7 +80,7 @@ export default function ProjectsPage() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-2.5 py-1 border border-primary/10"
+                      className="text-[10px] font-bold tracking-widest uppercase text-primary/80 bg-primary/5 px-2.5 py-1 rounded-md border border-primary/10"
                     >
                       {tag}
                     </span>

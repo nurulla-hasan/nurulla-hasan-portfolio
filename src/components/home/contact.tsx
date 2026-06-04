@@ -69,8 +69,8 @@ export function Contact() {
   return (
     <section id="contact" className="relative py-24 bg-background overflow-hidden">
       {/* Background Decorative Glows */}
-      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-100 h-100 bg-primary/20 rounded-full blur-[100px] pointer-events-none translate-y-1/4 -translate-x-1/4" />
+      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/5 dark:bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-100 h-100 bg-primary/5 dark:bg-primary/20 rounded-full blur-[100px] pointer-events-none translate-y-1/4 -translate-x-1/4" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
@@ -95,7 +95,7 @@ export function Contact() {
                       <Input 
                         placeholder="John Doe"
                         {...form.register("name")}
-                        className="bg-background border-border rounded-none h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                        className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
                       />
                       <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
                         {errors.name?.message}
@@ -107,7 +107,7 @@ export function Contact() {
                         type="email" 
                         placeholder="john@example.com"
                         {...form.register("email")}
-                        className="bg-background border-border rounded-none h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
+                        className="bg-background border-border rounded-lg h-11 px-4 focus:ring-1 focus:ring-primary/30 text-base font-bold"
                       />
                       <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
                         {errors.email?.message}
@@ -119,7 +119,7 @@ export function Contact() {
                     <Textarea 
                       placeholder="How can I help you?"
                       {...form.register("message")}
-                      className="h-32 bg-background border-border rounded-none px-4 py-3 focus:ring-1 focus:ring-primary/30 resize-none text-base font-bold"
+                      className="h-32 bg-background border-border rounded-lg px-4 py-3 focus:ring-1 focus:ring-primary/30 resize-none text-base font-bold"
                     />
                     <FieldError className="text-[9px] uppercase font-bold tracking-widest text-destructive mt-1.5">
                       {errors.message?.message}
@@ -151,8 +151,8 @@ export function Contact() {
           {/* Contact Details (Right Strip) */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-4">
             {/* Email Card */}
-            <div className="p-5 border border-border bg-muted/10 flex items-center gap-5 hover:border-primary/50 transition-all group premium-hover">
-              <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+            <div className="p-5 border border-border bg-muted/10 rounded-xl flex items-center gap-5 hover:border-primary/50 transition-all group premium-hover">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <div className="min-w-0">
@@ -165,8 +165,8 @@ export function Contact() {
 
             {/* Phone & Location Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 border border-border bg-muted/10 flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
-                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <div className="p-5 border border-border bg-muted/10 rounded-xl flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -176,8 +176,8 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-              <div className="p-5 border border-border bg-muted/10 flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
-                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <div className="p-5 border border-border bg-muted/10 rounded-xl flex items-center gap-4 hover:border-primary/50 transition-all group premium-hover">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -188,7 +188,7 @@ export function Contact() {
             </div>
 
             {/* Availability Badge Card */}
-            <div className="p-5 border border-primary/20 bg-primary/5 flex items-center gap-4">
+            <div className="p-5 border border-primary/20 bg-primary/5 rounded-xl flex items-center gap-4">
               <div className="h-2.5 w-2.5 bg-primary shadow-[0_0_8px_var(--color-primary)] animate-pulse shrink-0" />
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Status: Open for Opportunities</p>
             </div>

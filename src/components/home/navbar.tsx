@@ -51,17 +51,60 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    const hashIndex = href.indexOf("#");
+    if (hashIndex !== -1) {
+      const hash = href.substring(hashIndex);
+      const targetPath = href.substring(0, hashIndex) || "/";
+
+      if (pathname === targetPath || (pathname === "/" && targetPath === "")) {
+        e.preventDefault();
+        const element = document.querySelector(hash);
+        if (element) {
+          const lenisInstance = (window as unknown as LenisWindow).lenis;
+          if (lenisInstance) {
+            lenisInstance.scrollTo(hash, {
+              offset: -80,
+              duration: 1.2,
+            });
+          } else {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    } else if (href === "/" || href === "") {
+      if (pathname === "/") {
+        e.preventDefault();
+        const lenisInstance = (window as unknown as LenisWindow).lenis;
+        if (lenisInstance) {
+          lenisInstance.scrollTo(0, {
+            duration: 1.2,
+          });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-0 md:px-6 transition-all duration-500">
       <div
         className={`max-w-7xl mx-auto flex items-center justify-between px-5 py-2 md:px-10 md:py-3 transition-all duration-500 ${
           scrolled
-            ? "bg-background/60 backdrop-blur-xl border-x border-b md:border border-border/50 shadow-2xl shadow-primary/5 md:rounded-b-2xl lg:rounded-b-3xl"
+            ? "backdrop-blur-xl border-x border-b md:border border-border/50 shadow-2xl shadow-primary/5 md:rounded-b-2xl lg:rounded-b-3xl"
             : "bg-transparent border border-transparent shadow-none"
         }`}
       >
         {/* Logo */}
-        <Link href="/" className="group transition-all duration-300 shrink-0">
+        <Link 
+          href="/" 
+          onClick={(e) => handleNavLinkClick(e, "/")}
+          className="group transition-all duration-300 shrink-0"
+        >
           <NHLogo className="text-foreground h-8 md:h-12 w-auto transition-all group-hover:scale-110" />
         </Link>
 
@@ -77,6 +120,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavLinkClick(e, link.href)}
                 className={`text-xs font-bold uppercase tracking-widest transition-all hover:text-primary relative group/link ${
                   isActive ? "text-primary" : "text-muted-foreground"
                 }`}
@@ -136,7 +180,10 @@ export function Navbar() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          setIsOpen(false);
+                          handleNavLinkClick(e, link.href);
+                        }}
                         className="group relative flex items-center py-4 transition-all"
                       >
                         <div className="flex items-baseline gap-4 w-full">

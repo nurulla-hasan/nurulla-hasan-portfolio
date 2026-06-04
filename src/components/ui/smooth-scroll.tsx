@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { useEffect } from "react";
@@ -25,14 +25,23 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
     requestAnimationFrame(raf);
 
     // Expose lenis to window for global access (like from Navbar)
-    (window as any).lenis = lenis;
+    (window as unknown as LenisWindow).lenis = lenis;
 
     // Initial scroll sync
-    lenis.scrollTo(0, { immediate: true });
+    if (window.location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+          lenis.scrollTo(window.location.hash, { offset: -80, duration: 1.2 });
+        }
+      }, 200);
+    } else {
+      lenis.scrollTo(0, { immediate: true });
+    }
 
     return () => {
       lenis.destroy();
-      (window as any).lenis = undefined;
+      (window as unknown as LenisWindow).lenis = undefined;
     };
   }, []);
 
