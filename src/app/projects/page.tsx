@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-background pt-32 pb-24 relative overflow-hidden">
       {/* Subtle Background Glows */}
-      <div className="absolute top-0 left-1/4 w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/4 w-[50%] h-[50%] bg-primary/15 dark:bg-primary/35 rounded-full blur-[120px] pointer-events-none z-0" />
       
       <div className="container mx-auto px-6 lg:px-10 max-w-7xl relative z-10">
         {/* Header */}

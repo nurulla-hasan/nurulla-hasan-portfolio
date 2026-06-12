@@ -22,7 +22,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative py-20 bg-background overflow-hidden">
       {/* Background Decorative Glow - Positioned to follow the timeline flow */}
-      <div className="absolute top-[20%] left-[10%] w-120 h-120 bg-primary/3 dark:bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-[20%] left-[10%] w-120 h-120 bg-primary/15 dark:bg-primary/30 rounded-full blur-[130px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
@@ -41,7 +41,7 @@ export function Experience() {
               {/* Timeline Dot */}
               <div className="absolute -left-2.25 top-0 w-4.5 h-4.5 bg-background border-4 border-primary shadow-[0_0_10px_rgba(var(--color-primary),0.5)]" />
               
-              <div className="group relative p-8 border border-border bg-muted/20 rounded-xl backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30">
+              <div className="group relative p-8 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   <div>
