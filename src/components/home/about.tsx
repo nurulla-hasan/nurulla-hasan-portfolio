@@ -33,7 +33,7 @@ export function About() {
   return (
     <section id="about" className="relative py-24 bg-background overflow-hidden">
       {/* Background Decorative Glow */}
-      <div className="absolute top-[10%] left-[5%] w-100 h-100 bg-primary/5 dark:bg-primary/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-[10%] left-[5%] w-100 h-100 bg-primary/15 dark:bg-primary/35 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 
@@ -83,7 +83,7 @@ export function About() {
                 {LANGUAGES.map((lang) => (
                   <div 
                     key={lang.name}
-                    className="premium-hover flex items-center gap-3 px-6 py-3 border border-border bg-muted/20 rounded-xl backdrop-blur-sm transition-all hover:border-primary/30"
+                    className="premium-hover flex items-center gap-3 px-6 py-3 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30"
                   >
                     {lang.icon}
                     <div>
@@ -110,7 +110,7 @@ export function About() {
                 {EDUCATION.map((edu) => (
                   <div 
                     key={edu.institution}
-                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
@@ -138,7 +138,7 @@ export function About() {
                 {TRAINING.map((train) => (
                   <div 
                     key={train.platform}
-                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-muted/30"
+                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
                     <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                       {train.platform}

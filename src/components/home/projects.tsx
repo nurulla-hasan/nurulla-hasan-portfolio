@@ -14,7 +14,7 @@ export function Projects() {
       className="relative py-24 bg-background overflow-hidden"
     >
       {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/5 dark:bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/15 dark:bg-primary/40 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 

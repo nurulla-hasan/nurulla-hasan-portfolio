@@ -32,14 +32,14 @@ export function Hero() {
       />
 
       {/* Primary glow behind image */}
-      <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/5 dark:bg-primary/20 blur-[120px]" />
-      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/2 dark:bg-primary/10 blur-[90px]" />
+      <div className="absolute right-[18%] top-1/2 z-0 h-115 w-115 -translate-y-1/2 bg-primary/15 dark:bg-primary/40 blur-[120px]" />
+      <div className="absolute right-[14%] top-1/2 z-0 h-80 w-80 -translate-y-1/2 bg-primary/10 dark:bg-primary/30 blur-[90px]" />
 
       <div className="relative z-10 mx-auto grid md:min-h-screen max-w-7xl items-center gap-16 px-6 py-10 md:pt-26 md:gap-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
         {/* Left */}
         <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge with Typewriter */}
-          <div className="inline-flex items-center gap-2 border bg-muted/30 px-4 py-2 rounded-lg backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 border bg-muted/30 px-4 py-2 rounded-lg">
             <span className="h-2.5 w-2.5 bg-primary shadow-[0_0_14px_var(--color-primary)] animate-pulse" />
             <div className="flex items-center text-xs sm:text-sm font-medium tracking-wide text-foreground/85">
               <span>Frontend-Focused </span>
