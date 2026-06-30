@@ -96,4 +96,24 @@ export const PROJECTS = [
     liveUrl: "https://koumanisdietapp.com",
     githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
   },
+
+  {
+    id: "binksanders",
+    title: "Bink Sanders — Microlearning Platform",
+    description:
+      "An interactive microlearning platform featuring module-based learning paths, survey-driven assessments on workplace safety and inclusion, rich progress tracking with localStorage persistence, and dynamic theming. Built with Next.js 16 App Router, Radix UI, and Recharts for data-driven insights.",
+    image: "/assets/binksanders.png",
+    tags: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "shadcn/ui",
+      "Radix UI",
+      "TipTap",
+      "Recharts",
+      "Framer Motion",
+    ],
+    liveUrl: "https://binksanders-website.vercel.app/",
+    githubUrl: "https://github.com/nurulla-hasan/binksanders_website",
+  },
 ];

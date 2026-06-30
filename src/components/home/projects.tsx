@@ -83,11 +83,13 @@ export function Projects() {
                 </p>
 
                 <div className="flex items-center gap-4">
+                  {project.liveUrl && (
                   <Link href={project.liveUrl} target="_blank">
                     <Button variant="hero" size="sm" className="">
                       Live Demo <ExternalLink />
                     </Button>
                   </Link>
+                  )}
                   <Link href={project.githubUrl} target="_blank">
                     <Button variant="nav" size="sm" className="">
                       Source Code <GithubIcon />

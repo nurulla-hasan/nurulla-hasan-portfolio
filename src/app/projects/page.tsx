@@ -98,11 +98,13 @@ export default function ProjectsPage() {
                 </p>
 
                 <div className="flex items-center gap-3 mt-auto pt-5 border-t">
+                  {project.liveUrl && (
                   <Link href={project.liveUrl} target="_blank" className="flex-1">
                     <Button variant="hero" size="sm" className="w-full h-9 text-xs">
                       Live Preview <ExternalLink className="w-3 h-3 ml-1.5" />
                     </Button>
                   </Link>
+                  )}
                   <Link href={project.githubUrl} target="_blank">
                     <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
                       <GithubIcon className="w-4 h-4" />
