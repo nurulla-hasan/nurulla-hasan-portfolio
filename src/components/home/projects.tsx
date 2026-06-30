@@ -27,7 +27,7 @@ export function Projects() {
         />
 
         <div className="flex flex-col gap-0">
-          {PROJECTS.slice(0, 3).map((project, index) => (
+          {PROJECTS.slice(0, 10).map((project, index) => (
             <AnimatedSection
               key={project.title}
               direction="up"
