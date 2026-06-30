@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     id: "mess-manager-os",
-    title: "MessManager OS",
+    title: "Mess Manager OS",
     description:
       "A full-featured mess management platform for managers and members with meal tracking, meal-off requests, market schedules, payments, expenses, billing, notices, complaints, reports, and subscription-based feature access.",
     image: "/assets/mess.png",
@@ -13,7 +13,7 @@ export const PROJECTS = [
       "MongoDB",
       "TypeScript",
     ],
-    liveUrl: "https://mess-os-client.vercel.app",
+    liveUrl: "http://72.61.115.32:3005/",
     githubUrl: "https://github.com/nurulla-hasan/mess_os_client",
   },
   {
@@ -54,12 +54,30 @@ export const PROJECTS = [
   },
   {
     id: "mouza-map-calculator",
-    title: "Mouza Map & Land Area Calculator",
+    title: "Mouza Map Pro",
     description:
       "Engineered a high-performance 2D geospatial plotting tool using Konva.js, executing complex Shoelace algorithms to convert raw pixel distances into exact physical land areas (SqFt, Shotok). Implemented a custom physics-based repulsion algorithm to prevent label overlapping and integrated client-side PDF processing (pdfjs), delivering instant, scale-accurate A4 reports without server overhead.",
-    image: "/assets/mouza-map.png",
+    image: "/assets/mouza.png",
     tags: ["React", "Konva.js", "Zustand", "jsPDF"],
-    liveUrl: "https://mouza-map-calculation.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan/mouza-map-calculation",
+    liveUrl: "https://mouzamappro.com",
+    githubUrl: "https://github.com/nurulla-hasan/mouza_map_pro",
+  },
+  {
+    id: "recycle-mart",
+    title: "Recycle Mart — Buy & Sell Used Goods",
+    description:
+      "A modern e-commerce platform for buying and selling second-hand goods in Bangladesh. Features product listings with category filtering, real-time chat messaging, internationalization (English & Bengali), dark/light mode, image optimization via Cloudinary, JWT authentication, and fully responsive design.",
+    image: "/assets/recycle.png",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Shadcn UI",
+      "next-intl",
+      "Socket.IO",
+    ],
+    liveUrl: "https://recyclemart.com.bd",
+    githubUrl: "https://github.com/nurulla-hasan/recyclemart_website",
   },
 ];
