@@ -107,7 +107,7 @@ export default function ResumePage() {
                   Professional Summary
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                  Frontend-focused MERN Stack Developer with 1+ year of experience building API-driven SaaS platforms and high-performance corporate websites. Expert in React, Next.js (App Router), TypeScript, and Tailwind CSS. Proven ability to engineer scalable UI architectures, optimize URL-driven states, and deliver SEO-friendly, production-ready web applications.
+                  Frontend-focused MERN Stack Developer with 1+ year of experience building API-driven SaaS platforms and high-performance corporate websites. Strong proficiency in React, Next.js (App Router), TypeScript, and Tailwind CSS. Proven ability to engineer scalable UI architectures, optimize URL-driven states, and deliver SEO-friendly, production-ready web applications.
                 </p>
               </section>
 
@@ -131,9 +131,9 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <ul className="space-y-3 text-muted-foreground list-disc list-outside ml-4">
-                      <li>Engineered an optimized URL-state filtering hook (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/hooks/nextjs/useSmartFilter.ts" target="_blank" className="text-primary hover:underline font-bold"><code>useSmartFilter</code></Link>) for Next.js App Router with debounced navigation, cutting redundant API calls by 40%.</li>
-                      <li>Developed a centralized server-side <Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/lib/fetcher.ts" target="_blank" className="text-primary hover:underline font-bold">fetcher</Link> handling automated JWT validation and Next.js caching (<code>revalidateTag</code>), reducing API integration boilerplate by 30%.</li>
-                      <li>Built highly reusable frontend systems, including dynamic data tables with server-side pagination, protected routing, and API-integrated CRUD workflows.</li>
+                      <li>Engineered an optimized URL-state filtering hook (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/hooks/nextjs/useNextFilter.ts" target="_blank" className="text-primary hover:underline font-bold"><code>useNextFilter</code></Link>) for Next.js App Router with debounced navigation and responsive filtering.</li>
+                      <li>Developed a centralized server-side fetching layer (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/lib/nextServerFetch.ts" target="_blank" className="text-primary hover:underline font-bold"><code>nextServerFetch</code></Link>) with automated JWT validation and Next.js caching support.</li>
+                      <li>Built reusable frontend systems including data tables, protected routing, and API-integrated CRUD workflows.</li>
                     </ul>
                   </div>
                 </div>
@@ -150,14 +150,14 @@ export default function ResumePage() {
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-lg font-bold">Mess Management System</h3>
                       <div className="flex gap-4">
-                        <Link href="https://mess-os-client.vercel.app" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                        <Link href="http://72.61.115.32:3005/" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
                         <Link href="https://github.com/nurulla-hasan/mess_os_client" target="_blank" className="text-xs font-bold text-primary hover:underline">Client GitHub</Link>
                         <Link href="https://github.com/nurulla-hasan/mess_os_server" target="_blank" className="text-xs font-bold text-primary hover:underline">Server GitHub</Link>
                       </div>
                     </div>
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui, Express.js, MongoDB</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Architected a multi-tenant SaaS platform featuring a complex financial engine for automated monthly billing, dynamic meal rates, and equal-share overhead division.</li>
+                      <li>Built a full-stack mess management platform with automated monthly billing, dynamic meal rate calculation, equal-share utility cost distribution, and role-based dashboards.</li>
                       <li>Integrated an AI-powered menu planner and market scheduler that automates daily grocery lists based on budget limits and dietary preferences.</li>
                     </ul>
                   </div>
@@ -173,16 +173,16 @@ export default function ResumePage() {
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
                       <li>Developed a high-performance corporate website featuring advanced JSON-LD SEO schema, dynamic HTML Table of Contents parsing, and a ⌘K global command palette.</li>
-                      <li>Enhanced user navigation and UX by integrating a session-aware AI chatbot and implementing On-Demand ISR (<code>revalidateTag</code>) for optimal content caching.</li>
+                      <li>Enhanced user navigation and UX through On-Demand ISR (<code>revalidateTag</code>), optimized content caching, and advanced frontend interactions.</li>
                     </ul>
                   </div>
 
                   <div className="group">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">Mouza Map & Land Area Calculator</h3>
+                      <h3 className="text-lg font-bold">Mouza Map Pro</h3>
                       <div className="flex gap-4">
-                        <Link href="https://mouza-map-calculation.vercel.app/" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
-                        <Link href="https://github.com/nurulla-hasan/mouza-map-calculation" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
+                        <Link href="https://mouzamappro.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                        <Link href="https://github.com/nurulla-hasan/mouza_map_pro" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
                       </div>
                     </div>
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">React, Konva.js, Zustand, jsPDF</p>
@@ -207,15 +207,7 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Frontend</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["React.js", "Next.js App Router", "TypeScript", "JavaScript ES6+", "Tailwind CSS", "shadcn/ui", "Konva.js", "Framer Motion"].map(s => (
-                        <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Backend</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {["Node.js", "Express.js", "MongoDB", "Mongoose", "REST APIs", "JWT"].map(s => (
+                      {["React.js", "Next.js (App Router)", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "shadcn/ui", "Konva.js"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -223,15 +215,15 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">State & Data</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Zustand", "Redux Toolkit", "TanStack Query", "TanStack Table", "React Hook Form", "Zod"].map(s => (
+                      {["Zustand", "TanStack Query", "TanStack Table", "React Hook Form", "Zod", "Redux Toolkit"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Tools</h3>
+                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Backend & Tools</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Git", "GitHub", "Vercel", "jsPDF", "pnpm", "npm"].map(s => (
+                      {["Node.js", "Express.js", "MongoDB", "REST APIs", "Git", "Vercel", "jsPDF", "Framer Motion"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -254,33 +246,29 @@ export default function ResumePage() {
                 </div>
               </section>
 
-              {/* Training */}
+              {/* Additional Info */}
               <section>
                 <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
                   <Zap className="w-4 h-4 text-primary" />
-                  Additional Training
+                  Additional Info
                 </h2>
                 <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground font-medium">
-                    Programming Hero — Level 1 completed, currently continuing Level 2
-                  </p>
-                </div>
-              </section>
-
-              {/* Languages */}
-              <section>
-                <h2 className="text-base font-black uppercase tracking-widest mb-5 flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-primary" />
-                  Languages
-                </h2>
-                <div className="space-y-2 text-sm font-bold">
-                  <div className="flex justify-between">
-                    <span className="uppercase tracking-widest text-muted-foreground">English</span>
-                    <span className="text-primary">Comfortable</span>
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground">Training</h3>
+                    <p className="text-xs text-muted-foreground font-medium">Programming Hero (Level 1 Completed, Level 2 Continuing)</p>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="uppercase tracking-widest text-muted-foreground">Bangla</span>
-                    <span className="text-primary">Native</span>
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground">Languages</h3>
+                    <div className="space-y-1 text-xs font-bold mt-2">
+                      <div className="flex justify-between">
+                        <span className="uppercase tracking-widest text-muted-foreground">English</span>
+                        <span className="text-primary">Comfortable</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="uppercase tracking-widest text-muted-foreground">Bangla</span>
+                        <span className="text-primary">Native</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
