@@ -17,6 +17,26 @@ export const PROJECTS = [
     githubUrl: "https://github.com/nurulla-hasan/mess_os_client",
   },
   {
+    id: "mouza-map-calculator",
+    title: "Mouza Map Pro",
+    description:
+      "Engineered a high-performance 2D geospatial plotting tool using Konva.js, executing complex Shoelace algorithms to convert raw pixel distances into exact physical land areas (SqFt, Shotok). Implemented a custom physics-based repulsion algorithm to prevent label overlapping and integrated client-side PDF processing (pdfjs), delivering instant, scale-accurate A4 reports without server overhead.",
+    image: "/assets/mouza.png",
+    tags: ["React", "Konva.js", "Zustand", "jsPDF"],
+    liveUrl: "https://mouzamappro.com",
+    githubUrl: "https://github.com/nurulla-hasan/mouza_map_pro",
+  },
+  {
+    id: "wedding-marketplace",
+    title: "Wedding Marketplace & Vendor Platform",
+    description:
+      "A comprehensive platform featuring App Router route groups, shared UI abstractions, and vendor/user dashboard workflows. Includes smart filtering and infinite loading.",
+    image: "/assets/elevetor.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    liveUrl: "https://elevator-website-six.vercel.app/",
+    githubUrl: "https://github.com/nurulla-hasan/elevator_website",
+  },
+  {
     id: "mentorip",
     title: "MentorIP — Global IP Law Firm",
     description:
@@ -31,36 +51,6 @@ export const PROJECTS = [
     ],
     liveUrl: "https://mentorip.com",
     githubUrl: "https://github.com/nurulla-hasan/mentorip_website",
-  },
-  {
-    id: "cookbook-recipe",
-    title: "Cookbook Recipe & Meal Planner",
-    description:
-      "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
-    image: "/assets/jaykou.png",
-    tags: ["React", "Redux", "JavaScript","Tailwind CSS", "Shadcn UI"],
-    liveUrl: "https://koumanisdietapp.com",
-    githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
-  },
-  {
-    id: "wedding-marketplace",
-    title: "Wedding Marketplace & Vendor Platform",
-    description:
-      "A comprehensive platform featuring App Router route groups, shared UI abstractions, and vendor/user dashboard workflows. Includes smart filtering and infinite loading.",
-    image: "/assets/elevetor.png",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-    liveUrl: "https://elevator-website-six.vercel.app/",
-    githubUrl: "https://github.com/nurulla-hasan/elevator_website",
-  },
-  {
-    id: "mouza-map-calculator",
-    title: "Mouza Map Pro",
-    description:
-      "Engineered a high-performance 2D geospatial plotting tool using Konva.js, executing complex Shoelace algorithms to convert raw pixel distances into exact physical land areas (SqFt, Shotok). Implemented a custom physics-based repulsion algorithm to prevent label overlapping and integrated client-side PDF processing (pdfjs), delivering instant, scale-accurate A4 reports without server overhead.",
-    image: "/assets/mouza.png",
-    tags: ["React", "Konva.js", "Zustand", "jsPDF"],
-    liveUrl: "https://mouzamappro.com",
-    githubUrl: "https://github.com/nurulla-hasan/mouza_map_pro",
   },
   {
     id: "recycle-mart",
@@ -79,5 +69,15 @@ export const PROJECTS = [
     ],
     liveUrl: "https://recyclemart.com.bd",
     githubUrl: "https://github.com/nurulla-hasan/recyclemart_website",
+  },
+  {
+    id: "cookbook-recipe",
+    title: "Cookbook Recipe & Meal Planner",
+    description:
+      "Developed modular frontend flows with protected routing, debounce-driven interactions, and reusable profile/account features.",
+    image: "/assets/jaykou.png",
+    tags: ["React", "Redux", "JavaScript", "Tailwind CSS", "Shadcn UI"],
+    liveUrl: "https://koumanisdietapp.com",
+    githubUrl: "https://github.com/nurulla-hasan/cookbook-recipe-website",
   },
 ];

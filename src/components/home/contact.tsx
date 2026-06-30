@@ -19,6 +19,8 @@ import {
   CardTitle 
 } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggerContainer } from "@/components/ui/stagger-container";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -83,7 +85,8 @@ export function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Main Form Box (Left) */}
           <div className="lg:col-span-7">
-            <Card className="h-full border-border bg-muted/5 premium-shadow">
+            <AnimatedSection direction="up" threshold={0.15}>
+              <Card className="h-full border-border bg-muted/5 premium-shadow">
               <CardHeader className="p-6">
                 <CardTitle className="text-xl font-black uppercase tracking-tighter">Send a Message</CardTitle>
               </CardHeader>
@@ -146,10 +149,11 @@ export function Contact() {
                 </form>
               </CardContent>
             </Card>
+            </AnimatedSection>
           </div>
 
           {/* Contact Details (Right Strip) */}
-          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+          <StaggerContainer direction="up" staggerDelay={0.1} className="lg:col-span-5 grid grid-cols-1 gap-4">
             {/* Email Card */}
             <div className="p-5 border border-border bg-muted/10 rounded-xl flex items-center gap-5 hover:border-primary/50 transition-all group premium-hover">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -192,7 +196,7 @@ export function Contact() {
               <div className="h-2.5 w-2.5 bg-primary shadow-[0_0_8px_var(--color-primary)] animate-pulse shrink-0" />
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Status: Open for Opportunities</p>
             </div>
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

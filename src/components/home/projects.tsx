@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 import { PROJECTS } from "@/lib/data";
 import Link from "next/link";
@@ -27,8 +28,11 @@ export function Projects() {
 
         <div className="flex flex-col gap-0">
           {PROJECTS.slice(0, 3).map((project, index) => (
-            <div
+            <AnimatedSection
               key={project.title}
+              direction="up"
+              threshold={0.12}
+              delay={index * 0.1}
               className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12 ${
                 index !== 0 ? "border-t" : ""
               } ${
@@ -91,7 +95,7 @@ export function Projects() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { GraduationCap, Award, Languages, Code } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
+import { StaggerContainer } from "@/components/ui/stagger-container";
+import { AnimatedSection } from "@/components/ui/animated-section";
 
 const STATS = [
   { value: "1+", label: "Year Experience" },
@@ -43,7 +45,7 @@ export function About() {
         />
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           {/* Left: Bio & Stats */}
-          <div>
+          <StaggerContainer direction="up" staggerDelay={0.12}>
             <div className="space-y-4 text-muted-foreground text-base leading-relaxed max-w-xl">
               <p>
                 I am a passionate <span className="text-foreground font-semibold">Frontend-focused MERN Stack Developer</span> with 
@@ -94,64 +96,66 @@ export function About() {
                 ))}
               </div>
             </div>
-          </div>
+          </StaggerContainer>
 
           {/* Right: Education & Training */}
-          <div className="space-y-10">
-            {/* Education */}
-            <div>
-              <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-primary" />
-                </div>
-                Education
-              </h4>
-              <div className="space-y-4">
-                {EDUCATION.map((edu) => (
-                  <div 
-                    key={edu.institution}
-                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                        {edu.degree}
-                      </h5>
-                      <span className="text-sm font-medium text-primary border border-primary/20 rounded-md px-3 py-1 shrink-0 ml-3">
-                        {edu.duration}
-                      </span>
+          <StaggerContainer direction="up" staggerDelay={0.15} delay={0.1}>
+            <div className="space-y-10">
+              {/* Education */}
+              <div>
+                <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  Education
+                </h4>
+                <div className="space-y-4">
+                  {EDUCATION.map((edu) => (
+                    <div 
+                      key={edu.institution}
+                      className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
+                    >
+                      <div className="flex justify-between items-start mb-2">
+                        <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                          {edu.degree}
+                        </h5>
+                        <span className="text-sm font-medium text-primary border border-primary/20 rounded-md px-3 py-1 shrink-0 ml-3">
+                          {edu.duration}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground font-medium">{edu.institution}</p>
                     </div>
-                    <p className="text-muted-foreground font-medium">{edu.institution}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Training */}
-            <div>
-              <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-primary" />
+                  ))}
                 </div>
-                Additional Training
-              </h4>
-              <div className="space-y-4">
-                {TRAINING.map((train) => (
-                  <div 
-                    key={train.platform}
-                    className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
-                  >
-                    <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                      {train.platform}
-                    </h5>
-                    <p className="text-muted-foreground font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full animate-pulse shrink-0" />
-                      {train.status}
-                    </p>
+              </div>
+
+              {/* Training */}
+              <div>
+                <h4 className="text-foreground font-bold text-2xl mb-6 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Award className="w-6 h-6 text-primary" />
                   </div>
-                ))}
+                  Additional Training
+                </h4>
+                <div className="space-y-4">
+                  {TRAINING.map((train) => (
+                    <div 
+                      key={train.platform}
+                      className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
+                    >
+                      <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                        {train.platform}
+                      </h5>
+                      <p className="text-muted-foreground font-medium flex items-center gap-2">
+                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse shrink-0" />
+                        {train.status}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

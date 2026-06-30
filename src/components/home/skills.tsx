@@ -2,6 +2,7 @@
 
 import { Cpu, Layout, Zap, CheckCircle2 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
+import { StaggerContainer } from "@/components/ui/stagger-container";
 import { 
   FrontendIcon, StateIcon, ArchitectureIcon, FocusIcon,
   ReactIcon, NextjsIcon, TSIcon, JSIcon, TailwindIcon, CodeIcon 
@@ -75,7 +76,11 @@ export function Skills() {
           description="I specialize in the MERN stack and modern frontend technologies, focusing on creating seamless digital products that solve real-world problems."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <StaggerContainer
+          direction="up"
+          staggerDelay={0.12}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+        >
           {SKILL_CATEGORIES.map((category) => (
             <div
               key={category.title}
@@ -113,7 +118,7 @@ export function Skills() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

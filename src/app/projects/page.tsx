@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/ui/icons";
+import { StaggerContainer } from "@/components/ui/stagger-container";
 import { PROJECTS } from "@/lib/data";
 import type { Metadata } from "next";
 
@@ -57,7 +58,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer direction="up" staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
@@ -111,7 +112,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </main>
   );

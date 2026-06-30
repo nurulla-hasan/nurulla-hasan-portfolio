@@ -1,5 +1,7 @@
 import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggerContainer } from "@/components/ui/stagger-container";
 import Link from "next/link";
 
 const EXPERIENCES = [
@@ -34,8 +36,10 @@ export function Experience() {
 
         <div className="max-w-4xl">
           {EXPERIENCES.map((exp) => (
-            <div
+            <AnimatedSection
               key={exp.company}
+              direction="left"
+              threshold={0.15}
               className="relative pl-8 md:pl-12 border-l border-border pb-8 last:pb-0"
             >
               {/* Timeline Dot */}
@@ -68,14 +72,14 @@ export function Experience() {
                   {exp.description}
                 </p>
 
-                <div className="space-y-3">
+                <StaggerContainer direction="up" staggerDelay={0.08} className="space-y-3">
                   {exp.achievements.map((achievement, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <p className="text-foreground/80 text-sm leading-relaxed">{achievement}</p>
                     </div>
                   ))}
-                </div>
+                </StaggerContainer>
 
                 {/* Tech Stack Tags */}
                 <div className="mt-6 pt-6 border-t border-border/50">
@@ -89,7 +93,7 @@ export function Experience() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
