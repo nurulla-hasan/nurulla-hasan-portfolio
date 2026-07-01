@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cagliostro } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -93,13 +93,24 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
     apple: "/apple-touch-icon.png",
+  },
+  appleWebApp: {
+    title: "Nurulla Hasan",
+    statusBarStyle: "black-translucent",
   },
   verification: {
     google: "IhcboU1VL3736BrgXDuvYguYXsjToJ1pnTXA8aMSOOM",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#050505" },
+    { media: "(prefers-color-scheme: light)", color: "#f5f5f5" },
+  ],
 };
 
 import { Navbar } from "@/components/home/navbar";
