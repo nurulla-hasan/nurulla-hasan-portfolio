@@ -4,9 +4,9 @@ import { StaggerContainer } from "@/components/ui/stagger-container";
 import { AnimatedSection } from "@/components/ui/animated-section";
 
 const STATS = [
-  { value: "1+", label: "Year Experience" },
-  { value: "40+", label: "Projects Built" },
-  { value: "12+", label: "Happy Clients" },
+  { value: "1+", label: "Years Experience" },
+  { value: "10+", label: "Production Projects" },
+  { value: "Current", label: "Company" },
 ];
 
 const EDUCATION = [

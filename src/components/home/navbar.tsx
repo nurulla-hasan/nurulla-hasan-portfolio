@@ -26,8 +26,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Skills", href: "/#skills" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/#featured-projects" },
   { name: "Contact", href: "/#contact" },
 ];
 
@@ -64,28 +63,13 @@ export function Navbar() {
         e.preventDefault();
         const element = document.querySelector(hash);
         if (element) {
-          const lenisInstance = (window as unknown as LenisWindow).lenis;
-          if (lenisInstance) {
-            lenisInstance.scrollTo(hash, {
-              offset: -80,
-              duration: 1.2,
-            });
-          } else {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
     } else if (href === "/" || href === "") {
       if (pathname === "/") {
         e.preventDefault();
-        const lenisInstance = (window as unknown as LenisWindow).lenis;
-        if (lenisInstance) {
-          lenisInstance.scrollTo(0, {
-            duration: 1.2,
-          });
-        } else {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     }
   };

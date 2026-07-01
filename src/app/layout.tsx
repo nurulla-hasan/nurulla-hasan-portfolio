@@ -104,7 +104,6 @@ export const metadata: Metadata = {
 
 import { Navbar } from "@/components/home/navbar";
 import { SocialSidebar } from "@/components/ui/social-sidebar";
-import SmoothScrollProvider from "@/components/ui/smooth-scroll";
 
 export default function RootLayout({
   children,
@@ -125,11 +124,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScrollProvider>
-            <Navbar />
+          <Navbar />
             {children}
             <SocialSidebar />
-          </SmoothScrollProvider>
           <Toaster richColors/>
         </ThemeProvider>
       </body>

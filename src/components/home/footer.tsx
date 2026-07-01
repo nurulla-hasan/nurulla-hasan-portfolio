@@ -14,12 +14,7 @@ const SOCIALS = [
 
 export function Footer() {
   const scrollToTop = () => {
-    const lenisInstance = (window as unknown as LenisWindow).lenis;
-    if (lenisInstance) {
-      lenisInstance.scrollTo(0, { duration: 1.2 });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -47,7 +42,7 @@ export function Footer() {
             <div className="flex items-center gap-8 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
               <a href="#about" className="hover:text-primary transition-colors">About</a>
               <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-              <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+              <a href="#featured-projects" className="hover:text-primary transition-colors">Projects</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
             </div>
           </div>

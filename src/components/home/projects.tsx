@@ -33,7 +33,7 @@ export function Projects() {
               direction="up"
               threshold={0.12}
               delay={index * 0.1}
-              className={`group relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12 ${
+              className={`group relative grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 items-center py-12 ${
                 index !== 0 ? "border-t" : ""
               } ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
