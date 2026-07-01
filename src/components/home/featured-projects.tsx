@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, Star, Info } from "lucide-react";
+import { ExternalLink, Star, Info, ArrowRight } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
@@ -45,7 +45,7 @@ export function FeaturedProjects() {
               </div>
 
               {/* Image */}
-              <div className="relative aspect-16/10 overflow-hidden">
+              <Link href={`/projects/${project.id}`} className="relative aspect-16/10 overflow-hidden block">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -53,8 +53,12 @@ export function FeaturedProjects() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
-              </div>
+                <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+                  <span className="text-white font-bold bg-primary/90 px-6 py-2.5 rounded-full translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg flex items-center gap-2">
+                    View Case Study <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
 
               {/* Content */}
               <div className="flex flex-col flex-1 p-6 pt-4">
