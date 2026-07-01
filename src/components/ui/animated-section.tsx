@@ -59,7 +59,7 @@ export function AnimatedSection({
   direction = "up",
   delay = 0,
   duration = 0.6,
-  once = false,
+  once = true,
   threshold = 0.2,
   className,
   distance = 60,
