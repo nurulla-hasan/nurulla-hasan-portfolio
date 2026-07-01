@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink, Star, Info } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
@@ -39,7 +39,7 @@ export function FeaturedProjects() {
               className="group relative flex flex-col border border-border bg-muted/10 rounded-2xl overflow-hidden premium-hover hover:border-primary/30 transition-all duration-500"
             >
               {/* Star Badge */}
-              <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5 bg-primary/90 backdrop-blur-sm text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+              <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5 bg-primary/90 text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
                 <Star className="w-3 h-3" />
                 Featured
               </div>
@@ -87,14 +87,19 @@ export function FeaturedProjects() {
                 <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border/50">
                   {project.liveUrl && (
                     <Link href={project.liveUrl} target="_blank">
-                      <Button variant="hero" size="xs">
-                        Live <ExternalLink className="ml-1" />
+                      <Button variant="hero" className="gap-2">
+                        Live <ExternalLink />
                       </Button>
                     </Link>
                   )}
+                  <Link href={`/projects/${project.id}`}>
+                    <Button variant="nav" className="gap-2">
+                      Details <Info />
+                    </Button>
+                  </Link>
                   <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" size="xs">
-                      Code <GithubIcon className="ml-1" />
+                    <Button variant="nav" className="gap-2">
+                      Code <GithubIcon />
                     </Button>
                   </Link>
                 </div>

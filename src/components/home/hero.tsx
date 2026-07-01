@@ -50,13 +50,13 @@ export function Hero() {
             <AnimatedText 
               text="Frontend-Focused"
               as="h1"
-              className="text-[40px] font-bold leading-tight md:leading-18 sm:text-[56px] md:text-[74px] xl:text-[86px]"
+              className="text-[32px] font-bold leading-tight md:leading-18 sm:text-[46px] md:text-[58px] xl:text-[70px]"
               type="words"
               staggerDelay={0.04}
               delay={0.15}
             />
             <AnimatedSection direction="up" delay={0.25}>
-              <h2 className="text-[36px] font-bold leading-tight md:leading-20 sm:text-[50px] md:text-[66px] xl:text-[78px] mt-1">
+              <h2 className="text-[28px] font-bold leading-tight md:leading-20 sm:text-[40px] md:text-[50px] xl:text-[62px] mt-1 whitespace-nowrap">
                 <span className="text-primary">MERN Stack</span>
                 <span className="text-foreground"> Developer</span>
               </h2>
@@ -121,7 +121,7 @@ export function Hero() {
         <AnimatedSection direction="right" delay={0.2} className="relative flex h-87.5 items-end justify-center sm:h-112.5 lg:h-180 lg:justify-end">
           <div className="relative z-10 flex h-full w-full items-end justify-center lg:justify-end">
             <motion.div
-              className="relative h-full w-full max-w-155 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center"
+              className="relative h-full w-full max-w-full lg:scale-125 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center origin-bottom"
               animate={{ y: [0, -12, 0] }}
               transition={{
                 duration: 5,

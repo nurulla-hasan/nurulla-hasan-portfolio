@@ -137,6 +137,7 @@
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -144,11 +145,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary transition-colors;
+  @apply bg-primary transition-colors rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary/40;
+  @apply bg-primary/40 rounded-full;
 }
 
 @layer utilities {

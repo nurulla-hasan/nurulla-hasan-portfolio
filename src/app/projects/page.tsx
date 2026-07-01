@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/ui/icons";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
-              className="group flex flex-col border bg-muted/20 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
+              className="group flex flex-col h-full border bg-muted/20 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
             >
               {/* Image */}
               <div className="relative aspect-video overflow-hidden bg-muted/30">
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                  className="object-contain transition-transform duration-700"
+                  className="object-cover transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
@@ -93,9 +93,11 @@ export default function ProjectsPage() {
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
-                  {project.description}
-                </p>
+                <div className="flex-1 mb-6">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                    {project.description}
+                  </p>
+                </div>
 
                 <div className="flex items-center gap-3 mt-auto pt-5 border-t">
                   {project.liveUrl && (
@@ -105,6 +107,11 @@ export default function ProjectsPage() {
                     </Button>
                   </Link>
                   )}
+                  <Link href={`/projects/${project.id}`}>
+                    <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
+                      <Info className="w-4 h-4" />
+                    </Button>
+                  </Link>
                   <Link href={project.githubUrl} target="_blank">
                     <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
                       <GithubIcon className="w-4 h-4" />
