@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "@/components/ui/icons";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
+import { MessageCircle, Send } from "lucide-react";
 
 const SOCIALS = [
   { 
@@ -15,14 +16,14 @@ const SOCIALS = [
     icon: LinkedinIcon
   },
   { 
-    label: "Twitter", 
-    href: "https://x.com",
-    icon: XIcon
+    label: "WhatsApp", 
+    href: "https://wa.me/8801750974716",
+    icon: MessageCircle
   },
   { 
-    label: "Instagram", 
-    href: "https://instagram.com",
-    icon: InstagramIcon
+    label: "Telegram", 
+    href: "https://t.me/+8801750974716",
+    icon: Send
   },
 ];
 

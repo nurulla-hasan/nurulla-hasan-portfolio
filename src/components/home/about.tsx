@@ -58,6 +58,10 @@ export function About() {
               My approach is centered around <span className="text-foreground font-semibold">reusable architecture</span> and 
               clean code — ensuring every product I build is powerful, maintainable, and developer-friendly.
             </p>
+            <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
+              Beyond the screen, I am an avid learner who enjoys exploring new technologies. When I am not coding, you can find me 
+              <span className="text-foreground font-medium"> traveling, reading tech blogs, or playing cricket</span>. I believe maintaining a healthy balance fuels my creativity and problem-solving skills.
+            </p>
 
             {/* Stats Row */}
             <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
