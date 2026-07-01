@@ -1,7 +1,6 @@
 import { GraduationCap, Award, Languages, Code } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { StaggerContainer } from "@/components/ui/stagger-container";
-import { AnimatedSection } from "@/components/ui/animated-section";
 
 const STATS = [
   { value: "1+", label: "Years Experience" },
@@ -61,14 +60,14 @@ export function About() {
             </p>
 
             {/* Stats Row */}
-            <div className="mt-8 grid grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
               {STATS.map((stat) => (
                 <div
                   key={stat.label}
-                  className="group p-4 border border-border bg-muted/20 rounded-xl hover:border-primary/40 hover:bg-muted/30 transition-all text-center"
+                  className="group p-3 sm:p-4 border border-border bg-muted/20 rounded-xl hover:border-primary/40 hover:bg-muted/30 transition-all text-center flex flex-col justify-center overflow-hidden"
                 >
-                  <p className="text-3xl font-black text-primary leading-none mb-1">{stat.value}</p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
+                  <p className="text-xl sm:text-3xl font-black text-primary leading-none mb-1 truncate">{stat.value}</p>
+                  <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-muted-foreground truncate">{stat.label}</p>
                 </div>
               ))}
             </div>

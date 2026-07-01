@@ -23,8 +23,8 @@ const EXPERIENCES = [
 export function Experience() {
   return (
     <section id="experience" className="relative py-20 bg-background overflow-hidden">
-      {/* Background Decorative Glow - Positioned to follow the timeline flow */}
-      <div className="absolute top-[20%] left-[10%] w-120 h-120 bg-primary/15 dark:bg-primary/30 rounded-full blur-[130px] pointer-events-none" />
+      {/* Background Decorative Glow - Positioned to the right for visual variety */}
+      <div className="absolute top-[15%] right-[5%] w-100 h-100 bg-primary/15 dark:bg-primary/35 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         <SectionHeader 

@@ -5,7 +5,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import { sendEmail } from "@/app/actions/email";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,7 @@ import {
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { StaggerContainer } from "@/components/ui/stagger-container";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -153,7 +154,7 @@ export function Contact() {
           </div>
 
           {/* Contact Details (Right Strip) — Unified Premium Panel */}
-          <StaggerContainer direction="up" staggerDelay={0.1} className="lg:col-span-5 flex flex-col gap-4">
+          <StaggerContainer direction="up" staggerDelay={0.1} className="lg:col-span-5 flex flex-col gap-6">
             {/* Unified Contact Info Card */}
             <div className="relative overflow-hidden rounded-xl border border-border bg-linear-to-br from-muted/20 to-muted/5 premium-shadow group">
               {/* Decorative gradient blob */}
@@ -219,6 +220,57 @@ export function Contact() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">
                   Open for Opportunities
                 </p>
+              </div>
+            </div>
+
+            {/* Social Profiles Card */}
+            <div className="relative overflow-hidden rounded-xl border border-border bg-linear-to-br from-muted/10 to-transparent premium-shadow group p-5 flex flex-col justify-center">
+              {/* <div className="flex items-center gap-3 pb-2 mb-3 border-b border-border/50">
+                <div className="h-6 w-1 bg-primary rounded-full" />
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-foreground/60">Social Profiles</p>
+              </div> */}
+              
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                <a 
+                  href="https://github.com/nurulla-hasan" 
+                  target="_blank"
+                  className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-background border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/social"
+                >
+                  <GithubIcon className="w-5 h-5 text-muted-foreground group-hover/social:text-primary transition-colors" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground group-hover/social:text-primary transition-colors">GitHub</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/nurulla-hasan/" 
+                  target="_blank"
+                  className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-background border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/social"
+                >
+                  <LinkedinIcon className="w-5 h-5 text-muted-foreground group-hover/social:text-primary transition-colors" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground group-hover/social:text-primary transition-colors">LinkedIn</span>
+                </a>
+                {/* <a 
+                  href="https://x.com/nurullahasan44" 
+                  target="_blank"
+                  className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-background border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/social"
+                >
+                  <XIcon className="w-5 h-5 text-muted-foreground group-hover/social:text-primary transition-colors" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground group-hover/social:text-primary transition-colors">Twitter</span>
+                </a> */}
+                <a 
+                  href="https://wa.me/8801750974716" 
+                  target="_blank"
+                  className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-background border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/social"
+                >
+                  <MessageCircle className="w-5 h-5 text-muted-foreground group-hover/social:text-primary transition-colors" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground group-hover/social:text-primary transition-colors">WhatsApp</span>
+                </a>
+                <a 
+                  href="https://t.me/+8801750974716" 
+                  target="_blank"
+                  className="flex flex-col items-center justify-center gap-1.5 p-2.5 rounded-lg bg-background border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/social"
+                >
+                  <Send className="w-5 h-5 text-muted-foreground group-hover/social:text-primary transition-colors" />
+                  <span className="text-[8px] font-bold uppercase tracking-widest text-muted-foreground group-hover/social:text-primary transition-colors">Telegram</span>
+                </a>
               </div>
             </div>
           </StaggerContainer>
