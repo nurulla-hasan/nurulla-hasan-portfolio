@@ -66,7 +66,7 @@ const containerVariants = (
 export function StaggerContainer({
   children,
   staggerDelay = 0.1,
-  once = false,
+  once = true,
   className,
   direction = "up",
   delay = 0,
