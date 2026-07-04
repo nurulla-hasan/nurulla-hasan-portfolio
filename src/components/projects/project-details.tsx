@@ -39,6 +39,7 @@ interface ProjectDetailsProps {
 
 export function ProjectDetails({ project }: ProjectDetailsProps) {
   const [activeScreenshot, setActiveScreenshot] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Calculate next project
   const currentIndex = PROJECTS.findIndex(p => p.id === project.id);
@@ -48,13 +49,13 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
 
   // Auto-play slider
   useEffect(() => {
-    if (project.screenshots && project.screenshots.length > 1) {
+    if (project.screenshots && project.screenshots.length > 1 && !isHovered) {
       const interval = setInterval(() => {
         setActiveScreenshot((prev) => (prev + 1) % project.screenshots.length);
       }, 3000);
       return () => clearInterval(interval);
     }
-  }, [project.screenshots]);
+  }, [project.screenshots, isHovered]);
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-24">
@@ -129,7 +130,11 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
 
         {/* Project Screenshots Slider */}
         <AnimatedSection direction="up" delay={0.2} className="mb-20">
-          <div className="relative aspect-video rounded-2xl overflow-hidden border border-border bg-muted/20 premium-shadow group">
+          <div 
+            className="relative aspect-16/8 rounded-2xl overflow-hidden border border-border bg-muted/20 premium-shadow group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeScreenshot}
@@ -144,7 +149,8 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   alt={`${project.title} Screenshot ${activeScreenshot + 1}`}
                   fill
                   sizes="(max-width: 1200px) 100vw, 1000px"
-                  className="object-cover"
+                  className="object-contain"
+                  unoptimized
                   priority
                 />
               </motion.div>
@@ -167,6 +173,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                       src={ss}
                       alt={`Thumbnail ${index + 1}`}
                       fill
+                      sizes="64px"
                       className="object-cover"
                     />
                   </button>
