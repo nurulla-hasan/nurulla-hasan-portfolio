@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="banner.png" width="100%" alt="Nurulla Hasan - Frontend Developer" />
-
 # Hi, I'm Nurulla Hasan 👋
 
 <img
