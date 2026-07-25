@@ -1,49 +1,21 @@
-export const PROJECTS = [
-  {
-    id: "mess-manager-os",
-    title: "Mess Management System",
-    description:
-      "A full-stack SaaS platform for mess management featuring role-based dashboards, automated monthly billing, dynamic meal rate calculation, utility expense distribution, meal tracking, notices, complaints, reports, and AI-assisted menu planning. Built with a scalable architecture using Next.js, Express.js, MongoDB, and TypeScript.",
-    image: "/assets/mess.png",
-    tags: [
-      "Next.js 16",
-      "React 19",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "TypeScript",
-    ],
-    liveUrl: "https://mess-os-client.vercel.app",
-    githubUrl: "https://github.com/nurulla-hasan/mess_os_client",
-    role: "Full-Stack Developer",
-    duration: "2024 – Present",
-    features: [
-      "Role-based dashboards for managers, members, and admins with granular access control",
-      "Automated monthly billing with dynamic meal rate calculation and equal-share utility cost distribution",
-      "Real-time meal tracking system with daily meal count management and meal on/off toggle",
-      "AI-powered menu planner that automates daily grocery lists based on budget limits and dietary preferences",
-      "Market scheduler for automated daily grocery procurement workflows",
-      "Notice board, complaint management, and report generation systems",
-      "Comprehensive analytics dashboard with monthly expense breakdowns and member-wise reports",
-    ],
-    challenges: [
-      "Designed a scalable multi-tenant architecture supporting multiple mess groups with isolated data",
-      "Implemented complex billing logic handling dynamic meal rates, utility splits, and carry-forward balances",
-      "Built an optimized server-side data fetching layer with automated JWT validation and Next.js caching (revalidateTag)",
-      "Engineered URL-state filtering with debounced navigation, reducing redundant API calls by 40%",
-    ],
-    screenshots: [
-      "/assets/messos/Screenshot 2026-07-04 175419.png",
-      "/assets/messos/Screenshot 2026-07-04 175502.png",
-      "/assets/messos/Screenshot 2026-07-04 175524.png",
-      "/assets/messos/Screenshot 2026-07-04 175541.png",
-      "/assets/messos/Screenshot 2026-07-04 180803.png",
-      "/assets/messos/Screenshot 2026-07-04 180827.png",
-      "/assets/messos/Screenshot 2026-07-04 180844.png",
-      "/assets/messos/Screenshot 2026-07-04 180944.png",
-    ],
-  },
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured?: boolean;
+  hideCodeButton?: boolean;
+  role: string;
+  duration: string;
+  features: string[];
+  challenges: string[];
+  screenshots: string[];
+}
 
+export const PROJECTS: Project[] = [
   {
     id: "mouza-map-calculator",
     title: "Mouza Map Pro",
