@@ -98,6 +98,7 @@ export const PROJECTS = [
     liveUrl: "https://mentorip.com",
     githubUrl: "",
     featured: true,
+    hideCodeButton: true,
     role: "Frontend Developer",
     duration: "2025",
     features: [
