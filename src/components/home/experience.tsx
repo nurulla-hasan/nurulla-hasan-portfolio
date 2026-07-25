@@ -2,21 +2,21 @@ import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { StaggerContainer } from "@/components/ui/stagger-container";
-import Link from "next/link";
 
 const EXPERIENCES = [
   {
-    company: "Betopia Group",
-    role: "Frontend Developer",
+    company: "Sparktech Agency",
+    role: "Junior Frontend Developer",
     location: "Dhaka, Bangladesh (On-site)",
     duration: "March 2025 – Present",
-    description: "Building API-driven SaaS platforms and internal dashboards, focusing on scalable UI architecture, optimized data flows, and production-ready frontend systems.",
+    description: "Serve as the sole frontend developer across multiple client products, building production websites and role-based dashboards from requirement analysis to delivery.",
     achievements: [
-      <span key="useSmartFilter">Engineered an optimized URL-state filtering hook (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/hooks/nextjs/useSmartFilter.ts" target="_blank" className="text-primary hover:underline font-bold"><code>useSmartFilter</code></Link>) for Next.js App Router with debounced navigation, cutting redundant API calls by 40%.</span>,
-      <span key="fetcher">Developed a centralized server-side <Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/lib/fetcher.ts" target="_blank" className="text-primary hover:underline font-bold">fetcher</Link> handling automated JWT validation and Next.js caching (<code>revalidateTag</code>), reducing API integration boilerplate by 30%.</span>,
-      "Built highly reusable frontend systems, including dynamic data tables with server-side pagination, protected routing, and API-integrated CRUD workflows."
+      <span key="build">Build reusable, API-driven interfaces for dashboards, complex forms, data tables, authentication, and <span className="text-primary font-medium">role-based workflows</span> using Next.js, React, TypeScript, and modern state-management tools.</span>,
+      <span key="utils">Developed reusable <span className="text-primary font-medium">useNextFilter</span> and <span className="text-primary font-medium">nextServerFetch</span> utilities to standardize URL-synced filtering, debounced navigation, authentication, request handling, and consistent API error management across projects.</span>,
+      <span key="implement">Implement and maintain <span className="text-primary font-medium">real-time chat</span>, CRUD and CMS workflows, QR-based access, maps, file uploads, dynamic metadata, route protection, and responsive interfaces.</span>,
+      <span key="collab">Collaborate with backend developers and stakeholders to turn business requirements into practical, maintainable, and user-friendly frontend solutions.</span>
     ],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "TanStack Query", "TanStack Table", "React Hook Form", "Zod"]
+    stack: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "TanStack Query", "TanStack Table", "React Hook Form", "Zod"]
   }
 ];
 
@@ -31,7 +31,7 @@ export function Experience() {
           badge="Career Path"
           title="Professional"
           titleAccent="Experience"
-          description="My journey through the tech industry, focused on delivering high-impact frontend solutions and architecting scalable dashboard systems for enterprise-level applications."
+          description="My professional journey is focused on building production-ready websites, reusable frontend systems, and role-based dashboards for real-world client products."
         />
 
         <div className="max-w-4xl">

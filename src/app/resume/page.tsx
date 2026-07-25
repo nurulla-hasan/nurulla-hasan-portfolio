@@ -26,7 +26,7 @@ export default function ResumePage() {
       {/* Background Decorative Glows */}
       <div className="absolute top-0 left-1/4 w-[50%] h-[50%] bg-primary/15 dark:bg-primary/35 rounded-full blur-[120px] pointer-events-none z-0" />
       
-      <div className="container mx-auto px-6 lg:px-10 max-w-5xl relative z-10">
+      <div className="container mx-auto px-6 lg:px-10 max-w-7xl relative z-10">
         {/* Navigation / Actions */}
         <div className="mb-12 flex items-center justify-between">
           <Link 
@@ -42,11 +42,7 @@ export default function ResumePage() {
             target="_blank"
             download="Nurulla_Hasan_Resume.pdf"
           >
-            <Button 
-              variant="hero" 
-              size="sm" 
-              className="rounded-xl h-10 px-6"
-            >
+            <Button variant="hero">
               <Download className="w-4 h-4 mr-2" />
               Download PDF
             </Button>
@@ -65,7 +61,7 @@ export default function ResumePage() {
                   Nurulla <span className="text-primary">Hasan</span>
                 </h1>
                 <p className="text-sm md:text-base font-bold text-muted-foreground uppercase tracking-widest">
-                  Frontend-Focused MERN Stack Developer
+                  Frontend Developer | React.js, Next.js &amp; TypeScript
                 </p>
               </div>
               <div className="flex flex-col gap-1.5 text-left md:text-right md:items-end text-xs md:text-sm">
@@ -75,7 +71,7 @@ export default function ResumePage() {
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground font-medium">
                   <Phone className="w-3.5 h-3.5 text-primary" />
-                  +8801750974716
+                  +880 1750-974716
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground font-medium underline decoration-primary/30">
                   <Mail className="w-3.5 h-3.5 text-primary" />
@@ -107,7 +103,7 @@ export default function ResumePage() {
                   Professional Summary
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                  Frontend-focused MERN Stack Developer with 1+ year of experience building API-driven SaaS platforms and high-performance corporate websites. Strong proficiency in React, Next.js (App Router), TypeScript, and Tailwind CSS. Proven ability to engineer scalable UI architectures, optimize URL-driven states, and deliver SEO-friendly, production-ready web applications.
+                  Frontend Developer with over 1 year of professional experience building and shipping production websites and role-based dashboards across multiple client products. Experienced in React.js, Next.js App Router, TypeScript, API integration, reusable component architecture, responsive UI development, SEO, and performance optimization.
                 </p>
               </section>
 
@@ -122,18 +118,19 @@ export default function ResumePage() {
                     <div className="absolute -left-1 top-2 w-2 h-2 rounded-full bg-primary" />
                     <div className="flex flex-col md:flex-row justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">Frontend Developer</h3>
-                        <p className="text-primary font-bold">Betopia Group</p>
+                        <h3 className="text-xl font-bold text-foreground">Junior Frontend Developer</h3>
+                        <p className="text-primary font-bold">Sparktech Agency</p>
+                        <p className="text-xs text-muted-foreground font-medium mt-1">Full-time, On-site | Dhaka, Bangladesh</p>
                       </div>
                       <div className="text-right md:text-right">
                         <p className="font-bold text-sm uppercase tracking-widest">March 2025 – Present</p>
-                        <p className="text-xs text-muted-foreground">Dhaka, Bangladesh (On-site)</p>
                       </div>
                     </div>
                     <ul className="space-y-3 text-muted-foreground list-disc list-outside ml-4">
-                      <li>Engineered an optimized URL-state filtering hook (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/hooks/nextjs/useNextFilter.ts" target="_blank" className="text-primary hover:underline font-bold"><code>useNextFilter</code></Link>) for Next.js App Router with debounced navigation and responsive filtering.</li>
-                      <li>Developed a centralized server-side fetching layer (<Link href="https://github.com/nurulla-hasan/my_project_tools/blob/main/src/lib/nextServerFetch.ts" target="_blank" className="text-primary hover:underline font-bold"><code>nextServerFetch</code></Link>) with automated JWT validation and Next.js caching support.</li>
-                      <li>Built reusable frontend systems including data tables, protected routing, and API-integrated CRUD workflows.</li>
+                      <li>Serve as the sole frontend developer across multiple client products, owning production websites and role-based dashboards from requirement analysis to delivery.</li>
+                      <li>Build reusable, API-driven interfaces for dashboards, complex forms, data tables, authentication, and role-based workflows using Next.js, React, TypeScript, and modern state-management tools.</li>
+                      <li>Built reusable <code className="text-primary font-bold">useNextFilter</code> and <code className="text-primary font-bold">nextServerFetch</code> utilities to standardize URL-synced filtering, debounced navigation, authentication, request handling, and consistent API error management across projects.</li>
+                      <li>Implement and maintain real-time chat, CRUD/CMS workflows, QR-based access, maps, file uploads, dynamic metadata, route protection, and responsive interfaces.</li>
                     </ul>
                   </div>
                 </div>
@@ -146,49 +143,53 @@ export default function ResumePage() {
                   Selected Projects
                 </h2>
                 <div className="space-y-8">
+                  {/* Mouza Map Pro */}
                   <div className="group">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">Mess Management System</h3>
-                      <div className="flex gap-4">
-                        <Link href="http://72.61.115.32:3005/" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
-                        <Link href="https://github.com/nurulla-hasan/mess_os_client" target="_blank" className="text-xs font-bold text-primary hover:underline">Client GitHub</Link>
-                        <Link href="https://github.com/nurulla-hasan/mess_os_server" target="_blank" className="text-xs font-bold text-primary hover:underline">Server GitHub</Link>
-                      </div>
-                    </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui, Express.js, MongoDB</p>
-                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Built a full-stack mess management platform with automated monthly billing, dynamic meal rate calculation, equal-share utility cost distribution, and role-based dashboards.</li>
-                      <li>Integrated an AI-powered menu planner and market scheduler that automates daily grocery lists based on budget limits and dietary preferences.</li>
-                    </ul>
-                  </div>
-
-                  <div className="group">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold">MentorIP Law Firm</h3>
-                      <div className="flex gap-4">
-                        <Link href="https://mentorip.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
-                        <Link href="https://github.com/nurulla-hasan/mentorip_website" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
-                      </div>
-                    </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript, Tailwind CSS, shadcn/ui</p>
-                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Developed a high-performance corporate website featuring advanced JSON-LD SEO schema, dynamic HTML Table of Contents parsing, and a ⌘K global command palette.</li>
-                      <li>Enhanced user navigation and UX through On-Demand ISR (<code>revalidateTag</code>), optimized content caching, and advanced frontend interactions.</li>
-                    </ul>
-                  </div>
-
-                  <div className="group">
-                    <div className="flex justify-between items-start mb-2">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                       <h3 className="text-lg font-bold">Mouza Map Pro</h3>
-                      <div className="flex gap-4">
-                        <Link href="https://mouzamappro.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                      <div className="flex gap-4 shrink-0">
+                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Personal Product</span>
+                        <Link href="https://mouzamappro.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Product</Link>
                         <Link href="https://github.com/nurulla-hasan/mouza_map_pro" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
                       </div>
                     </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">React, Konva.js, Zustand, jsPDF</p>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js 16, React 19, TypeScript, Konva.js, Zustand, Leaflet, PDF.js, jsPDF</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Engineered a high-performance 2D geospatial plotting tool using Konva.js, executing complex Shoelace algorithms to convert raw pixel distances into exact physical land areas (SqFt, Shotok).</li>
-                      <li>Implemented a custom physics-based repulsion algorithm to prevent label overlapping and integrated client-side PDF processing (pdfjs), delivering instant, scale-accurate A4 reports without server overhead.</li>
+                      <li>Own and develop a Bangla-first land-surveying platform for measuring plots, aligning C.S./B.S. maps, tracing boundaries, annotating sheets, finding surveyors, and exporting survey documents at configurable scales.</li>
+                      <li>Build mobile-first canvas and PDF interactions, worker-backed image processing, low-memory previews, tiled KMZ export, snapping, undo/redo, and responsive workflows for lower-powered devices.</li>
+                    </ul>
+                  </div>
+
+                  {/* Mess Management System */}
+                  <div className="group">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                      <h3 className="text-lg font-bold">Mess Management System</h3>
+                      <div className="flex gap-4 shrink-0">
+                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Personal Full-Stack</span>
+                        <Link href="https://mess-os-client.vercel.app" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                        <Link href="https://github.com/nurulla-hasan/mess_os_client" target="_blank" className="text-xs font-bold text-primary hover:underline">Frontend GitHub</Link>
+                        <Link href="https://github.com/nurulla-hasan/mess_os_server" target="_blank" className="text-xs font-bold text-primary hover:underline">Backend GitHub</Link>
+                      </div>
+                    </div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, React, TypeScript, Tailwind CSS, Zustand, PWA, Express.js, MongoDB</p>
+                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
+                      <li>Built responsive role-based dashboards for meals, members, billing, expenses, market schedules, and financial reports with API integrations and PWA support.</li>
+                      <li>Added AI-assisted menu planning and shopping-list generation based on budget and dietary preferences.</li>
+                    </ul>
+                  </div>
+
+                  {/* Frontend Utilities */}
+                  <div className="group">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                      <h3 className="text-lg font-bold">Frontend Utilities</h3>
+                      <div className="flex gap-4 shrink-0">
+                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Reusable Hooks</span>
+                        <Link href="https://github.com/nurulla-hasan/my_project_tools" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
+                      </div>
+                    </div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript</p>
+                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
+                      <li>Developed a typed URL-state filter with optimistic updates, debouncing, batch changes, pagination reset, and multi-select support, alongside reusable clipboard, countdown, storage, media-query, and network-status hooks.</li>
                     </ul>
                   </div>
                 </div>
@@ -207,23 +208,23 @@ export default function ResumePage() {
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Frontend</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["React.js", "Next.js (App Router)", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "shadcn/ui", "Konva.js"].map(s => (
+                      {["React.js", "Next.js (App Router)", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS", "shadcn/ui"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">State & Data</h3>
+                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">State &amp; Data</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Zustand", "TanStack Query", "TanStack Table", "React Hook Form", "Zod", "Redux Toolkit"].map(s => (
+                      {["Zustand", "Redux Toolkit", "TanStack Query", "TanStack Table", "React Hook Form", "Zod"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Backend & Tools</h3>
+                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-3">Backend, Database &amp; Tools</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["Node.js", "Express.js", "MongoDB", "REST APIs", "Git", "Vercel", "jsPDF", "Framer Motion"].map(s => (
+                      {["Node.js", "Express.js", "PostgreSQL", "Prisma ORM", "MongoDB", "REST APIs", "Git", "GitHub", "Vercel", "Postman"].map(s => (
                         <span key={s} className="px-3 py-1 bg-muted/20 border border-border rounded-md text-[10px] font-bold uppercase tracking-widest">{s}</span>
                       ))}
                     </div>
@@ -239,9 +240,10 @@ export default function ResumePage() {
                 </h2>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-sm font-bold text-foreground">Diploma in Engineering</h3>
+                    <h3 className="text-sm font-bold text-foreground">Diploma in Computer Science &amp; Technology</h3>
                     <p className="text-xs text-muted-foreground font-bold">Dinajpur Polytechnic Institute</p>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">2021–2024</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">2021 – 2024</p>
+                    <p className="text-xs font-bold text-foreground mt-1">CGPA: 3.50 / 4.00</p>
                   </div>
                 </div>
               </section>
@@ -255,18 +257,23 @@ export default function ResumePage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-sm font-bold text-foreground">Training</h3>
-                    <p className="text-xs text-muted-foreground font-medium">Programming Hero (Level 1 Completed, Level 2 Continuing)</p>
+                    <p className="text-xs text-muted-foreground font-medium">Programming Hero</p>
+                    <ul className="text-xs text-muted-foreground list-disc list-outside ml-4 mt-1 space-y-1">
+                      <li>Web Development Level 1 — Completed</li>
+                      <li>Next Level Web Development — Ongoing</li>
+                    </ul>
+                    <p className="text-xs text-muted-foreground font-medium mt-2">Completed modules: JavaScript, TypeScript, Next.js, Node.js &amp; Express, PostgreSQL &amp; Prisma.</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-foreground">Languages</h3>
                     <div className="space-y-1 text-xs font-bold mt-2">
                       <div className="flex justify-between">
-                        <span className="uppercase tracking-widest text-muted-foreground">English</span>
-                        <span className="text-primary">Comfortable</span>
-                      </div>
-                      <div className="flex justify-between">
                         <span className="uppercase tracking-widest text-muted-foreground">Bangla</span>
                         <span className="text-primary">Native</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="uppercase tracking-widest text-muted-foreground">English</span>
+                        <span className="text-primary">Working Proficiency</span>
                       </div>
                     </div>
                   </div>

@@ -5,14 +5,15 @@ import { StaggerContainer } from "@/components/ui/stagger-container";
 const STATS = [
   { value: "1+", label: "Years Experience" },
   { value: "10+", label: "Production Projects" },
-  { value: "Current", label: "Company" },
+  { value: "Sparktech", label: "Current Company" },
 ];
 
 const EDUCATION = [
   {
     institution: "Dinajpur Polytechnic Institute",
-    degree: "Diploma in Engineering",
+    degree: "Diploma in Computer Science & Technology",
     duration: "2021 – 2024",
+    cgpa: "3.50 / 4.00",
     icon: <GraduationCap className="w-6 h-6 text-primary" />
   }
 ];
@@ -20,14 +21,23 @@ const EDUCATION = [
 const TRAINING = [
   {
     platform: "Programming Hero",
-    status: "Level 1 Completed, Level 2 Continuing",
+    course: "Web Development",
+    level: "Level 1",
+    status: "Completed",
+    icon: <Award className="w-6 h-6 text-primary" />
+  },
+  {
+    platform: "Programming Hero",
+    course: "Next Level Web Development",
+    level: "Level 2",
+    status: "Ongoing",
     icon: <Award className="w-6 h-6 text-primary" />
   }
 ];
 
 const LANGUAGES = [
   { name: "Bangla", level: "Native", icon: <Languages className="w-5 h-5 text-primary" /> },
-  { name: "English", level: "Comfortable", icon: <Languages className="w-5 h-5 text-primary" /> }
+  { name: "English", level: "Working Proficiency", icon: <Languages className="w-5 h-5 text-primary" /> }
 ];
 
 export function About() {
@@ -46,21 +56,20 @@ export function About() {
           {/* Left: Bio & Stats */}
           <StaggerContainer direction="up" staggerDelay={0.12}>
             <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
-              I am a passionate <span className="text-foreground font-semibold">Frontend-focused MERN Stack Developer</span> with 
-              a deep love for building clean, scalable, and impactful web applications.
+              I&apos;m a <span className="text-primary font-medium">Frontend Developer</span> with{" "}
+              <span className="text-foreground font-semibold">over 1 year of professional experience</span>{" "}
+              building production websites, role-based dashboards, and reusable frontend systems for multiple client products.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
-              With over a year of experience, I have honed my skills in 
-              <span className="text-primary font-medium"> React, Next.js, and TypeScript</span>. 
-              I bridge the gap between complex backend logic and intuitive, aesthetic user interfaces.
+              Currently, I work at Sparktech Agency, where I handle frontend development from requirement analysis to delivery
+              using <span className="text-primary font-medium">React.js, Next.js App Router, TypeScript</span>, and modern
+              state-management tools. I also have hands-on experience with Node.js, Express.js, PostgreSQL, Prisma ORM,
+              MongoDB, and REST APIs.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
-              My approach is centered around <span className="text-foreground font-semibold">reusable architecture</span> and 
-              clean code — ensuring every product I build is powerful, maintainable, and developer-friendly.
-            </p>
-            <p className="text-muted-foreground text-base leading-relaxed max-w-xl">
-              Beyond the screen, I am an avid learner who enjoys exploring new technologies. When I am not coding, you can find me 
-              <span className="text-foreground font-medium"> traveling, reading tech blogs, or playing cricket</span>. I believe maintaining a healthy balance fuels my creativity and problem-solving skills.
+              I enjoy turning complex business requirements into{" "}
+              <span className="text-foreground font-semibold">simple, reliable, and user-friendly digital products</span>.
+              Outside of coding, I enjoy exploring new technologies, reading tech blogs, traveling, and playing cricket.
             </p>
 
             {/* Stats Row */}
@@ -124,6 +133,7 @@ export function About() {
                       </span>
                     </div>
                     <p className="text-muted-foreground font-medium">{edu.institution}</p>
+                    <p className="text-sm text-primary font-medium mt-2">CGPA: {edu.cgpa}</p>
                   </div>
                 ))}
               </div>
@@ -140,14 +150,20 @@ export function About() {
               <div className="space-y-4">
                 {TRAINING.map((train) => (
                   <div 
-                    key={train.platform}
+                    key={train.course}
                     className="premium-shadow group relative p-6 border border-border bg-muted/20 rounded-xl transition-all hover:border-primary/30 hover:bg-muted/30"
                   >
-                    <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                      {train.platform}
-                    </h5>
+                    <div className="flex items-start justify-between gap-3 mb-1">
+                      <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                        {train.course}
+                      </h5>
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-primary border border-primary/20 rounded-md px-2.5 py-1 shrink-0">
+                        {train.level}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground font-medium mb-2">{train.platform}</p>
                     <p className="text-muted-foreground font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full animate-pulse shrink-0" />
+                      <span className={`w-2 h-2 rounded-full shrink-0 ${train.status === "Ongoing" ? "bg-primary animate-pulse" : "bg-primary"}`} />
                       {train.status}
                     </p>
                   </div>

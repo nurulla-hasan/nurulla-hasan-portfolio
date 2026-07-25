@@ -28,7 +28,8 @@ interface ProjectDetailsProps {
     image: string;
     tags: string[];
     liveUrl?: string;
-    githubUrl: string;
+    githubUrl?: string;
+    hideCodeButton?: boolean;
     role: string;
     duration: string;
     features: string[];
@@ -60,7 +61,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
   return (
     <div className="min-h-screen bg-background pt-24 pb-24">
       {/* Background Decorative Element */}
-      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/10 dark:bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+      {/* <div className="absolute top-0 right-0 w-125 h-125 bg-primary/10 dark:bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" /> */}
       
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         {/* Back Navigation */}
@@ -94,11 +95,13 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                   </Button>
                 </Link>
               )}
-              <Link href={project.githubUrl} target="_blank">
-                <Button variant="nav" className="gap-2">
-                  <GithubIcon className="w-4 h-4" /> Source
-                </Button>
-              </Link>
+              {!project.hideCodeButton && project.githubUrl && (
+                <Link href={project.githubUrl} target="_blank">
+                  <Button variant="nav" className="gap-2">
+                    <GithubIcon className="w-4 h-4" /> Source
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         </AnimatedSection>
@@ -268,11 +271,13 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                     </Button>
                   </Link>
                 )}
-                <Link href={project.githubUrl} target="_blank">
-                  <Button variant="nav">
-                    Code <GithubIcon className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
+                {!project.hideCodeButton && project.githubUrl && (
+                  <Link href={project.githubUrl} target="_blank">
+                    <Button variant="nav">
+                      Code <GithubIcon className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
 

@@ -112,11 +112,13 @@ export default function ProjectsPage() {
                       <Info className="w-4 h-4" />
                     </Button>
                   </Link>
-                  <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
-                      <GithubIcon className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                  {!project.hideCodeButton && project.githubUrl && (
+                    <Link href={project.githubUrl} target="_blank">
+                      <Button variant="nav" size="sm" className="h-9 w-9 flex items-center justify-center p-0">
+                        <GithubIcon className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

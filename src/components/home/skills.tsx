@@ -10,8 +10,8 @@ import {
 
 const SKILL_CATEGORIES = [
   {
-    title: "Frontend Mastery",
-    description: "Expertise in building high-performance, accessible, and scalable user interfaces.",
+    title: "Frontend Engineering",
+    description: "Building responsive, accessible, and maintainable user interfaces with modern React and Next.js.",
     icon: <FrontendIcon className="w-8 h-8 text-primary" />,
     skills: [
       { name: "React.js", icon: <ReactIcon className="w-8 h-8" /> },
@@ -19,45 +19,49 @@ const SKILL_CATEGORIES = [
       { name: "TypeScript", icon: <TSIcon className="w-8 h-8" /> },
       { name: "JavaScript (ES6+)", icon: <JSIcon className="w-8 h-8" /> },
       { name: "Tailwind CSS", icon: <TailwindIcon className="w-8 h-8" /> },
-      { name: "Shadcn UI", icon: <CodeIcon className="w-8 h-8" /> }
+      { name: "shadcn/ui", icon: <CodeIcon className="w-8 h-8" /> }
     ]
   },
   {
     title: "State & Data Management",
-    description: "Robust data-fetching patterns and complex state synchronization.",
+    description: "Managing application state, server data, forms, validation, and complex data-driven interfaces.",
     icon: <StateIcon className="w-8 h-8 text-primary" />,
     skills: [
+      { name: "Zustand", icon: <StateIcon className="w-8 h-8" /> },
       { name: "Redux Toolkit", icon: <StateIcon className="w-8 h-8" /> },
-      { name: "RTK Query", icon: <Zap className="w-8 h-8" /> },
       { name: "TanStack Query", icon: <Cpu className="w-8 h-8" /> },
+      { name: "TanStack Table", icon: <Layout className="w-8 h-8" /> },
       { name: "React Hook Form", icon: <Layout className="w-8 h-8" /> },
       { name: "Zod", icon: <CheckCircle2 className="w-8 h-8" /> }
     ]
   },
   {
-    title: "Modern Tools & Architecture",
-    description: "Delivering high-quality code through reusable patterns and modern deployment.",
+    title: "Tools & Architecture",
+    description: "Creating reusable frontend systems with maintainable patterns, reliable API integration, and modern development tools.",
     icon: <ArchitectureIcon className="w-8 h-8 text-primary" />,
     skills: [
       { name: "Git & GitHub", icon: <CodeIcon className="w-8 h-8" /> },
       { name: "Vercel", icon: <NextjsIcon className="w-8 h-8" /> },
+      { name: "Postman", icon: <Zap className="w-8 h-8" /> },
       { name: "Custom Hooks", icon: <ReactIcon className="w-8 h-8" /> },
-      { name: "Component Architecture", icon: <ArchitectureIcon className="w-8 h-8" /> },
+      { name: "Reusable Components", icon: <ArchitectureIcon className="w-8 h-8" /> },
       { name: "API Integration", icon: <Cpu className="w-8 h-8" /> },
-      { name: "Rapid Prototyping", icon: <Zap className="w-8 h-8" /> }
+      { name: "Performance Optimization", icon: <Zap className="w-8 h-8" /> }
     ]
   },
   {
     title: "Backend & Database",
-    description: "Server-side development with Node.js and database management for full-stack applications.",
+    description: "Hands-on experience building REST APIs, authentication systems, and database-driven full-stack applications.",
     icon: <FocusIcon className="w-8 h-8 text-primary" />,
     skills: [
       { name: "Node.js", icon: <CodeIcon className="w-8 h-8" /> },
       { name: "Express.js", icon: <Zap className="w-8 h-8" /> },
+      { name: "PostgreSQL", icon: <Cpu className="w-8 h-8" /> },
+      { name: "Prisma ORM", icon: <ArchitectureIcon className="w-8 h-8" /> },
       { name: "MongoDB", icon: <Cpu className="w-8 h-8" /> },
+      { name: "Mongoose", icon: <ArchitectureIcon className="w-8 h-8" /> },
       { name: "REST APIs", icon: <Layout className="w-8 h-8" /> },
-      { name: "JWT Auth", icon: <CheckCircle2 className="w-8 h-8" /> },
-      { name: "Mongoose", icon: <ArchitectureIcon className="w-8 h-8" /> }
+      { name: "JWT & Cookie Auth", icon: <CheckCircle2 className="w-8 h-8" /> }
     ]
   }
 ];
@@ -73,7 +77,7 @@ export function Skills() {
           badge="Technical Prowess"
           title="My Expert"
           titleAccent="Skillset"
-          description="I specialize in the MERN stack and modern frontend technologies, focusing on creating seamless digital products that solve real-world problems."
+          description="I specialize in modern frontend technologies and the MERN stack, focusing on building maintainable, production-ready digital products that solve real-world problems."
         />
 
         <StaggerContainer

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, Star, Info, ArrowRight } from "lucide-react";
+import { ExternalLink, Star, Info } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
@@ -10,10 +10,8 @@ import { PROJECTS } from "@/lib/data";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-const FEATURED_IDS = ["mess-manager-os", "mouza-map-calculator", "mentorip"];
-
 export function FeaturedProjects() {
-  const featured = PROJECTS.filter((p) => FEATURED_IDS.includes(p.id));
+  const featured = PROJECTS.filter((p) => p.featured);
 
   return (
     <section id="featured-projects" className="relative py-24 bg-background overflow-hidden">
@@ -53,11 +51,6 @@ export function FeaturedProjects() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
-                  <span className="text-white font-bold bg-primary/90 px-6 py-2.5 rounded-full translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg flex items-center gap-2">
-                    View Case Study <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
               </Link>
 
               {/* Content */}
@@ -101,11 +94,13 @@ export function FeaturedProjects() {
                       Details <Info />
                     </Button>
                   </Link>
-                  <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" className="gap-2">
-                      Code <GithubIcon />
-                    </Button>
-                  </Link>
+                  {!project.hideCodeButton && project.githubUrl && (
+                    <Link href={project.githubUrl} target="_blank">
+                      <Button variant="nav" className="gap-2">
+                        Code <GithubIcon />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </AnimatedSection>

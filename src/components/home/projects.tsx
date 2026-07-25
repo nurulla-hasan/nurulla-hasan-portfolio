@@ -18,11 +18,11 @@ export function Projects() {
       <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/15 dark:bg-primary/40 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-        <SectionHeader 
+        <SectionHeader
           badge="Selected Work"
           title="Featured"
           titleAccent="Projects"
-          description="Explore a collection of my recent work, focusing on large-scale dashboard systems, reusable component libraries, and full-stack applications built with modern tools."
+          description="A selection of personal products and production client work showcasing frontend architecture, complex workflows, and real-world problem solving."
           link={{ href: "/projects", label: "View All Projects" }}
         />
 
@@ -35,9 +35,7 @@ export function Projects() {
               delay={index * 0.1}
               className={`group relative grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 items-center py-12 ${
                 index !== 0 ? "border-t" : ""
-              } ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
+              } ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
               {/* Project Image Container */}
               <div
@@ -63,7 +61,12 @@ export function Projects() {
                   index % 2 !== 0 ? "lg:order-1" : "lg:order-2"
                 }`}
               >
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap items-center gap-2 mb-6">
+                  {project.featured && (
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-primary bg-primary/10 px-3 py-1 rounded-md border border-primary/20">
+                      Featured
+                    </span>
+                  )}
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -84,17 +87,25 @@ export function Projects() {
 
                 <div className="flex items-center gap-4">
                   {project.liveUrl && (
-                  <Link href={project.liveUrl} target="_blank">
-                    <Button variant="hero" size="sm" className="">
-                      Live Demo <ExternalLink />
-                    </Button>
-                  </Link>
+                    <Link href={project.liveUrl} target="_blank">
+                      <Button variant="hero" size="sm" className="">
+                        Live Demo <ExternalLink />
+                      </Button>
+                    </Link>
                   )}
-                  <Link href={project.githubUrl} target="_blank">
-                    <Button variant="nav" size="sm" className="">
-                      Source Code <GithubIcon />
-                    </Button>
-                  </Link>
+                  {project.hideCodeButton ? (
+                    <Link href={`/projects/${project.id}`} target="_blank">
+                      <Button variant="nav" size="sm" className="">
+                        Details <ExternalLink />
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Link href={project.githubUrl} target="_blank">
+                      <Button variant="nav" size="sm" className="">
+                        Source Code <GithubIcon />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </AnimatedSection>

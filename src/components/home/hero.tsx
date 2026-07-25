@@ -40,32 +40,31 @@ export function Hero() {
             <div className="inline-flex items-center gap-2.5 border bg-muted/20 px-4 py-2 rounded-full">
               <span className="h-2 w-2 bg-primary shadow-[0_0_10px_var(--color-primary)] animate-pulse rounded-full" />
               <span className="text-xs sm:text-sm font-bold tracking-wide text-foreground/85">
-                MERN Stack Developer
+                Frontend Developer • 1+ Year Experience
               </span>
             </div>
           </AnimatedSection>
 
           {/* Heading */}
-          <div className="mt-6 space-y-0">
+          <div className="mt-4 space-y-0">
             <AnimatedText 
-              text="Frontend-Focused"
+              text="Frontend Developer"
               as="h1"
-              className="text-[32px] font-bold leading-tight md:leading-18 sm:text-[46px] md:text-[58px] xl:text-[70px]"
+              className="text-[32px] font-bold leading-tight md:leading-18 sm:text-[46px] md:text-[58px] xl:text-[62px]"
               type="words"
               staggerDelay={0.04}
               delay={0.15}
             />
             <AnimatedSection direction="up" delay={0.25}>
-              <h2 className="text-[28px] font-bold leading-tight md:leading-20 sm:text-[40px] md:text-[50px] xl:text-[62px] mt-1 whitespace-nowrap">
-                <span className="text-primary">MERN Stack</span>
-                <span className="text-foreground"> Developer</span>
+              <h2 className="text-[28px] font-bold leading-tight md:leading-20 sm:text-[40px] md:text-[50px] xl:text-[50px] mt-1">
+                <span className="text-primary">React • Next.js • TypeScript</span>
               </h2>
             </AnimatedSection>
           </div>
 
           {/* Location Badge */}
           <AnimatedSection direction="up" delay={0.35}>
-            <div className="mt-6 flex flex-wrap items-center justify-start lg:justify-start gap-3">
+            <div className="mt-4 flex flex-wrap items-center justify-start lg:justify-start gap-3">
               <div className="px-4 py-1.5 bg-muted/50 border border-border rounded-full text-xs font-medium text-muted-foreground">
                 Dhaka, Bangladesh
               </div>
@@ -74,21 +73,21 @@ export function Hero() {
 
           {/* Accent line */}
           <AnimatedSection direction="up" delay={0.4} distance={30}>
-            <div className="mt-6 h-1 w-12 bg-primary shadow-[0_0_20px_var(--color-primary)] lg:mx-0 rounded-full" />
+            <div className="mt-4 h-1 w-12 bg-primary shadow-[0_0_20px_var(--color-primary)] lg:mx-0 rounded-full" />
           </AnimatedSection>
 
           {/* Description */}
           <AnimatedSection direction="up" delay={0.45}>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
-              Building <span className="text-foreground font-semibold">scalable SaaS platforms</span>,
-              dashboard systems and high-performance
-              web applications using <span className="text-primary font-medium">React, Next.js & TypeScript</span>.
+            <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg md:text-[1.38rem] md:leading-10 lg:max-w-145">
+              I build responsive, <span className="text-primary font-medium">production-ready</span> websites and{" "}
+              <span className="text-primary font-medium">role-based dashboards</span> using React, Next.js, and
+              TypeScript—with a focus on clean architecture, API integration, and performance.
             </p>
           </AnimatedSection>
 
           {/* Buttons */}
           <AnimatedSection direction="up" delay={0.55}>
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-start gap-4 w-full sm:w-auto">
+            <div className="mt-7 flex flex-wrap items-center justify-start gap-4 w-full sm:w-auto">
               <Button
                 variant="hero"
                 onClick={(e) => {
@@ -100,7 +99,7 @@ export function Hero() {
                 }}
               >
                 <Rocket className="mr-2 h-4 w-4" />
-                View Projects
+                Explore Projects
               </Button>
 
               <Link 
@@ -110,7 +109,7 @@ export function Hero() {
               >
                 <Button variant="nav">
                   <Download className="mr-2 h-4 w-4" />
-                  Download CV
+                  Download Resume
                 </Button>
               </Link>
             </div>

@@ -11,40 +11,40 @@ import { StaggerContainer } from "@/components/ui/stagger-container";
 
 const SERVICES = [
   {
-    title: "Custom Web Application",
+    title: "Frontend Web Development",
     description:
-      "Full-featured, scalable web applications built with React, Next.js, and modern technologies — tailored to your unique business needs.",
+      "Production-ready websites and web applications built with React.js, Next.js, TypeScript, and maintainable component architecture.",
     icon: <Code2 className="w-7 h-7 text-primary" />,
   },
   {
-    title: "Responsive UI/UX Development",
+    title: "Dashboard & Admin Panel Development",
     description:
-      "Pixel-perfect, mobile-first interfaces that look stunning on every device — from smartphones to ultrawide monitors.",
-    icon: <Paintbrush className="w-7 h-7 text-primary" />,
-  },
-  {
-    title: "Single Page Applications",
-    description:
-      "Fast, interactive SPAs with seamless navigation, dynamic content loading, and smooth user experiences using React ecosystem.",
-    icon: <Smartphone className="w-7 h-7 text-primary" />,
-  },
-  {
-    title: "Performance Optimization",
-    description:
-      "Speed audit, lazy loading, code splitting, image optimization, and caching strategies to make your app lightning fast.",
-    icon: <Rocket className="w-7 h-7 text-primary" />,
-  },
-  {
-    title: "API Integration & Full Stack",
-    description:
-      "RESTful API design and integration with Node.js, Express, and MongoDB — connecting your frontend to powerful backends.",
+      "Role-based dashboards, data tables, filters, reports, CRUD workflows, and responsive management interfaces.",
     icon: <Blocks className="w-7 h-7 text-primary" />,
   },
   {
-    title: "Maintenance & Upgrades",
+    title: "Responsive Interface Development",
     description:
-      "Ongoing support, bug fixes, feature additions, and technology upgrades to keep your application modern and secure.",
+      "Mobile-first interfaces that remain accessible, consistent, and easy to use across different devices and screen sizes.",
+    icon: <Smartphone className="w-7 h-7 text-primary" />,
+  },
+  {
+    title: "API Integration & Authentication",
+    description:
+      "Reliable REST API integration, complex forms, validation, protected routes, JWT, and cookie-based authentication workflows.",
     icon: <RefreshCcw className="w-7 h-7 text-primary" />,
+  },
+  {
+    title: "Performance & SEO Optimization",
+    description:
+      "Improving loading speed, rendering, metadata, image delivery, code splitting, and overall user experience.",
+    icon: <Rocket className="w-7 h-7 text-primary" />,
+  },
+  {
+    title: "Maintenance & Feature Development",
+    description:
+      "Bug fixes, UI improvements, new feature implementation, refactoring, and ongoing frontend support.",
+    icon: <Paintbrush className="w-7 h-7 text-primary" />,
   },
 ];
 
@@ -59,7 +59,7 @@ export function Services() {
           badge="What I Offer"
           title="My"
           titleAccent="Services"
-          description="From concept to deployment — I provide end-to-end development solutions that help businesses grow and succeed online."
+          description="I build reliable frontend solutions for real-world products—from responsive interfaces and role-based dashboards to API integration, performance optimization, and ongoing feature development."
         />
 
         <StaggerContainer
