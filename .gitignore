@@ -36,6 +36,7 @@ yarn-error.log*
 # package manager
 pnpm-lock.yaml
 pnpm-workspace.yaml
+package-lock.json
 
 # vercel
 .vercel

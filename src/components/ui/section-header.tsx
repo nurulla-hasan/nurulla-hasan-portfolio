@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,8 +43,8 @@ export function SectionHeader({
       </div>
       
       {link && (
-        <Link href={link.href}>
-          <Button variant="nav" className="group">
+        <Link href={link.href} className="group">
+          <Button variant="nav">
             {link.label}
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>

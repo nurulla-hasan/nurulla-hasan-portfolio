@@ -34,7 +34,7 @@ export function FeaturedProjects() {
               direction="up"
               threshold={0.12}
               delay={index * 0.12}
-              className="group relative flex flex-col border border-border bg-muted/10 rounded-2xl overflow-hidden premium-hover hover:border-primary/30 transition-all duration-500"
+              className="group relative flex flex-col border rounded-2xl overflow-hidden premium-hover hover:border-primary/30 transition-all duration-500"
             >
               {/* Star Badge */}
               <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5 bg-primary/90 text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">

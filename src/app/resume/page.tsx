@@ -103,7 +103,7 @@ export default function ResumePage() {
                   Professional Summary
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                  Frontend Developer with over 1 year of professional experience building and shipping production websites and role-based dashboards across multiple client products. Experienced in React.js, Next.js App Router, TypeScript, API integration, reusable component architecture, responsive UI development, SEO, and performance optimization.
+                  Frontend Developer with around 1.5 years of professional experience building production websites, role-based dashboards, and scalable web interfaces using React.js, Next.js, and TypeScript. Focused on responsive UI, REST API integration, SEO, and performance optimization.
                 </p>
               </section>
 
@@ -147,10 +147,10 @@ export default function ResumePage() {
                   <div className="group">
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                       <h3 className="text-lg font-bold">Mouza Map Pro</h3>
-                      <div className="flex gap-4 shrink-0">
+                      <div className="flex gap-4 shrink-0 flex-wrap">
                         <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Personal Product</span>
+                        <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Active Development</span>
                         <Link href="https://mouzamappro.com" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Product</Link>
-                        <Link href="https://github.com/nurulla-hasan/mouza_map_pro" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
                       </div>
                     </div>
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js 16, React 19, TypeScript, Konva.js, Zustand, Leaflet, PDF.js, jsPDF</p>
@@ -160,12 +160,31 @@ export default function ResumePage() {
                     </ul>
                   </div>
 
+                  {/* FixItNow */}
+                  <div className="group">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                      <h3 className="text-lg font-bold">FixItNow</h3>
+                      <div className="flex gap-4 shrink-0 flex-wrap">
+                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Next.js Service Booking Platform</span>
+                        <Link href="https://l2-b7-a5.vercel.app" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
+                        <Link href="https://github.com/nurulla-hasan/L2B7A5" target="_blank" className="text-xs font-bold text-primary hover:underline">Frontend GitHub</Link>
+                        <Link href="https://github.com/nurulla-hasan/L2B7A4" target="_blank" className="text-xs font-bold text-primary hover:underline">Backend GitHub</Link>
+                      </div>
+                    </div>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js App Router, TypeScript, Tailwind CSS, shadcn/ui, React Hook Form, Zod, Express.js, PostgreSQL, Prisma</p>
+                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
+                      <li>Built responsive dashboards and protected workflows for Customer, Technician, and Admin roles.</li>
+                      <li>Implemented service discovery, filtering, booking management, reviews, authentication, and API-driven UI states.</li>
+                      <li>Created consistent form validation, loading, error, and payment-flow handling using React Hook Form, Zod, and reusable components.</li>
+                    </ul>
+                  </div>
+
                   {/* Mess Management System */}
                   <div className="group">
                     <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                       <h3 className="text-lg font-bold">Mess Management System</h3>
-                      <div className="flex gap-4 shrink-0">
-                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Personal Full-Stack</span>
+                      <div className="flex gap-4 shrink-0 flex-wrap">
+                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Personal Full-Stack Project</span>
                         <Link href="https://mess-os-client.vercel.app" target="_blank" className="text-xs font-bold text-primary hover:underline">Live Demo</Link>
                         <Link href="https://github.com/nurulla-hasan/mess_os_client" target="_blank" className="text-xs font-bold text-primary hover:underline">Frontend GitHub</Link>
                         <Link href="https://github.com/nurulla-hasan/mess_os_server" target="_blank" className="text-xs font-bold text-primary hover:underline">Backend GitHub</Link>
@@ -173,23 +192,8 @@ export default function ResumePage() {
                     </div>
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, React, TypeScript, Tailwind CSS, Zustand, PWA, Express.js, MongoDB</p>
                     <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Built responsive role-based dashboards for meals, members, billing, expenses, market schedules, and financial reports with API integrations and PWA support.</li>
-                      <li>Added AI-assisted menu planning and shopping-list generation based on budget and dietary preferences.</li>
-                    </ul>
-                  </div>
-
-                  {/* Frontend Utilities */}
-                  <div className="group">
-                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
-                      <h3 className="text-lg font-bold">Frontend Utilities</h3>
-                      <div className="flex gap-4 shrink-0">
-                        <span className="text-[10px] font-bold text-primary/70 uppercase tracking-widest">Reusable Hooks</span>
-                        <Link href="https://github.com/nurulla-hasan/my_project_tools" target="_blank" className="text-xs font-bold text-primary hover:underline">GitHub</Link>
-                      </div>
-                    </div>
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Next.js, TypeScript</p>
-                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-outside ml-4">
-                      <li>Developed a typed URL-state filter with optimistic updates, debouncing, batch changes, pagination reset, and multi-select support, alongside reusable clipboard, countdown, storage, media-query, and network-status hooks.</li>
+                      <li>Built a full-stack mess management platform for managing members, meals, billing, expenses, market schedules, and financial reports through role-based dashboards.</li>
+                      <li>Implemented member and meal management, monthly billing, expense tracking, financial reports, PWA support, and AI-assisted menu planning and shopping-list generation.</li>
                     </ul>
                   </div>
                 </div>
@@ -256,13 +260,12 @@ export default function ResumePage() {
                 </h2>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-sm font-bold text-foreground">Training</h3>
-                    <p className="text-xs text-muted-foreground font-medium">Programming Hero</p>
+                    <h3 className="text-sm font-bold text-foreground">Training &amp; Courses</h3>
+                    <p className="text-xs text-muted-foreground font-medium mt-1">Programming Hero</p>
                     <ul className="text-xs text-muted-foreground list-disc list-outside ml-4 mt-1 space-y-1">
-                      <li>Web Development Level 1 — Completed</li>
-                      <li>Next Level Web Development — Ongoing</li>
+                      <li>Web Development Level 1 (Completed)</li>
+                      <li>Next Level Web Development (Ongoing)</li>
                     </ul>
-                    <p className="text-xs text-muted-foreground font-medium mt-2">Completed modules: JavaScript, TypeScript, Next.js, Node.js &amp; Express, PostgreSQL &amp; Prisma.</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-foreground">Languages</h3>

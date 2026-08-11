@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 import { MessageCircle, Send } from "lucide-react";
 

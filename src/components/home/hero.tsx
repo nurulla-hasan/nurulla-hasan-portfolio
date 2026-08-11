@@ -37,10 +37,10 @@ export function Hero() {
         <div className="flex flex-col items-start justify-center text-left lg:items-start lg:text-left pt-6 lg:pt-0">
           {/* Badge */}
           <AnimatedSection direction="up" delay={0}>
-            <div className="inline-flex items-center gap-2.5 border bg-muted/20 px-4 py-2 rounded-full">
-              <span className="h-2 w-2 bg-primary shadow-[0_0_10px_var(--color-primary)] animate-pulse rounded-full" />
+            <div className="inline-flex items-center gap-2.5 border bg-muted/20 px-4 py-2 rounded-md">
+              <span className="h-2 w-2 bg-primary shadow-[0_0_10px_var(--color-primary)] animate-pulse rounded-sm" />
               <span className="text-xs sm:text-sm font-bold tracking-wide text-foreground/85">
-                Frontend Developer • 1+ Year Experience
+                Frontend Developer • 1.5+ Years Experience
               </span>
             </div>
           </AnimatedSection>
@@ -56,7 +56,7 @@ export function Hero() {
               delay={0.15}
             />
             <AnimatedSection direction="up" delay={0.25}>
-              <h2 className="text-[28px] font-bold leading-tight md:leading-20 sm:text-[40px] md:text-[50px] xl:text-[50px] mt-1">
+              <h2 className="text-[20px] font-bold leading-snug sm:text-[28px] md:text-[34px] xl:text-[36px] mt-2">
                 <span className="text-primary">React • Next.js • TypeScript</span>
               </h2>
             </AnimatedSection>
@@ -117,37 +117,21 @@ export function Hero() {
         </div>
 
         {/* Right */}
-        <AnimatedSection direction="right" delay={0.2} className="relative flex h-87.5 items-end justify-center sm:h-112.5 lg:h-180 lg:justify-end">
+        <AnimatedSection direction="right" delay={0.2} className="relative flex h-87.5 items-end justify-center sm:h-112.5 lg:h-130 lg:justify-end">
           <div className="relative z-10 flex h-full w-full items-end justify-center lg:justify-end">
-            <motion.div
-              className="relative h-full w-full max-w-full lg:scale-125 mb-10 lg:mb-24 mask-[linear-gradient(to_bottom,white_60%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center origin-bottom"
-              animate={{ y: [0, -12, 0] }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+            <div
+              className="relative h-full w-full mask-[linear-gradient(to_bottom,white_70%,transparent_100%)] dark:mask-[linear-gradient(to_bottom,black_80%,transparent_100%)] flex items-center justify-center origin-bottom"
             >
-              {/* Light Mode Avatar */}
-              <Image
-                src="/light-avatar.png"
-                alt="Nurulla Hasan"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
-                priority
-                className="object-contain object-bottom drop-shadow-[0_10px_30px_rgba(0,0,0,0.10)] block dark:hidden"
-              />
-
               {/* Dark Mode Avatar */}
               <Image
-                src="/without-bg.png"
+                src="/me.png"
                 alt="Nurulla Hasan"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
                 priority
-                className="object-contain object-bottom drop-shadow-[0_10px_40px_rgba(0,0,0,0.25)] hidden dark:block"
+                className="object-contain object-bottom drop-shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
               />
-            </motion.div>
+            </div>
           </div>
         </AnimatedSection>
       </div>

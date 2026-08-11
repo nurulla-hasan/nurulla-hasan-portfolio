@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "@/components/ui/icons";
 import Link from "next/link";

@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { JsonLd } from "@/components/seo/json-ld";
+import { Navbar } from "@/components/home/navbar";
+import { SocialSidebar } from "@/components/ui/social-sidebar";
 
 const cagliostro = Cagliostro({
   subsets: ["latin"],
@@ -112,9 +114,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#f5f5f5" },
   ],
 };
-
-import { Navbar } from "@/components/home/navbar";
-import { SocialSidebar } from "@/components/ui/social-sidebar";
 
 export default function RootLayout({
   children,

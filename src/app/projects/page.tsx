@@ -62,7 +62,7 @@ export default function ProjectsPage() {
           {PROJECTS.map((project) => (
             <div 
               key={project.id}
-              className="group flex flex-col h-full border bg-muted/20 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
+              className="group flex flex-col h-full border rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 premium-hover"
             >
               {/* Image */}
               <div className="relative aspect-video overflow-hidden bg-muted/30">
