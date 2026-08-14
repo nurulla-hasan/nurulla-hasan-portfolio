@@ -153,7 +153,7 @@ export const PROJECTS: Project[] = [
     ],
     liveUrl: "https://mentorip.com",
     githubUrl: "",
-    featured: true,
+    featured: false,
     hideCodeButton: true,
     role: "Frontend Developer",
     duration: "2025",
