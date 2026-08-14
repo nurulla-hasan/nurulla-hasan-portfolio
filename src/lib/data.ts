@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     title: "FixItNow",
     description:
       "A full-stack home service marketplace where customers can discover and book technicians, manage service requests, make online payments, and track bookings through role-based dashboards.",
-    image: "/assets/fixitnow.png",
+    image: "/assets/fixitnow/Screenshot 1.png",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "+6"],
     liveUrl: "https://l2-b7-a5.vercel.app",
     githubUrl: "https://github.com/nurulla-hasan/L2B7A5",
